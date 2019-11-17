@@ -3,7 +3,9 @@ public:
     int subarraysWithKDistinct(vector<int>& A, int K) {
         int result = 0;
         vector<int> v(A.size() + 1);
-        for (int i = 0, j = 0, count = 0, prefix = 0; i < A.size(); i++) {
+	int count = 0;
+	int prefix = 0;
+        for (int i = 0, j = 0; i < A.size(); i++) {
             if (v[A[i]]++ == 0) {
                 count++;
             }
