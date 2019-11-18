@@ -17,7 +17,7 @@ int fib(int n) {
 int main()
 {
     for (int i = 0; i < 47; i++) {
-        cout << "index: "<< i << " val: " << fib(i) << endl;
+        cout << "index: "<< i << " value: " << fib(i) << endl;
     }
     return 0;
 }
