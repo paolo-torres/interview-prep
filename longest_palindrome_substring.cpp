@@ -1,9 +1,6 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        if (s.size() == 0 || s.size() == 1) {
-            return true;
-        }
         int n = s.size();
         for (int i = 0; i < n / 2; i++) {
             if (s[i] != s[n-i-1]) {
@@ -13,7 +10,7 @@ public:
         return true;
     }
     string longestPalindrome(string s) {
-        if (s.size() == 0 || s.size() == 1) {
+        if (s.size() < 2) {
             return s;
         }
         string result;
