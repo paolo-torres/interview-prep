@@ -5,7 +5,6 @@ private:
     }
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {
-        vector<vector<int>> result;
         if (points.size() == K) {
             return points;
         }
@@ -26,6 +25,7 @@ public:
                 count++;
             }
         }
+        vector<vector<int>> result;
         for (auto it = m.begin(); it != m.end(); ++it) {
             result.push_back(it->second);
         }
