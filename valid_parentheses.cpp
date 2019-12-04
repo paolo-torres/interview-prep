@@ -4,25 +4,24 @@ public:
         if (s.empty()) {
             return true;
         }
-        stack <char> myStack;
-        for (auto it = s.begin(); it != s.end(); ++it) {
-            if (*it == '(' || *it == '{' || *it == '[') {
-                myStack.push(*it);
-            } else if (myStack.empty()
-                && (*it == ')' || *it == '}' || *it == ']')) {
+        stack<char> open;
+        for (int i = 0; i < s.size(); i++) {
+            if ((s[i] == ')' || s[i] == '}' || s[i] == ']') && open.empty()) {
                 return false;
+            } else if (s[i] == ')' && open.top() != '('
+                || s[i] == '}' && open.top() != '{'
+                || s[i] == ']' && open.top() != '[') {
+                return false;
+            } else if (s[i] == '(' || s[i] == '{' || s[i] == '[') {
+                open.push(s[i]);
             } else {
-                if (myStack.top() == '(' && *it != ')'
-                    || myStack.top() == '{' && *it != '}'
-                    || myStack.top() == '[' && *it != ']') {
-                    return false;
-                }
-                myStack.pop();
+                open.pop();
             }
         }
-        if (!myStack.empty()) {
+        if (open.empty()) {
+            return true;
+        } else {
             return false;
         }
-        return true;
     }
 };
