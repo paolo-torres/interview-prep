@@ -22,8 +22,8 @@ int main()
             m.insert({votes[i], 1});
         }
     }
-    for (auto it = m.begin(); it != m.end(); ++it) {
-        cout << "Name: " << it->first << " Votes: " << it->second << endl;
+    for (auto it = m.begin(); it != m.end(); it++) {
+        cout << "Name: " << it->first << " | Votes: " << it->second << endl;
     }
 
     return 0;
