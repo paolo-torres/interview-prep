@@ -6,14 +6,17 @@
 using namespace std;
 
 int maximumDifference(vector<int>& nums) {
-    int minElement = nums[0];
-    int maxDiff = nums[1] - nums[0];
+    if (nums.empty()) {
+        return -1;
+    }
+    int minValue = nums[0];
+    int maxDiff = -1;
     for (int i = 1; i < nums.size(); i++) {
-        if (nums[i] < minElement) {
-            minElement = nums[i];
+        if (nums[i] < minValue) {
+            minValue = nums[i];
         }
-        if (nums[i] - minElement > maxDiff) {
-            maxDiff = nums[i] - minElement;
+        if (nums[i] - minValue > maxDiff) {
+            maxDiff = nums[i] - minValue;
         }
     }
     return maxDiff;
