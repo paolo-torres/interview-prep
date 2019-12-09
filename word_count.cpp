@@ -20,26 +20,26 @@ int main()
                "Be careful. Look out for each other. "
                "This is the fight of our lives. And we're going to win. "
                "Whatever it takes. Good luck.";
-    for (auto it = s.begin(); it != s.end(); ++it) {
-        if (isalpha(*it)) {
-            *it = tolower(*it);
-        } else {
-            *it = ' ';
+    for (int i = 0; i < s.size(); i++) {
+        if (isalpha(s[i])) {
+            s[i] = tolower(s[i]);
+        } else if (s[i] == '.' || s[i] == ',') {
+            s[i] = ' ';
         }
     }
-    string temp;
+    string word;
     stringstream ss(s);
     map<string, int> m;
-    while (ss >> temp) {
-        auto it = m.find(temp);
+    while (ss >> word) {
+        auto it = m.find(word);
         if (it != m.end()) {
             it->second++;
         } else {
-            m.insert({temp, 1});
+            m.insert({word, 1});
         }
     }
-    for (auto it = m.begin(); it != m.end(); ++it) {
-        cout << "Word: " << it->second << " Count: " << it->first << endl;
+    for (auto it = m.begin(); it != m.end(); it++) {
+        cout << "Word: " << it->first << " | Count: " << it->second << endl;
     }
 
     return 0;
