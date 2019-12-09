@@ -1,14 +1,14 @@
 class NumArray {
 private:
-    vector<int> data;
     vector<int> temp;
+    vector<int> data;
 public:
     NumArray(vector<int>& nums) {
         if (nums.empty()) {
             return;
         }
-        data = nums;
         temp = nums;
+        data = nums;
         for (int i = 1; i < nums.size(); i++) {
             data[i] = data[i] + data[i-1];
         }
