@@ -1,7 +1,7 @@
 class MyQueue {
 private:
-    stack<int> mainStack;
-    stack<int> tempStack;
+    stack<int> main;
+    stack<int> temp;
 public:
     /** Initialize your data structure here. */
     MyQueue() {
@@ -10,44 +10,32 @@ public:
     
     /** Push element x to the back of queue. */
     void push(int x) {
-        mainStack.push(x);
+        while (!main.empty()) {
+            temp.push(main.top());
+            main.pop();
+        }
+        temp.push(x);
+        while (!temp.empty()) {
+            main.push(temp.top());
+            temp.pop();
+        }
     }
     
     /** Removes the element from in front of queue and returns that element. */
     int pop() {
-        int length = mainStack.size();
-        for (int i = 0; i < length; i++) {
-            tempStack.push(mainStack.top());
-            mainStack.pop();
-        }
-        int result = tempStack.top();
-        tempStack.pop();
-        length = tempStack.size();
-        for (int i = 0; i < length; i++) {
-            mainStack.push(tempStack.top());
-            tempStack.pop();
-        }
+        int result = main.top();
+        main.pop();
         return result;
     }
     
     /** Get the front element. */
     int peek() {
-        int length = mainStack.size();
-        for (int i = 0; i < length; i++) {
-            tempStack.push(mainStack.top());
-            mainStack.pop();
-        }
-        int result = tempStack.top();
-        for (int i = 0; i < length; i++) {
-            mainStack.push(tempStack.top());
-            tempStack.pop();
-        }
-        return result;
+        return main.top();
     }
     
     /** Returns whether the queue is empty. */
     bool empty() {
-        if (mainStack.empty()) {
+        if (main.empty()) {
             return true;
         } else {
             return false;
