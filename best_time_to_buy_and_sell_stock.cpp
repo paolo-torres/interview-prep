@@ -5,7 +5,7 @@ public:
             return 0;
         }
         int minVal = prices[0];
-        int maxDiff = prices[1] - prices[0];
+        int maxDiff = 0;
         for (int i = 1; i < prices.size(); i++) {
             if (prices[i] < minVal) {
                 minVal = prices[i];
