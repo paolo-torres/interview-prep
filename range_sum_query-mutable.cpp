@@ -1,32 +1,32 @@
 class NumArray {
 private:
-    vector<int> temp;
-    vector<int> data;
+    vector<int> orig;
+    vector<int> sums;
 public:
     NumArray(vector<int>& nums) {
         if (nums.empty()) {
             return;
         }
-        temp = nums;
-        data = nums;
+        orig = nums;
+        sums = nums;
         for (int i = 1; i < nums.size(); i++) {
-            data[i] = data[i] + data[i-1];
+            sums[i] = sums[i] + sums[i-1];
         }
     }
     
     void update(int i, int val) {
-        int diff = temp[i] - val;
-        temp[i] = val;
-        for (int index = i; index < data.size(); index++) {
-            data[index] -= diff;
+        int diff = orig[i] - val;
+        orig[i] = val;
+        for (int index = i; index < sums.size(); index++) {
+            sums[index] -= diff;
         }
     }
     
     int sumRange(int i, int j) {
         if (i == 0) {
-            return data[j];
+            return sums[j];
         } else {
-            return data[j] - data[i-1];
+            return sums[j] - sums[i-1];
         }
     }
 };
