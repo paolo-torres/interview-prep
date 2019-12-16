@@ -9,7 +9,7 @@ private:
             if (i != pos && nums[i] == nums[pos]) {
                 continue;
             }
-            swap(nums[pos], nums[i]);
+            swap(nums[i], nums[pos]);
             permutations(nums, result, pos + 1);
         }
     }
