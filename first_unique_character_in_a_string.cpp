@@ -4,23 +4,21 @@ public:
         if (s.empty()) {
             return -1;
         }
-        unordered_map<char, int> myMap;
+        unordered_map<char, int> m;
         for (int i = 0; i < s.size(); i++) {
-            auto it = myMap.find(s[i]);
-            if (it != myMap.end()) {
+            auto it = m.find(s[i]);
+            if (it != m.end()) {
                 it->second++;
             } else {
-                myMap.insert({s[i], 1});
+                m.insert({s[i], 1});
             }
         }
-        int result = -1;
         for (int i = 0; i < s.size(); i++) {
-            auto it = myMap.find(s[i]);
-            if (it != myMap.end() && it->second == 1) {
-                result = i;
-                break;
+            auto it = m.find(s[i]);
+            if (it->second == 1) {
+                return i;
             }
         }
-        return result;
+        return -1;
     }
 };
