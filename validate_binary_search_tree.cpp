@@ -8,25 +8,26 @@
  * };
  */
 class Solution {
-    bool checkBST(TreeNode* root, TreeNode* &temp) {
+private:
+    bool checkBST(TreeNode* root, TreeNode* &prev) {
         if (root == NULL) {
             return true;
         }
-        if (!checkBST(root->left, temp)) {
+        if (!checkBST(root->left, prev)) {
             return false;
         }
-        if (temp != NULL && root->val <= temp->val) {
+        if (prev != NULL && prev->val >= root->val) {
             return false;
         }
-        temp = root;
-        if (!checkBST(root->right, temp)) {
+        prev = root;
+        if (!checkBST(root->right, prev)) {
             return false;
         }
         return true;
     }
 public:
     bool isValidBST(TreeNode* root) {
-        TreeNode* temp = NULL;
-        return checkBST(root, temp);
+        TreeNode* prev = NULL;
+        return checkBST(root, prev);
     }
 };
