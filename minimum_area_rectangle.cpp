@@ -3,7 +3,9 @@ public:
     int minAreaRect(vector<vector<int>>& points) {
         unordered_map<int, unordered_set<int>> m;
         for (int i = 0; i < points.size(); i++) {
-            m[points[i][0]].insert(points[i][1]);
+            int x = points[i][0];
+            int y = points[i][1];
+            m[x].insert(y);
         }
         int result = INT_MAX;
         for (int i = 0; i < points.size() - 1; i++) {
