@@ -9,26 +9,23 @@
  */
 class Solution {
 private:
-    bool symmetric(TreeNode* leftRoot, TreeNode* rightRoot) {
+    bool checkSymmetric(TreeNode* leftRoot, TreeNode* rightRoot) {
         if (leftRoot == NULL && rightRoot == NULL) {
             return true;
-        } else if (leftRoot != NULL && rightRoot == NULL || leftRoot == NULL && rightRoot != NULL) {
+        }
+        if (leftRoot == NULL || rightRoot == NULL) {
             return false;
         }
-        if ((leftRoot->val == rightRoot->val) && symmetric(leftRoot->left, rightRoot->right) && symmetric(leftRoot->right, rightRoot->left)) {
+        if (leftRoot->val == rightRoot->val && checkSymmetric(leftRoot->left, rightRoot->right) && checkSymmetric(leftRoot->right, rightRoot->left)) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 public:
     bool isSymmetric(TreeNode* root) {
         if (root == NULL) {
             return true;
         }
-        if (symmetric(root->left, root->right)) {
-            return true;
-        }
-        return false;
+        return checkSymmetric(root->left, root->right);
     }
 };
