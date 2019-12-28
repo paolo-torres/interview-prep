@@ -1,33 +1,16 @@
 class Solution {
-private:
-    int getDist(int x, int y) {
-        return x * x + y * y;
-    }
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {
-        if (points.size() == K) {
-            return points;
-        }
-        int curDist = 0;
-        int maxDist = INT_MAX;
-        int count = 0;
-        multimap<int, vector<int>> m;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
         for (int i = 0; i < points.size(); i++) {
-            curDist = getDist(points[i][0], points[i][1]);
-            if (curDist < maxDist || count < K) {
-                if (m.size() != 0 && count >= K) {
-                    m.erase(prev(m.end()));
-                    count--;
-                }
-                m.insert({curDist, {points[i][0], points[i][1]}});
-                auto it = prev(m.end());
-                maxDist = it->first;
-                count++;
-            }
+            int distance = pow(points[i][0], 2) + pow(points[i][1], 2);
+            pq.push(make_pair(distance, i));
         }
         vector<vector<int>> result;
-        for (auto it = m.begin(); it != m.end(); ++it) {
-            result.push_back(it->second);
+        for (int i = 0; i < K; i++) {
+            int index = pq.top().second;
+            result.push_back(points[index]);
+            pq.pop();
         }
         return result;
     }
