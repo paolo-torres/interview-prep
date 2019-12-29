@@ -2,34 +2,34 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> result;
-        if (nums.empty()) {
+        if (nums.size() < 3) {
             return result;
         }
         sort(nums.begin(), nums.end());
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] > 0) {
+        for (int a = 0; a < nums.size() - 2; a++) {
+            if (nums[a] > 0) {
                 break;
             }
-            if (i > 0 && nums[i] == nums[i-1]) {
+            if (a > 0 && nums[a-1] == nums[a]) {
                 continue;
             }
-            int left = i + 1;
-            int right = nums.size() - 1;
-            while (left < right) {
-                int sum = nums[i] + nums[left] + nums[right];
+            int b = a + 1;
+            int c = nums.size() - 1;
+            while (b < c) {
+                int sum = nums[a] + nums[b] + nums[c];
                 if (sum < 0) {
-                    left++;
+                    b++;
                 } else if (sum > 0) {
-                    right--;
+                    c--;
                 } else {
-                    result.push_back({nums[i], nums[left], nums[right]});
-                    int last_left = nums[left];
-                    int last_right = nums[right];
-                    while (left < right && nums[left] == last_left) {
-                        left++;
+                    result.push_back({nums[a], nums[b], nums[c]});
+                    int bPrev = nums[b];
+                    int cPrev = nums[c];
+                    while (b < c && nums[b] == bPrev) {
+                        b++;
                     }
-                    while (left < right && nums[right] == last_right) {
-                        right--;
+                    while (b < c && nums[c] == cPrev) {
+                        c--;
                     }
                 }
             }
