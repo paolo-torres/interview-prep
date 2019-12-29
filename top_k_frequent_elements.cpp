@@ -11,10 +11,10 @@ public:
             }
         }
         priority_queue<pair<int, int>> pq;
-        vector<int> result;
         for (auto it = m.begin(); it != m.end(); it++) {
-            pq.push(make_pair(it->second, it->first));
+            pq.push({it->second, it->first});
         }
+        vector<int> result;
         for (int i = 0; i < k; i++) {
             result.push_back(pq.top().second);
             pq.pop();
