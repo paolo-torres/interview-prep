@@ -4,12 +4,15 @@ public:
         if (nums.size() < 2) {
             return 0;
         }
-        sort(nums.begin(), nums.end());
+        unordered_set<int> s;
         int result = 0;
-        for (int i = 1; i < nums.size(); i++) {
-            if (nums[i] == nums[i-1]) {
-                result = nums[i];
+        for (int i = 0; i < nums.size(); i++) {
+            auto it = s.find(nums[i]);
+            if (it != s.end()) {
+                result = *it;
                 break;
+            } else {
+                s.insert(nums[i]);
             }
         }
         return result;
