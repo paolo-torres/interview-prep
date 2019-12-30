@@ -1,40 +1,34 @@
 class Solution {
 private:
-    map<int, string> m = {
-        {2, "abc"},
-        {3, "def"},
-        {4, "ghi"},
-        {5, "jkl"},
-        {6, "mno"},
-        {7, "pqrs"},
-        {8, "tuv"},
-        {9, "wxyz"}
-    };
-    vector<string> result;
-    void makeCombos(vector<string>& nums, int pos, string& str, int size) {
-        if (size == str.size()) {
-            result.push_back(str);
+    void findCombos(string digits, string temp, vector<string>& result, unordered_map<int, string>& m, int index) {
+        if (index == digits.size()) {
+            result.push_back(temp);
             return;
         }
-        for (auto it = nums[pos].begin(); it != nums[pos].end(); ++it) {
-            str.push_back(*it);
-            makeCombos(nums, pos + 1, str, size);
-            str.pop_back();
+        auto it = m.find(digits[index] - '0');
+        for (int i = 0; i < it->second.size(); i++) {
+            temp.push_back(it->second[i]);
+            findCombos(digits, temp, result, m, index + 1);
+            temp.pop_back();
         }
     }
-    
 public:
     vector<string> letterCombinations(string digits) {
-        vector<string> nums;
+        vector<string> result;
         if (digits.empty()) {
-            return nums;
+            return result;
         }
-        for (int i = 0; i < digits.size(); i++) {
-            auto it = m.find(digits[i] - '0');
-            nums.push_back(it->second);
-        }
-        string str;
-        makeCombos(nums, 0, str, digits.size());
+        unordered_map<int, string> m;
+        m.insert({2, "abc"});
+        m.insert({3, "def"});
+        m.insert({4, "ghi"});
+        m.insert({5, "jkl"});
+        m.insert({6, "mno"});
+        m.insert({7, "pqrs"});
+        m.insert({8, "tuv"});
+        m.insert({9, "wxyz"});
+        string temp;
+        findCombos(digits, temp, result, m, 0);
         return result;
     }
 };
