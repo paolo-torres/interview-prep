@@ -1,5 +1,5 @@
 class Solution {
-public:
+private:
     bool isPalindrome(string s) {
         int n = s.size();
         for (int i = 0; i < n / 2; i++) {
@@ -9,12 +9,13 @@ public:
         }
         return true;
     }
+public:
     string longestPalindrome(string s) {
         if (s.size() < 2) {
             return s;
         }
-        string result;
         int maxLength = 0;
+        string result;
         for (int i = 0; i < s.size() - maxLength; i++) {
             for (int j = s.size() - 1; j >= i + maxLength; j--) {
                 if (s[i] != s[j]) {
