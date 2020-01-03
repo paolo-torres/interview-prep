@@ -14,8 +14,7 @@ private:
     }
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
-        int index = 0;
-        findSubsets(nums, index);
+        findSubsets(nums, 0);
         return result;
     }
 };
