@@ -1,14 +1,14 @@
 class Solution {
 private:
-    void findLand(vector<vector<char>>& grid, int row, int col, int& m, int& n) {
-        if (row < 0 || col < 0 || row >= m || col >= n || grid[row][col] == '0') {
+    void findLand(vector<vector<char>>& grid, int i, int j, int m, int n) {
+        if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] == '0') {
             return;
         }
-        grid[row][col] = '0';
-        findLand(grid, row + 1, col, m, n);
-        findLand(grid, row - 1, col, m, n);
-        findLand(grid, row, col - 1, m, n);
-        findLand(grid, row, col + 1, m, n);
+        grid[i][j] = '0';
+        findLand(grid, i - 1, j, m, n);
+        findLand(grid, i + 1, j, m, n);
+        findLand(grid, i, j - 1, m, n);
+        findLand(grid, i, j + 1, m, n);
     }
 public:
     int numIslands(vector<vector<char>>& grid) {
