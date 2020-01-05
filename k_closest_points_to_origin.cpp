@@ -4,7 +4,7 @@ public:
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
         for (int i = 0; i < points.size(); i++) {
             int distance = pow(points[i][0], 2) + pow(points[i][1], 2);
-            pq.push(make_pair(distance, i));
+            pq.push({distance, i});
         }
         vector<vector<int>> result;
         for (int i = 0; i < K; i++) {
