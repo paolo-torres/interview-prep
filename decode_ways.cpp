@@ -12,8 +12,8 @@ public:
         int second = 1;
         int result = first + second;
         for (int i = 2; i <= n; i++) {
-            int firstTemp = first * (int)((s[i-2] == '1') || (s[i-2] == '2' && s[i-1] <= '6'));
-            int secondTemp = second * (int)(s[i-1] != '0');
+            int firstTemp = first * ((s[i-2] == '1') || (s[i-2] == '2' && s[i-1] <= '6'));
+            int secondTemp = second * (s[i-1] != '0');
             result = firstTemp + secondTemp;
             first = second;
             second = result;
