@@ -11,21 +11,20 @@ public:
             {'M', 1000}
         };
         int result = 0;
-        for (auto cur = s.begin(); cur != s.end(); ++cur) {
-            auto nxt = next(cur);
-            if (cur == prev(s.end())) {
-                result += m[*cur];
-            } else if (*cur == 'I' && (*nxt == 'V' || *nxt == 'X')) {
-                result += m[*nxt] - m[*cur];
-                ++cur;
-            } else if (*cur == 'X' && (*nxt == 'L' || *nxt == 'C')) {
-                result += m[*nxt] - m[*cur];
-                ++cur;
-            } else if (*cur == 'C' && (*nxt == 'D' || *nxt == 'M')) {
-                result += m[*nxt] - m[*cur];
-                ++cur;
+        for (int i = 0; i < s.size(); i++) {
+            if (i == s.size() - 1) {
+                result += m[s[i]];
+            } else if (s[i] == 'I' && s[i+1] == 'V' || s[i] == 'I' && s[i+1] == 'X') {
+                result += m[s[i+1]] - m[s[i]];
+                i++;
+            } else if (s[i] == 'X' && s[i+1] == 'L' || s[i] == 'X' && s[i+1] == 'C') {
+                result += m[s[i+1]] - m[s[i]];
+                i++;
+            } else if (s[i] == 'C' && s[i+1] == 'D' || s[i] == 'C' && s[i+1] == 'M') {
+                result += m[s[i+1]] - m[s[i]];
+                i++;
             } else {
-                result += m[*cur];
+                result += m[s[i]];
             }
         }
         return result;
