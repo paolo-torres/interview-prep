@@ -9,7 +9,7 @@
  */
 class Solution {
 private:
-    void levels(vector<vector<int>>& result, TreeNode* root, int level) {
+    void traverse(TreeNode* root, vector<vector<int>>& result, int level) {
         if (root == NULL) {
             return;
         }
@@ -17,13 +17,13 @@ private:
             result.push_back(vector<int>());
         }
         result[level].push_back(root->val);
-        levels(result, root->left, level + 1);
-        levels(result, root->right, level + 1);
+        traverse(root->left, result, level + 1);
+        traverse(root->right, result, level + 1);
     }
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> result;
-        levels(result, root, 0);
+        traverse(root, result, 0);
         return result;
     }
 };
