@@ -12,16 +12,16 @@ public:
         if (head == NULL || head->next == NULL) {
             return head;
         }
-        ListNode* trail = NULL;
+        ListNode* prev = NULL;
         ListNode* curr = head;
         ListNode* next = head->next;
         while (curr != NULL) {
             next = curr->next;
-            curr->next = trail;
-            trail = curr;
+            curr->next = prev;
+            prev = curr;
             curr = next;
         }
-        head = trail;
+        head = prev;
         return head;
     }
 };
