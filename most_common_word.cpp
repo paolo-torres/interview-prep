@@ -9,30 +9,23 @@ public:
             }
         }
         string temp;
-        stringstream stream(paragraph);
+        stringstream str(paragraph);
         unordered_set<string> s(banned.begin(), banned.end());
         unordered_map<string, int> m;
-        int max = 0;
-        string result;
-        while (stream >> temp) {
+        while (str >> temp) {
             if (s.find(temp) == s.end()) {
                 auto it = m.find(temp);
                 if (it != m.end()) {
                     it->second++;
-                    if (it->second > max) {
-                        result = it->first;
-                        max = it->second;
-                    }
                 } else {
                     m.insert({temp, 1});
-                    if (m.size() == 1) {
-                        it = m.find(temp);
-                        result = it->first;
-                        max = it->second;
-                    }
                 }
             }
         }
-        return result;
+        priority_queue<pair<int, string>, vector<pair<int, string>>> pq;
+        for (auto it = m.begin(); it != m.end(); it++) {
+            pq.push({it->second, it->first});
+        }
+        return pq.top().second;
     }
 };
