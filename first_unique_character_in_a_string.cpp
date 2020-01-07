@@ -1,9 +1,6 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        if (s.empty()) {
-            return -1;
-        }
         unordered_map<char, int> m;
         for (int i = 0; i < s.size(); i++) {
             auto it = m.find(s[i]);
