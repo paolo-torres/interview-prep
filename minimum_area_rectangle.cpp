@@ -19,9 +19,7 @@ public:
                 }
                 if (m[xOne].find(yTwo) != m[xOne].end() && m[xTwo].find(yOne) != m[xTwo].end()) {
                     int area = abs(xTwo - xOne) * abs(yTwo - yOne);
-                    if (area < result) {
-                        result = area;
-                    }
+                    result = min(result, area);
                 }
             }
         }
