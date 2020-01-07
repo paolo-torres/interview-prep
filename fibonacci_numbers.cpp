@@ -4,12 +4,9 @@ public:
         if (N == 0) {
             return 0;
         }
-        if (N == 1) {
-            return 1;
-        }
         int first = 0;
         int second = 1;
-        int result = 0;
+        int result = first + second;
         for (int i = 2; i <= N; i++) {
             result = first + second;
             first = second;
