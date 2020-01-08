@@ -9,17 +9,17 @@
  */
 class Solution {
 private:
-    bool checkSymmetric(TreeNode* leftRoot, TreeNode* rightRoot) {
-        if (leftRoot == NULL && rightRoot == NULL) {
+    bool checkSymmetric(TreeNode* left, TreeNode* right) {
+        if (left == NULL && right == NULL) {
             return true;
         }
-        if (leftRoot == NULL || rightRoot == NULL) {
+        if (left == NULL || right == NULL) {
             return false;
         }
-        if (leftRoot->val == rightRoot->val && checkSymmetric(leftRoot->left, rightRoot->right) && checkSymmetric(leftRoot->right, rightRoot->left)) {
-            return true;
+        if (left->val != right->val) {
+            return false;
         }
-        return false;
+        return checkSymmetric(left->left, right->right) && checkSymmetric(left->right, right->left);
     }
 public:
     bool isSymmetric(TreeNode* root) {
