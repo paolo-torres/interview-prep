@@ -13,9 +13,6 @@ public:
         if (root == NULL) {
             return true;
         }
-        if (root->left == NULL && root->right == NULL) {
-            return true;
-        }
         if (root->left != NULL && root->val != root->left->val) {
             return false;
         }
