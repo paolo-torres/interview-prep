@@ -3,16 +3,10 @@ public:
     int firstUniqChar(string s) {
         unordered_map<char, int> m;
         for (int i = 0; i < s.size(); i++) {
-            auto it = m.find(s[i]);
-            if (it != m.end()) {
-                it->second++;
-            } else {
-                m.insert({s[i], 1});
-            }
+            m[s[i]]++;
         }
         for (int i = 0; i < s.size(); i++) {
-            auto it = m.find(s[i]);
-            if (it->second == 1) {
+            if (m[s[i]] == 1) {
                 return i;
             }
         }
