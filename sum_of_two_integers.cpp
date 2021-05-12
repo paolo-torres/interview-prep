@@ -1,12 +1,14 @@
+// Time: O(n)
+// Space: O(1)
+
 class Solution {
 public:
     int getSum(int a, int b) {
-        int sum = 0;
         while (b != 0) {
-            sum = a ^ b;
-            b = (unsigned int)(a & b) << 1;
-            a = sum;
+            int carry = a & b;
+            a = a ^ b;
+            b = (unsigned)carry << 1;
         }
-        return sum;
+        return a;
     }
 };
