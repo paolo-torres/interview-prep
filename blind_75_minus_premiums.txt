@@ -43,7 +43,7 @@ Longest Consecutive Sequence
 
 Interval
 -----------------------------------------------------------------------
-Insert Interval
+Insert Interval ✅
 Merge Intervals
 Non-overlapping Intervals
 
