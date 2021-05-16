@@ -49,7 +49,7 @@ Non-overlapping Intervals
 
 Linked List
 -----------------------------------------------------------------------
-Reverse a Linked List
+Reverse a Linked List ✅
 Detect Cycle in a Linked List
 Merge Two Sorted Lists
 Merge K Sorted Lists
