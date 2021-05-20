@@ -1,7 +1,7 @@
 Array
 -----------------------------------------------------------------------
 Two Sum ✅
-Best Time to Buy and Sell Stock
+Best Time to Buy and Sell Stock ✅
 Contains Duplicate
 Product of Array Except Self
 Maximum Subarray
