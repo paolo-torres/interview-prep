@@ -22,7 +22,7 @@ Reverse Bits
 Dynamic Programming
 -----------------------------------------------------------------------
 Climbing Stairs ✅
-Coin Change
+Coin Change ✅
 Longest Increasing Subsequence
 Longest Common Subsequence
 Word Break Problem
