@@ -59,7 +59,7 @@ Reorder List
 Matrix
 -----------------------------------------------------------------------
 Set Matrix Zeroes ✅
-Spiral Matrix
+Spiral Matrix ✅
 Rotate Image
 Word Search
 
