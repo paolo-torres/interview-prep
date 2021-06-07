@@ -1,3 +1,6 @@
+// Time: O(n)
+// Space: O(n)
+
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -5,9 +8,8 @@ public:
         for (int i = 0; i < nums.size(); i++) {
             if (s.find(nums[i]) != s.end()) {
                 return true;
-            } else {
-                s.insert(nums[i]);
             }
+            s.insert(nums[i]);
         }
         return false;
     }
