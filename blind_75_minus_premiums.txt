@@ -23,7 +23,7 @@ Dynamic Programming
 -----------------------------------------------------------------------
 Climbing Stairs ✅
 Coin Change ✅
-Longest Increasing Subsequence
+Longest Increasing Subsequence ✅
 Longest Common Subsequence
 Word Break Problem
 Combination Sum
