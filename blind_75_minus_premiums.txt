@@ -60,7 +60,7 @@ Matrix
 -----------------------------------------------------------------------
 Set Matrix Zeroes ✅
 Spiral Matrix ✅
-Rotate Image
+Rotate Image ✅
 Word Search
 
 String
