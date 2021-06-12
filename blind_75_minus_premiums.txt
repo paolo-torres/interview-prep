@@ -45,7 +45,7 @@ Interval
 -----------------------------------------------------------------------
 Insert Interval ✅
 Merge Intervals ✅
-Non-overlapping Intervals
+Non-overlapping Intervals ✅
 
 Linked List
 -----------------------------------------------------------------------
