@@ -67,7 +67,7 @@ String
 -----------------------------------------------------------------------
 Longest Substring Without Repeating Characters ✅
 Longest Repeating Character Replacement ✅
-Minimum Window Substring
+Minimum Window Substring ✅
 Valid Anagram
 Group Anagrams
 Valid Parentheses
