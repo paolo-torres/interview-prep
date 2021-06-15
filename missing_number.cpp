@@ -1,20 +1,22 @@
+// Time: O(n)
+// Space: O(n)
+
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        if (nums.empty()) {
-            return 0;
-        }
+        int n = nums.size();
         unordered_set<int> s;
-        for (int i = 0; i < nums.size(); i++) {
+        
+        for (int i = 0; i < n; i++) {
             s.insert(nums[i]);
         }
-        int result = 0;
-        for (int i = 0; i < nums.size() + 1; i++) {
+        
+        for (int i = 0; i < n; i++) {
             if (s.find(i) == s.end()) {
-                result = i;
-                break;
+                return i;
             }
         }
-        return result;
+        
+        return n;
     }
 };
