@@ -3,7 +3,7 @@ Array
 Two Sum ✅
 Best Time to Buy and Sell Stock ✅
 Contains Duplicate ✅
-Product of Array Except Self
+Product of Array Except Self ✅
 Maximum Subarray
 Maximum Product Subarray
 Find Minimum in Rotated Sorted Array
@@ -41,7 +41,7 @@ Pacific Atlantic Water Flow ✅
 Number of Islands
 Longest Consecutive Sequence
 
-Interval
+Interval ✅
 -----------------------------------------------------------------------
 Insert Interval ✅
 Merge Intervals ✅
@@ -92,7 +92,7 @@ Implement Trie (Prefix Tree)
 Add and Search Word
 Word Search II
 
-Heap
+Heap ✅
 -----------------------------------------------------------------------
 Merge K Sorted Lists ✅
 Top K Frequent Elements ✅
