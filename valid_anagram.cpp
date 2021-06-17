@@ -1,19 +1,23 @@
+// Time: O(n)
+// Space: O(26)
+
 class Solution {
 public:
     bool isAnagram(string s, string t) {
         if (s.size() != t.size()) {
             return false;
         }
-        unordered_multiset<char> mySet;
+        
+        vector<int> count(26);
+        
         for (int i = 0; i < s.size(); i++) {
-            mySet.insert(s[i]);
+            count[s[i] - 'a']++;
         }
-        for (int i = 0; i < t.size(); i++) {
-            auto it = mySet.find(t[i]);
-            if (it == mySet.end()) {
+        
+        for (int j = 0; j < t.size(); j++) {
+            count[t[j] - 'a']--;
+            if (count[t[j] - 'a'] < 0) {
                 return false;
-            } else {
-                mySet.erase(it);
             }
         }
         return true;
