@@ -33,13 +33,13 @@ Decode Ways
 Unique Paths
 Jump Game
 
-Graph
+Graph ✅
 -----------------------------------------------------------------------
 Clone Graph ✅
 Course Schedule ✅
 Pacific Atlantic Water Flow ✅
 Number of Islands ✅
-Longest Consecutive Sequence
+Longest Consecutive Sequence ✅
 
 Interval ✅
 -----------------------------------------------------------------------
