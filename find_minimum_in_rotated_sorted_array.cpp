@@ -1,22 +1,26 @@
+// Time: O(log n)
+// Space: O(1)
+
 class Solution {
 public:
     int findMin(vector<int>& nums) {
-        if (nums.size() == 1) {
-            return nums[0];
-        }
-        int i = 0;
-        int j = nums.size() - 1;
-        while (i < j) {
-            if (nums[i] <= nums[j]) {
-                return nums[i];
+        int low = 0;
+        int high = nums.size() - 1;
+        
+        while (low < high) {
+            if (nums[low] < nums[high]) {
+                return nums[low];
             }
-            int mid = i + (j - i) / 2;
-            if (nums[i] <= nums[mid]) {
-                i = mid + 1;
+            
+            int mid = low + (high - low) / 2;
+            
+            if (nums[low] <= nums[mid]) {
+                low = mid + 1;
             } else {
-                j = mid;
+                high = mid;
             }
         }
-        return nums[i];
+        
+        return nums[low];
     }
 };
