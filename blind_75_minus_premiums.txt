@@ -71,7 +71,7 @@ Minimum Window Substring ✅
 Valid Anagram ✅
 Group Anagrams ✅
 Valid Parentheses ✅
-Valid Palindrome
+Valid Palindrome ✅
 Longest Palindromic Substring
 Palindromic Substrings
 

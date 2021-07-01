@@ -1,23 +1,26 @@
+// Time: O(n)
+// Space: O(1)
+
 class Solution {
 public:
     bool isPalindrome(string s) {
-        if (s.size() < 2) {
-            return true;
-        }
-        for (int i = 0; i < s.size(); i++) {
-            if (isalpha(s[i])) {
-                s[i] = tolower(s[i]);
-            } else if (ispunct(s[i]) || isspace(s[i])) {
-                s.erase(i, 1);
-                i--;
+        int i = 0;
+        int j = s.size() - 1;
+        
+        while (i < j) {
+            while (!isalnum(s[i]) && i < j) {
+                i++;
             }
-        }
-        int n = s.size();
-        for (int i = 0; i < n / 2; i++) {
-            if (s[i] != s[n-i-1]) {
+            while (!isalnum(s[j]) && i < j) {
+                j--;
+            }
+            if (tolower(s[i]) != tolower(s[j])) {
                 return false;
             }
+            i++;
+            j--;
         }
+        
         return true;
     }
 };
