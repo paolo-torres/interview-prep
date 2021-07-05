@@ -1,33 +1,34 @@
+// Time: O(n^2)
+// Space: O(1)
+
 class Solution {
-private:
-    bool isPalindrome(string s) {
-        int n = s.size();
-        for (int i = 0; i < n / 2; i++) {
-            if (s[i] != s[n-i-1]) {
-                return false;
-            }
-        }
-        return true;
-    }
 public:
     string longestPalindrome(string s) {
-        if (s.size() < 2) {
+        int n = s.size();
+        
+        if (n == 1) {
             return s;
         }
-        int maxLength = 0;
-        string result;
-        for (int i = 0; i < s.size() - maxLength; i++) {
-            for (int j = s.size() - 1; j >= i + maxLength; j--) {
-                if (s[i] != s[j]) {
-                    continue;
-                }
-                string str = s.substr(i, j - i + 1);
-                if (isPalindrome(str) && str.size() > maxLength) {
-                    maxLength = str.size();
-                    result = str;
-                }
-            }
+        
+        int maxStart = 0;
+        int maxLength = 1;
+        
+        for (int i = 0; i < n - 1; i++) {
+            expandPalindrome(s, i, i, maxStart, maxLength);
+            expandPalindrome(s, i, i + 1, maxStart, maxLength);
         }
-        return result;
+        
+        return s.substr(maxStart, maxLength);
+    }
+private:
+    void expandPalindrome(string s, int i, int j, int& maxStart, int& maxLength) {
+        while (i >= 0 && j < s.size() && s[i] == s[j]) {
+            i--;
+            j++;
+        }
+        if (j - i - 1 > maxLength) {
+            maxStart = i + 1;
+            maxLength = j - i - 1;
+        }
     }
 };
