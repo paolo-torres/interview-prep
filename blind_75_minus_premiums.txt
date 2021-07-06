@@ -8,7 +8,7 @@ Maximum Subarray ✅
 Maximum Product Subarray ✅
 Find Minimum in Rotated Sorted Array ✅
 Search in Rotated Sorted Array ✅
-3 Sum
+3 Sum ✅
 Container With Most Water
 
 Binary ✅

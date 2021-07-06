@@ -1,39 +1,54 @@
+// Time: O(n^2)
+// Space: O(1)
+
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> result;
-        if (nums.size() < 3) {
+        
+        int n = nums.size();
+        
+        if (n < 3) {
             return result;
         }
+        
         sort(nums.begin(), nums.end());
-        for (int a = 0; a < nums.size() - 2; a++) {
-            if (nums[a] > 0) {
+        
+        for (int i = 0; i < n - 2; i++) {
+            if (nums[i] > 0) {
                 break;
             }
-            if (a > 0 && nums[a-1] == nums[a]) {
+            
+            if (i > 0 && nums[i-1] == nums[i]) {
                 continue;
             }
-            int b = a + 1;
-            int c = nums.size() - 1;
-            while (b < c) {
-                int sum = nums[a] + nums[b] + nums[c];
+            
+            int j = i + 1;
+            int k = n - 1;
+            
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                
                 if (sum < 0) {
-                    b++;
+                    j++;
                 } else if (sum > 0) {
-                    c--;
+                    k--;
                 } else {
-                    result.push_back({nums[a], nums[b], nums[c]});
-                    int bPrev = nums[b];
-                    int cPrev = nums[c];
-                    while (b < c && nums[b] == bPrev) {
-                        b++;
+                    result.push_back({nums[i], nums[j], nums[k]});
+                    
+                    int jPrev = nums[j];
+                    int kPrev = nums[k];
+                    
+                    while (j < k && nums[j] == jPrev) {
+                        j++;
                     }
-                    while (b < c && nums[c] == cPrev) {
-                        c--;
+                    while (j < k && nums[k] == kPrev) {
+                        k--;
                     }
                 }
             }
         }
+        
         return result;
     }
 };
