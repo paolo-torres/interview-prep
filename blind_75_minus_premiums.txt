@@ -63,7 +63,7 @@ Spiral Matrix ✅
 Rotate Image ✅
 Word Search ✅
 
-String
+String ✅
 -----------------------------------------------------------------------
 Longest Substring Without Repeating Characters ✅
 Longest Repeating Character Replacement ✅
@@ -73,7 +73,7 @@ Group Anagrams ✅
 Valid Parentheses ✅
 Valid Palindrome ✅
 Longest Palindromic Substring ✅
-Palindromic Substrings
+Palindromic Substrings ✅
 
 Tree
 -----------------------------------------------------------------------
