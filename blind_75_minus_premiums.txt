@@ -29,7 +29,7 @@ Word Break Problem ✅
 Combination Sum ✅
 House Robber ✅
 House Robber II ✅
-Decode Ways
+Decode Ways ✅
 Unique Paths
 Jump Game
 
