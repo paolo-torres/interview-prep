@@ -1,4 +1,4 @@
-// Time: O(mn)
+// Time: O(m x n)
 // Space: O(min(m, n))
 
 /**
