@@ -1,4 +1,4 @@
-Array
+Array ✅
 -----------------------------------------------------------------------
 Two Sum ✅
 Best Time to Buy and Sell Stock ✅
@@ -9,7 +9,7 @@ Maximum Product Subarray ✅
 Find Minimum in Rotated Sorted Array ✅
 Search in Rotated Sorted Array ✅
 3 Sum ✅
-Container With Most Water
+Container With Most Water ✅
 
 Binary ✅
 -----------------------------------------------------------------------

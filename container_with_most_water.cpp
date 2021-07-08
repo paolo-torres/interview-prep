@@ -1,25 +1,26 @@
+// Time: O(n)
+// Space: O(1)
+
 class Solution {
 public:
     int maxArea(vector<int>& height) {
-        if (height.size() == 2) {
-            return min(height[0], height[1]);
-        }
-        int current = 0;
-        int maximum = 0;
-        int left = 0;
-        int right = height.size() - 1;
-        while (left < right) {
-            int distance = right - left;
-            current = min(height[left], height[right]) * distance;
-            if (current > maximum) {
-                maximum = current;
-            }
-            if (height[left] > height[right]) {
-                right--;
+        int i = 0;
+        int j = height.size() - 1;
+        
+        int curr = 0;
+        int result = 0;
+        
+        while (i < j) {
+            curr = (j - i) * min(height[i], height[j]);
+            result = max(curr, result);
+            
+            if (height[i] < height[j]) {
+                i++;
             } else {
-                left++;
+                j--;
             }
         }
-        return maximum;
+        
+        return result;
     }
 };
