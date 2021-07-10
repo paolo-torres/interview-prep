@@ -19,7 +19,7 @@ Counting Bits ✅
 Missing Number ✅
 Reverse Bits ✅
 
-Dynamic Programming
+Dynamic Programming ✅
 -----------------------------------------------------------------------
 Climbing Stairs ✅
 Coin Change ✅
@@ -31,7 +31,7 @@ House Robber ✅
 House Robber II ✅
 Decode Ways ✅
 Unique Paths ✅
-Jump Game
+Jump Game ✅
 
 Graph ✅
 -----------------------------------------------------------------------
