@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "queue": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "string": "cpp",
+        "iosfwd": "cpp"
     }
 }
