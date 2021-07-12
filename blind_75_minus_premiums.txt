@@ -75,7 +75,7 @@ Valid Palindrome ✅
 Longest Palindromic Substring ✅
 Palindromic Substrings ✅
 
-Tree
+Tree ✅
 -----------------------------------------------------------------------
 Maximum Depth of Binary Tree ✅
 Same Tree ✅
@@ -90,7 +90,7 @@ Kth Smallest Element in a BST ✅
 Lowest Common Ancestor of BST ✅
 Implement Trie (Prefix Tree) ✅
 Add and Search Word ✅
-Word Search II
+Word Search II ✅
 
 Heap ✅
 -----------------------------------------------------------------------

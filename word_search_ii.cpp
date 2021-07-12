@@ -1,54 +1,84 @@
-class Solution {
-private:
-    void search(vector<vector<char>>& board, string& word, bool& found, int index, int i, int j, int m, int n) {
-        if (board[i][j] == '0' || found) {
-            return;
+// Time: O(4^(m x n))
+// Space: O(m x n)
+
+class TrieNode {
+public:
+    TrieNode* children[26];
+    bool isWord;
+    
+    TrieNode() {
+        for (int i = 0; i < 26; i++) {
+            children[i] = NULL;
         }
-        if (index == word.size()) {
-            found = true;
-            return;
-        }
-        char temp = board[i][j];
-        board[i][j] = '0';
-        if (i > 0 && board[i-1][j] == word[index]) {
-            search(board, word, found, index + 1, i - 1, j, m, n);
-        }
-        if (i < m - 1 && board[i+1][j] == word[index]) {
-            search(board, word, found, index + 1, i + 1, j, m, n);
-        }
-        if (j > 0 && board[i][j-1] == word[index]) {
-            search(board, word, found, index + 1, i, j - 1, m, n);
-        }
-        if (j < n - 1 && board[i][j+1] == word[index]) {
-            search(board, word, found, index + 1, i, j + 1, m, n);
-        }
-        board[i][j] = temp;
+        isWord = false;
     }
+};
+
+class Solution {
 public:
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
-        vector<string> result;
-        if (board.empty()) {
-            return result;
+        for (int i = 0; i < words.size(); i++) {
+            addWord(words[i]);
         }
-        unordered_map<char, vector<string>> map;
-        for (auto x : words) {
-            map[x[0]].push_back(x);
-        }
+        
+        TrieNode* node = root;
+        
         int m = board.size();
         int n = board[0].size();
+        
+        vector<string> result;
+        
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (map[board[i][j]].size() > 0) {
-                    for (auto x : map[board[i][j]]) {
-                        bool found = false;
-                        search(board, x, found, 1, i, j, m, n);
-                        if (found && find(result.begin(), result.end(), x) == result.end()) {
-                            result.push_back(x);
-                        }
-                    }
-                }
+                search(board, i, j, m, n, node, "", result);
             }
         }
+        
         return result;
+    }
+private:
+    TrieNode* root = new TrieNode();
+    
+    void addWord(string word) {
+        TrieNode* node = root;
+        int curr = 0;
+        
+        for (int i = 0; i < word.size(); i++) {
+            curr = word[i] - 'a';
+            if (node->children[curr] == NULL) {
+                node->children[curr] = new TrieNode();
+            }
+            node = node->children[curr];
+        }
+        
+        node->isWord = true;
+    }
+    
+    void search(vector<vector<char>>& board, int i, int j, int m, int n, TrieNode* node, string word, vector<string>& result) {
+        if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] == '#') {
+            return;
+        }
+        
+        char c = board[i][j];
+        
+        node = node->children[c - 'a'];
+        if (node == NULL) {
+            return;
+        }
+        
+        word += board[i][j];
+        if (node->isWord) {
+            result.push_back(word);
+            node->isWord = false;
+        }
+        
+        board[i][j] = '#';
+        
+        search(board, i - 1, j, m, n, node, word, result);
+        search(board, i + 1, j, m, n, node, word, result);
+        search(board, i, j - 1, m, n, node, word, result);
+        search(board, i, j + 1, m, n, node, word, result);
+        
+        board[i][j] = c;
     }
 };
