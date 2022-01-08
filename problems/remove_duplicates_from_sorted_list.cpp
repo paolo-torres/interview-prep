@@ -13,22 +13,24 @@
  */
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head) {
+    ListNode* deleteDuplicates(ListNode* head) {
         if (head == NULL || head->next == NULL) {
             return head;
         }
         
-        ListNode* prev = NULL;
-        ListNode* curr = head;
-        ListNode* next = curr->next;
+        ListNode* prev = head;
+        ListNode* curr = head->next;
         
         while (curr != NULL) {
-            next = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = next;
+            if (prev->val == curr->val) {
+                prev->next = curr->next;
+                curr = curr->next;
+            } else {
+                prev = curr;
+                curr = curr->next;
+            }
         }
         
-        return prev;
+        return head;
     }
 };
