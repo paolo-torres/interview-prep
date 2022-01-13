@@ -1,5 +1,5 @@
-// Time: O(m x n)
-// Space: O(min(m, n))
+// Time: O(mn)
+// Space: O(m)
 
 /**
  * Definition for a binary tree node.
