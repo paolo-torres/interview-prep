@@ -3,6 +3,9 @@
         "queue": "cpp",
         "sstream": "cpp",
         "string": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "vector": "cpp"
     }
 }
