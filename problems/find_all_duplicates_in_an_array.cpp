@@ -1,16 +1,20 @@
+// Time: O(n)
+// Space: O(1)
+
 class Solution {
 public:
     vector<int> findDuplicates(vector<int>& nums) {
-        unordered_set<int> s;
         vector<int> result;
+        
         for (int i = 0; i < nums.size(); i++) {
-            auto it = s.find(nums[i]);
-            if (it != s.end()) {
-                result.push_back(*it);
+            int index = abs(nums[i]) - 1;
+            if (nums[index] < 0) {
+                result.push_back(abs(nums[i]));
             } else {
-                s.insert(nums[i]);
+                nums[index] = -nums[index];
             }
         }
+        
         return result;
     }
 };
