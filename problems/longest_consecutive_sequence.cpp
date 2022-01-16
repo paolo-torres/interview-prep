@@ -9,23 +9,20 @@ public:
             s.insert(nums[i]);
         }
         
-        int best = 0;
+        int result = 0;
         
         for (auto it = s.begin(); it != s.end(); it++) {
-            int prev = *it - 1;
-            if (s.find(prev) == s.end()) {
-                int next = *it + 1;
-                int curr = 1;
-                
-                while (s.find(next) != s.end()) {
-                    next++;
-                    curr++;
+            int currNum = *it;
+            if (s.find(currNum - 1) == s.end()) {
+                int currLength = 1;
+                while (s.find(currNum + 1) != s.end()) {
+                    currLength++;
+                    currNum++;
                 }
-                
-                best = max(curr, best);
+                result = max(result, currLength);
             }
         }
         
-        return best;
+        return result;
     }
 };

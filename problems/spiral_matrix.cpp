@@ -1,20 +1,17 @@
-// Time: O(m x n)
-// Space: O(m x n)
+// Time: O(mn)
+// Space: O(mn)
 
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        vector<int> result;
-        if (matrix.empty()) {
-            return result;
-        }
-        
         int left = 0;
         int top = 0;
         int right = matrix[0].size() - 1;
         int bottom = matrix.size() - 1;
         
-        while (left <= right && top <= bottom) {
+        vector<int> result;
+        
+        while (top <= bottom && left <= right) {
             for (int j = left; j <= right; j++) {
                 result.push_back(matrix[top][j]);
             }
