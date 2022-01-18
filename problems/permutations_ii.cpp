@@ -1,7 +1,17 @@
+// Time: O(n x n!)
+// Space: O(n)
+
 class Solution {
+public:
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> result;
+        findPermutations(nums, 0, result);
+        return result;
+    }
 private:
-    void permutations(vector<int> nums, vector<vector<int>>& result, int pos) {
-        if (pos == nums.size() - 1) {
+    void findPermutations(vector<int> nums, int pos, vector<vector<int>>& result) {
+        if (pos == nums.size()) {
             result.push_back(nums);
             return;
         }
@@ -10,14 +20,7 @@ private:
                 continue;
             }
             swap(nums[i], nums[pos]);
-            permutations(nums, result, pos + 1);
+            findPermutations(nums, pos + 1, result);
         }
-    }
-public:
-    vector<vector<int>> permuteUnique(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        vector<vector<int>> result;
-        permutations(nums, result, 0);
-        return result;
     }
 };
