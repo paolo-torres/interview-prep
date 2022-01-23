@@ -1,17 +1,7 @@
+// Time: O(n x 4^n)
+// Space: O(n x 4^n)
+
 class Solution {
-private:
-    void findCombos(string digits, unordered_map<char, string>& m, int index, string str, vector<string>& result) {
-        if (index == digits.size()) {
-            result.push_back(str);
-            return;
-        }
-        auto it = m.find(digits[index]);
-        for (int i = 0; i < it->second.size(); i++) {
-            str.push_back(it->second[i]);
-            findCombos(digits, m, index + 1, str, result);
-            str.pop_back();
-        }
-    }
 public:
     vector<string> letterCombinations(string digits) {
         vector<string> result;
@@ -28,7 +18,21 @@ public:
             {'8', "tuv"},
             {'9', "wxyz"}
         };
-        findCombos(digits, m, 0, "", result);
+        string curr;
+        findCombos(digits, 0, m, curr, result);
         return result;
+    }
+private:
+    void findCombos(string digits, int index, unordered_map<char, string>& m, string& curr, vector<string>& result) {
+        if (index == digits.size()) {
+            result.push_back(curr);
+            return;
+        }
+        string str = m[digits[index]];
+        for (int i = 0; i < str.size(); i++) {
+            curr.push_back(str[i]);
+            findCombos(digits, index + 1, m, curr, result);
+            curr.pop_back();
+        }
     }
 };
