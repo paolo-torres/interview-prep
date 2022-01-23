@@ -19,11 +19,12 @@ private:
     int robber(vector<int>& nums, int start, int end) {
         int prev = 0;
         int curr = 0;
+        int next = 0;
         
         for (int i = start; i <= end; i++) {
-            int temp = max(prev + nums[i], curr);
+            next = max(prev + nums[i], curr);
             prev = curr;
-            curr = temp;
+            curr = next;
         }
         
         return curr;
