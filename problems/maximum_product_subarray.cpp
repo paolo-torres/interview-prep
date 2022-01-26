@@ -9,12 +9,10 @@ public:
         int result = nums[0];
         
         for (int i = 1; i < nums.size(); i++) {
-            if (nums[i] < 0) {
-                swap(currMax, currMin);
-            }
+            int temp = currMax;
             
-            currMax = max(currMax * nums[i], nums[i]);
-            currMin = min(currMin * nums[i], nums[i]);
+            currMax = max(max(currMax * nums[i], currMin * nums[i]), nums[i]);
+            currMin = min(min(currMin * nums[i], temp * nums[i]), nums[i]);
             
             result = max(result, currMax);
         }
