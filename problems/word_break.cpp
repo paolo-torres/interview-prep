@@ -4,10 +4,6 @@
 class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
-        if (wordDict.empty()) {
-            return false;
-        }
-        
         unordered_set<string> words;
         for (int i = 0; i < wordDict.size(); i++) {
             words.insert(wordDict[i]);
