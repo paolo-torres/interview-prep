@@ -12,8 +12,8 @@ public:
                 return false;
             }
             reachable = max(reachable, i + nums[i]);
-            if (reachable >= n) {
-                return true;
+            if (reachable >= n - 1) {
+                break;
             }
         }
         

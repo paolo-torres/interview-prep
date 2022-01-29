@@ -9,20 +9,18 @@ public:
         }
         
         int n = s.size();
-        
-        vector<int> dp(n + 1);
+        vector<int> dp(n + 1, 0);
         dp[0] = 1;
         dp[1] = 1;
         
         for (int i = 2; i <= n; i++) {
-            int single = stoi(s.substr(i - 1, 1));
-            if (single >= 1 && single <= 9) {
-                dp[i] += dp[i-1];
+            int ones = stoi(s.substr(i - 1, 1));
+            if (ones >= 1 && ones <= 9) {
+                dp[i] += dp[i - 1];
             }
-            
-            int group = stoi(s.substr(i - 2, 2));
-            if (group >= 10 && group <= 26) {
-                dp[i] += dp[i-2];
+            int tens = stoi(s.substr(i - 2, 2));
+            if (tens >= 10 && tens <= 26) {
+                dp[i] += dp[i - 2];
             }
         }
         
