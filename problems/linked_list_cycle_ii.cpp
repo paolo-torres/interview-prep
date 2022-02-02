@@ -11,22 +11,33 @@
  */
 class Solution {
 public:
-    bool hasCycle(ListNode *head) {
-        if (head == NULL) {
-            return false;
+    ListNode *detectCycle(ListNode *head) {
+        if (head == NULL || head->next == NULL) {
+            return NULL;
         }
         
         ListNode* slow = head;
         ListNode* fast = head;
+        bool hasCycle = false;
         
         while (fast->next != NULL && fast->next->next != NULL) {
             slow = slow->next;
             fast = fast->next->next;
             if (slow == fast) {
-                return true;
+                hasCycle = true;
+                break;
             }
         }
         
-        return false;
+        if (!hasCycle) {
+            return NULL;
+        }
+        
+        ListNode* trail = head;
+        while (trail != slow) {
+            trail = trail->next;
+            slow = slow->next;
+        }
+        return trail;
     }
 };

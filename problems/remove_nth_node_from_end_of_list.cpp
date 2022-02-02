@@ -18,22 +18,24 @@ public:
             return NULL;
         }
         
-        ListNode* root = head;
-        for (int i = 0; i < n; i++) {
-            root = root->next;
+        ListNode* slow = head;
+        ListNode* fast = head;
+        
+        while (n > 0) {
+            fast = fast->next;
+            n--;
         }
         
-        if (root == NULL) {
+        if (fast == NULL) {
             return head->next;
         }
         
-        ListNode* trail = head;
-        while (root->next != NULL) {
-            trail = trail->next;
-            root = root->next;
+        while (fast->next != NULL) {
+            slow = slow->next;
+            fast = fast->next;
         }
-        trail->next = trail->next->next;
         
+        slow->next = slow->next->next;
         return head;
     }
 };
