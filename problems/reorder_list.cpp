@@ -18,34 +18,51 @@ public:
             return;
         }
         
-        ListNode* p1 = head;
-        ListNode* p2 = head;
+        ListNode* prev = NULL;
+        ListNode* slow = head;
+        ListNode* fast = head;
         
-        while (p2->next != NULL && p2->next->next != NULL) {
-            p1 = p1->next;
-            p2 = p2->next->next;
+        while (fast != NULL && fast->next != NULL) {
+            prev = slow;
+            slow = slow->next;
+            fast = fast->next->next;
         }
         
-        ListNode* prev = p1;
-        ListNode* curr = p1->next;
-        ListNode* next = NULL;
+        prev->next = NULL;
         
-        while (curr->next != NULL) {
+        ListNode* l1 = head;
+        ListNode* l2 = reverse(slow);
+        
+        merge(l1, l2);
+    }
+private:
+    ListNode* reverse(ListNode* head) {
+        ListNode* prev = NULL;
+        ListNode* curr = head;
+        ListNode* next = curr->next;
+        
+        while (curr != NULL) {
             next = curr->next;
-            curr->next = next->next;
-            next->next = prev->next;
-            prev->next = next;
+            curr->next = prev;
+            prev = curr;
+            curr = next;
         }
         
-        p1 = head;
-        p2 = prev->next;
-        
-        while (p1 != prev) {
-            prev->next = p2->next;
-            p2->next = p1->next;
-            p1->next = p2;
-            p1 = p2->next;
-            p2 = prev->next;
+        return prev;
+    }
+    void merge(ListNode* l1, ListNode* l2) {
+        while (l1 != NULL) {
+            ListNode* p1 = l1->next;
+            ListNode* p2 = l2->next;
+            l1->next = l2;
+            
+            if (p1 == NULL) {
+                break;
+            }
+            
+            l2->next = p1;
+            l1 = p1;
+            l2 = p2;
         }
     }
 };
