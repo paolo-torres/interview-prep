@@ -54,13 +54,13 @@ private:
         while (l1 != NULL) {
             ListNode* p1 = l1->next;
             ListNode* p2 = l2->next;
-            l1->next = l2;
             
+            l1->next = l2;
             if (p1 == NULL) {
                 break;
             }
-            
             l2->next = p1;
+            
             l1 = p1;
             l2 = p2;
         }
