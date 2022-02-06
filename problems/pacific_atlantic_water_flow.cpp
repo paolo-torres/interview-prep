@@ -4,17 +4,13 @@
 class Solution {
 public:
     vector<vector<int>> pacificAtlantic(vector<vector<int>>& heights) {
-        vector<vector<int>> result;
-        
-        if (heights.empty()) {
-            return result;
-        }
-        
         int m = heights.size();
         int n = heights[0].size();
         
         vector<vector<bool>> pacific(m, vector<bool>(n));
         vector<vector<bool>> atlantic(m, vector<bool>(n));
+        
+        vector<vector<int>> result;
         
         for (int i = 0; i < m; i++) {
             dfs(heights, pacific, i, 0, m, n);
@@ -39,8 +35,9 @@ public:
 private:
     void dfs(vector<vector<int>>& heights, vector<vector<bool>>& visited,
         int i, int j, int m, int n) {
-        visited[i][j] = true;
         
+        visited[i][j] = true;
+
         if (i > 0 && !visited[i-1][j] && heights[i-1][j] >= heights[i][j]) {
             dfs(heights, visited, i - 1, j, m, n);
         }

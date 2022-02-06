@@ -28,14 +28,15 @@ public:
         if (node == NULL) {
             return NULL;
         }
+        
         if (m.find(node) == m.end()) {
             m[node] = new Node(node->val);
-            int n = node->neighbors.size();
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < node->neighbors.size(); i++) {
                 Node* neighbor = node->neighbors[i];
                 m[node]->neighbors.push_back(cloneGraph(neighbor));
             }
         }
+        
         return m[node];
     }
 private:
