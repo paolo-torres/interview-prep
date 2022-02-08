@@ -4,7 +4,8 @@
 class Solution {
 public:
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
-        if (intervals.size() < 2) {
+        int n = intervals.size();
+        if (n == 1) {
             return 0;
         }
         
@@ -14,12 +15,15 @@ public:
         
         int result = 0;
         
-        for (int i = 0; i < intervals.size() - 1; i++) {
+        int i = 0;
+        while (i < n - 1) {
             if (intervals[i][1] > intervals[i+1][0]) {
-                intervals[i+1][0] = intervals[i][0];
-                intervals[i+1][1] = min(intervals[i][1], intervals[i+1][1]);
+                if (intervals[i][1] < intervals[i+1][1]) {
+                    intervals[i+1] = intervals[i];
+                }
                 result++;
             }
+            i++;
         }
         
         return result;
