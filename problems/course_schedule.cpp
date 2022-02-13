@@ -4,36 +4,35 @@
 class Solution {
 public:
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        vector<vector<int>> courses(numCourses);
-        vector<int> degree(numCourses);
-        vector<int> bfs;
-        
+        unordered_map<int, vector<int>> m;
         for (int i = 0; i < prerequisites.size(); i++) {
-            int a = prerequisites[i][0];
-            int b = prerequisites[i][1];
-            courses[b].push_back(a);
-            degree[a]++;
+            m[prerequisites[i][0]].push_back(prerequisites[i][1]);
         }
+        unordered_set<int> visited;
         
-        for (int i = 0; i < numCourses; i++) {
-            if (degree[i] == 0) {
-                bfs.push_back(i);
+        for (int course = 0; course < numCourses; course++) {
+            if (!dfs(course, m, visited)) {
+                return false;
             }
         }
-        
-        for (int i = 0; i < bfs.size(); i++) {
-            vector<int> prereqs = courses[bfs[i]];
-            for (int j = 0; j < prereqs.size(); j++) {
-                degree[prereqs[j]]--;
-                if (degree[prereqs[j]] == 0) {
-                    bfs.push_back(prereqs[j]);
-                }
-            }
+        return true;
+    }
+private:
+    bool dfs(int course, unordered_map<int, vector<int>>& m, unordered_set<int>& visited) {
+        if (visited.find(course) != visited.end()) {
+            return false;
         }
-        
-        if (bfs.size() == numCourses) {
+        if (m[course].empty()) {
             return true;
         }
-        return false;
+        visited.insert(course);
+        for (int i = 0; i < m[course].size(); i++) {
+            if (!dfs(m[course][i], m, visited)) {
+                return false;
+            }
+        }
+        m[course].clear();
+        visited.erase(course);
+        return true;
     }
 };
