@@ -1,3 +1,6 @@
+// Time: O(n log n)
+// Space: O(n)
+
 class Solution {
 public:
     string frequencySort(string s) {
@@ -5,21 +8,21 @@ public:
         for (int i = 0; i < s.size(); i++) {
             m[s[i]]++;
         }
-        vector<pair<char, int>> v;
-        for (auto it = m.begin(); it != m.end(); ++it) {
-            v.push_back(make_pair(it->first, it->second));
+        
+        priority_queue<pair<int, char>> pq;
+        for (auto it = m.begin(); it != m.end(); it++) {
+            pq.push({it->second, it->first});
         }
-        sort(v.begin(), v.end(), [](const auto& a, const auto& b) {
-            return a.second >= b.second;
-        });
-        string result = "";
-        int i = 0;
-        while (i < v.size()) {
-            result.push_back(v[i].first);
-            v[i].second--;
-            if (v[i].second == 0) {
-                i++;
+        
+        string result;
+        while (!pq.empty()) {
+            int count = pq.top().first;
+            char letter = pq.top().second;
+            while (count > 0) {
+                result += letter;
+                count--;
             }
+            pq.pop();
         }
         return result;
     }

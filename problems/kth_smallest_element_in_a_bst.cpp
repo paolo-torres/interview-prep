@@ -16,23 +16,20 @@ class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
         int result = 0;
-        kTraverse(root, k, result);
+        inorder(root, k, result);
         return result;
     }
 private:
-    void kTraverse(TreeNode* root, int& k, int& result) {
-        if (root == NULL || k == 0) {
+    void inorder(TreeNode* root, int& k, int& result) {
+        if (root == NULL) {
             return;
         }
-        
-        kTraverse(root->left, k, result);
-        
+        inorder(root->left, k, result);
         k--;
         if (k == 0) {
             result = root->val;
             return;
         }
-        
-        kTraverse(root->right, k, result);
+        inorder(root->right, k, result);
     }
 };

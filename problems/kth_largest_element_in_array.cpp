@@ -1,16 +1,17 @@
+// Time: O(n log k)
+// Space: O(k)
+
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
-        if (nums.empty()) {
-            return 0;
-        }
-        priority_queue<int> pq;
+        priority_queue<int, vector<int>, greater<int>> pq;
         for (int i = 0; i < nums.size(); i++) {
             pq.push(nums[i]);
+            if (pq.size() > k) {
+                pq.pop();
+            }
         }
-        for (int i = 0; i < k - 1; i++) {
-            pq.pop();
-        }
+
         return pq.top();
     }
 };

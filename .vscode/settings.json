@@ -9,6 +9,8 @@
         "vector": "cpp",
         "__locale": "cpp",
         "string_view": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "memory": "cpp",
+        "utility": "cpp"
     }
 }
