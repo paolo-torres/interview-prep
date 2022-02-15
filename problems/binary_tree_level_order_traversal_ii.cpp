@@ -14,7 +14,7 @@
  */
 class Solution {
 public:
-    vector<vector<int>> levelOrder(TreeNode* root) {
+    vector<vector<int>> levelOrderBottom(TreeNode* root) {
         vector<vector<int>> result;
         
         if (root == NULL) {
@@ -45,6 +45,7 @@ public:
             result.push_back(curr);
         }
         
+        reverse(result.begin(), result.end());
         return result;
     }
 };
