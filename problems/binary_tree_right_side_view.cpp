@@ -1,3 +1,6 @@
+// Time: O(n)
+// Space: O(n)
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -10,21 +13,37 @@
  * };
  */
 class Solution {
-private:
-    void traverse(TreeNode* root, vector<int>& result, int level) {
-        if (root == NULL) {
-            return;
-        }
-        if (level > result.size()) {
-            result.push_back(root->val);
-        }
-        traverse(root->right, result, level + 1);
-        traverse(root->left, result, level + 1);
-    }
 public:
     vector<int> rightSideView(TreeNode* root) {
         vector<int> result;
-        traverse(root, result, 1);
+        
+        if (root == NULL) {
+            return result;
+        }
+        
+        queue<TreeNode*> q;
+        q.push(root);
+        
+        while (!q.empty()) {
+            int count = q.size();
+            
+            for (int i = count; i > 0; i--) {
+                TreeNode* node = q.front();
+                q.pop();
+
+                if (i == count) {
+                    result.push_back(node->val);
+                }
+                
+                if (node->right != NULL) {
+                    q.push(node->right);
+                }
+                if (node->left != NULL) {
+                    q.push(node->left);
+                }
+            }
+        }
+        
         return result;
     }
 };
