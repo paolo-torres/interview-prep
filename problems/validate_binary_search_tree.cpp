@@ -16,15 +16,15 @@ class Solution {
 public:
     bool isValidBST(TreeNode* root) {
         TreeNode* prev = NULL;
-        return isValid(root, prev);
+        return isBST(root, prev);
     }
 private:
-    bool isValid(TreeNode* root, TreeNode* &prev) {
+    bool isBST(TreeNode* root, TreeNode*& prev) {
         if (root == NULL) {
             return true;
         }
         
-        if (!isValid(root->left, prev)) {
+        if (!isBST(root->left, prev)) {
             return false;
         }
         
@@ -33,7 +33,7 @@ private:
         }
         prev = root;
         
-        if (!isValid(root->right, prev)) {
+        if (!isBST(root->right, prev)) {
             return false;
         }
         

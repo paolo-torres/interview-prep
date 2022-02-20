@@ -1,5 +1,5 @@
-// Time: O(m) insert, O(m) search, O(m) prefix
-// Space: O(m) insert, O(1) search, O(1) prefix
+// Time: O(n) insert, O(n) search, O(n) startsWith
+// Space: O(n) insert, O(1) search, O(1) startsWith
 
 class TrieNode {
 public:
@@ -16,12 +16,10 @@ public:
 
 class Trie {
 public:
-    /** Initialize your data structure here. */
     Trie() {
         root = new TrieNode();
     }
     
-    /** Inserts a word into the trie. */
     void insert(string word) {
         TrieNode* node = root;
         int curr = 0;
@@ -37,33 +35,31 @@ public:
         node->isWord = true;
     }
     
-    /** Returns if the word is in the trie. */
     bool search(string word) {
         TrieNode* node = root;
         int curr = 0;
         
         for (int i = 0; i < word.size(); i++) {
             curr = word[i] - 'a';
-            node = node->children[curr];
-            if (node == NULL) {
+            if (node->children[curr] == NULL) {
                 return false;
             }
+            node = node->children[curr];
         }
         
         return node->isWord;
     }
     
-    /** Returns if there is any word in the trie that starts with the given prefix. */
     bool startsWith(string prefix) {
         TrieNode* node = root;
         int curr = 0;
         
         for (int i = 0; i < prefix.size(); i++) {
             curr = prefix[i] - 'a';
-            node = node->children[curr];
-            if (node == NULL) {
+            if (node->children[curr] == NULL) {
                 return false;
             }
+            node = node->children[curr];
         }
         
         return true;
