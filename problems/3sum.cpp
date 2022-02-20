@@ -7,7 +7,6 @@ public:
         vector<vector<int>> result;
         
         int n = nums.size();
-        
         if (n < 3) {
             return result;
         }
@@ -18,8 +17,7 @@ public:
             if (nums[i] > 0) {
                 break;
             }
-            
-            if (i > 0 && nums[i-1] == nums[i]) {
+            if (i > 0 && nums[i - 1] == nums[i]) {
                 continue;
             }
             
@@ -36,15 +34,15 @@ public:
                 } else {
                     result.push_back({nums[i], nums[j], nums[k]});
                     
-                    int jPrev = nums[j];
-                    int kPrev = nums[k];
-                    
-                    while (j < k && nums[j] == jPrev) {
+                    while (j < k && nums[j] == nums[j + 1]) {
                         j++;
                     }
-                    while (j < k && nums[k] == kPrev) {
+                    j++;
+                    
+                    while (j < k && nums[k - 1] == nums[k]) {
                         k--;
                     }
+                    k--;
                 }
             }
         }

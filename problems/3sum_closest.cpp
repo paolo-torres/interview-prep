@@ -1,30 +1,39 @@
+// Time: O(n^2)
+// Space: O(1)
+
 class Solution {
 public:
     int threeSumClosest(vector<int>& nums, int target) {
-        if (nums.size() < 3) {
-            return 0;
-        }
         sort(nums.begin(), nums.end());
-        int temp = INT_MAX;
-        int result = 0;
-        for (int i = 0; i < nums.size() - 2; i++) {
-            int left = i + 1;
-            int right = nums.size() - 1;
-            while (left < right) {
-                int sum = nums[i] + nums[left] + nums[right];
-                if (abs(sum - target) < temp) {
-                    temp = abs(sum - target);
+        
+        int n = nums.size();
+        int result = nums[0] + nums[1] + nums[2];
+        
+        for (int i = 0; i < n - 2; i++) {
+            if (i > 0 && nums[i - 1] == nums[i]) {
+                continue;
+            }
+            
+            int j = i + 1;
+            int k = n - 1;
+            
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                
+                if (abs(sum - target) < abs(result - target)) {
                     result = sum;
                 }
+                
                 if (sum < target) {
-                    left++;
+                    j++;
                 } else if (sum > target) {
-                    right--;
+                    k--;
                 } else {
-                    return result;
+                    return sum;
                 }
             }
         }
+        
         return result;
     }
 };
