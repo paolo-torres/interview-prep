@@ -1,41 +1,47 @@
+// Time: O(n)
+// Space: O(n)
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
  *     TreeNode *left;
  *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
 class Solution {
 public:
     int widthOfBinaryTree(TreeNode* root) {
-        if (root == NULL) {
-            return 0;
-        }
-        queue<pair<TreeNode*, int>> q;
+        queue<pair<TreeNode*, unsigned int>> q;
         q.push({root, 1});
-        int result = 0;
+        
+        unsigned int result = 0;
+        
         while (!q.empty()) {
-            int size = q.size();
-            if (size == 1) {
-                q.push({q.front().first, 1});
+            int count = q.size();
+            
+            unsigned int start = q.front().second;
+            unsigned int end = 0;
+            
+            for (int i = 0; i < count; i++) {
+                TreeNode* node = q.front().first;
+                end = q.front().second;
                 q.pop();
-            }
-            result = max(result, q.back().second - q.front().second + 1);
-            while (size > 0) {
-                auto node = q.front().first;
-                auto id = q.front().second;
-                q.pop();
+                
                 if (node->left != NULL) {
-                    q.push({node->left, id * 2});
+                    q.push({node->left, end * 2});
                 }
                 if (node->right != NULL) {
-                    q.push({node->right, id * 2 + 1});
+                    q.push({node->right, end * 2 + 1});
                 }
-                size--;
             }
+            
+            result = max(result, end - start + 1);
         }
+        
         return result;
     }
 };
