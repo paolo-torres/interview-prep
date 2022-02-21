@@ -1,19 +1,23 @@
+// Time: O(n)
+// Space: O(1)
+
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int i = 0;
-        int j = 0;
-        int k = nums.size() - 1;
-        while (j <= k) {
-            if (nums[j] == 0) {
-                swap(nums[i], nums[j]);
+        int left = 0;
+        int right = nums.size() - 1;
+        
+        int i = left;
+        while (i <= right) {
+            if (nums[i] == 0) {
+                swap(nums[left], nums[i]);
+                left++;
                 i++;
-                j++;
-            } else if (nums[j] == 2) {
-                swap(nums[j], nums[k]);
-                k--;
+            } else if (nums[i] == 2) {
+                swap(nums[i], nums[right]);
+                right--;
             } else {
-                j++;
+                i++;
             }
         }
     }

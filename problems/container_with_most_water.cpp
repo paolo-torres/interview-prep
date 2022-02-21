@@ -12,9 +12,9 @@ public:
         
         while (i < j) {
             curr = (j - i) * min(height[i], height[j]);
-            result = max(curr, result);
+            result = max(result, curr);
             
-            if (height[i] < height[j]) {
+            if (height[i] <= height[j]) {
                 i++;
             } else {
                 j--;
