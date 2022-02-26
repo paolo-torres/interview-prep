@@ -14,7 +14,7 @@
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        priority_queue<int, vector<int>, greater<int> > pq;
+        priority_queue<int, vector<int>, greater<int>> pq;
         
         for (int i = 0; i < lists.size(); i++) {
             ListNode* node = lists[i];
@@ -28,14 +28,14 @@ public:
             return NULL;
         }
         
-        ListNode* root = new ListNode(pq.top());
-        ListNode* head = root;
+        ListNode* node = new ListNode(pq.top());
         pq.pop();
+        ListNode* head = node;
         
         while (!pq.empty()) {
-            root->next = new ListNode(pq.top());
-            root = root->next;
+            node->next = new ListNode(pq.top());
             pq.pop();
+            node = node->next;
         }
         
         return head;
