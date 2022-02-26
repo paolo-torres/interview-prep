@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/count-of-range-sum/discuss/77992/C%2B%2B-merge-sort-solution-very-short
+// https://leetcode.com/problems/count-of-range-sum/discuss/77990/Share-my-solution
 
 // Time: O(n log n)
 // Space: O(n)
