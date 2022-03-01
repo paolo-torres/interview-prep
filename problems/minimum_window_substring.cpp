@@ -14,6 +14,7 @@ public:
         int j = 0;
         
         int counter = t.size();
+        
         int minStart = 0;
         int minLength = INT_MAX;
         
