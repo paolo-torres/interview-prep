@@ -18,14 +18,13 @@ class Solution {
 public:
     vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
         for (int i = 0; i < words.size(); i++) {
-            addWord(words[i]);
+            insert(words[i]);
         }
-        
-        TrieNode* node = root;
         
         int m = board.size();
         int n = board[0].size();
         
+        TrieNode* node = root;
         vector<string> result;
         
         for (int i = 0; i < m; i++) {
@@ -39,7 +38,7 @@ public:
 private:
     TrieNode* root = new TrieNode();
     
-    void addWord(string word) {
+    void insert(string word) {
         TrieNode* node = root;
         int curr = 0;
         

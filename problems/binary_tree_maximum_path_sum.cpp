@@ -16,21 +16,21 @@ class Solution {
 public:
     int maxPathSum(TreeNode* root) {
         int maxPath = INT_MIN;
-        pathSum(root, maxPath);
+        dfs(root, maxPath);
         return maxPath;
     }
 private:
-    int pathSum(TreeNode* node, int& maxPath) {
-        if (node == NULL) {
+    int dfs(TreeNode* root, int& maxPath) {
+        if (root == NULL) {
             return 0;
         }
         
-        int left = max(pathSum(node->left, maxPath), 0);
-        int right = max(pathSum(node->right, maxPath), 0);
+        int left = max(dfs(root->left, maxPath), 0);
+        int right = max(dfs(root->right, maxPath), 0);
         
-        int curPath = node->val + left + right;
+        int curPath = root->val + left + right;
         maxPath = max(maxPath, curPath);
         
-        return node->val + max(left, right);
+        return root->val + max(left, right);
     }
 };

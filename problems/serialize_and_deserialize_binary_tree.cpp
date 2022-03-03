@@ -1,5 +1,5 @@
-// Time: O(n)
-// Space: O(n)
+// Time: O(n) serialize, O(n) deserialize
+// Space: O(n) serialize, O(n) deserialize
 
 /**
  * Definition for a binary tree node.
@@ -25,20 +25,23 @@ public:
         istringstream in(data);
         return decode(in);
     }
+    
 private:
     
     void encode(TreeNode* root, ostringstream& out) {
         if (root == NULL) {
             out << "N ";
-        } else {
-            out << root->val << " ";
-            encode(root->left, out);
-            encode(root->right, out);
+            return;
         }
+        
+        out << root->val << " ";
+        
+        encode(root->left, out);
+        encode(root->right, out);
     }
     
     TreeNode* decode(istringstream& in) {
-        string value;
+        string value = "";
         in >> value;
         
         if (value == "N") {
@@ -46,11 +49,13 @@ private:
         }
         
         TreeNode* root = new TreeNode(stoi(value));
+        
         root->left = decode(in);
         root->right = decode(in);
         
         return root;
     }
+    
 };
 
 // Your Codec object will be instantiated and called as such:
