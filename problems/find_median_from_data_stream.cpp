@@ -3,43 +3,53 @@
 
 class MedianFinder {
 public:
-    /** initialize your data structure here. */
     MedianFinder() {
         
     }
     
     void addNum(int num) {
-        if (maxHeap.empty() || maxHeap.top() > num) {
-            maxHeap.push(num);
-        } else {
-            minHeap.push(num);
+        if (lower.empty()) {
+            lower.push(num);
+            return;
         }
         
-        if (maxHeap.size() > minHeap.size() + 1) {
-            minHeap.push(maxHeap.top());
-            maxHeap.pop();
-        } else if (minHeap.size() > maxHeap.size() + 1) {
-            maxHeap.push(minHeap.top());
-            minHeap.pop();
+        if (lower.size() > higher.size()) {
+            if (lower.top() > num) {
+                higher.push(lower.top());
+                lower.pop();
+                lower.push(num);
+            } else {
+                higher.push(num);
+            }
+        } else {
+            if (num > higher.top()) {
+                lower.push(higher.top());
+                higher.pop();
+                higher.push(num);
+            } else {
+                lower.push(num);
+            }
         }
     }
     
     double findMedian() {
         double result = 0.0;
-        if (maxHeap.size() == minHeap.size()) {
-            result = (maxHeap.top() + minHeap.top()) / 2.0;
+        
+        if (lower.size() == higher.size()) {
+            result = lower.top() + (higher.top() - lower.top()) / 2.0;
         } else {
-            if (maxHeap.size() > minHeap.size()) {
-                result = maxHeap.top();
+            if (lower.size() > higher.size()) {
+                result = lower.top();
             } else {
-                result = minHeap.top();
+                result = higher.top();
             }
         }
+        
         return result;
     }
 private:
-    priority_queue<int> maxHeap;
-    priority_queue<int, vector<int>, greater<int> > minHeap;
+    priority_queue<int> lower;
+    priority_queue<int, vector<int>, greater<int>> higher;
 };
 
 /**
