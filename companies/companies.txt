@@ -9,11 +9,14 @@ In Progress:
 Applied:
 - Apple
 - Asana
+- Blend  
 - Bloomberg LP
 - Coinbase
 - Coursera
 - Datadog
 - Dropbox
+- Figma
+- Five Rings
 - GitHub
 - Google
 - Jane Street
@@ -21,6 +24,9 @@ Applied:
 - Lyft
 - MongoDB
 - NVIDIA
+- Palantir Technologies
+- Plaid
+- Point72
 - Reddit, Inc.
 - Slack
 - Splunk
