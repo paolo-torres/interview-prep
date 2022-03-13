@@ -14,5 +14,14 @@ Companies
 - Reddit, Inc.
 - Apple
 - Dropbox
+- Spotify
+- Square
+- MongoDB
+- Asana
+- Datadog
+- GitHub
+- Slack
+- Jane Street
+- Uber
 
 - Meta
