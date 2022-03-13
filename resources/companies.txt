@@ -1,27 +1,34 @@
 Companies
 
-- Two Sigma
-- Virtu Financial
+In Progress:
 - Luma Financial Technologies
 - Percent
+- Two Sigma
+- Virtu Financial
 
-- Google
-- LinkedIn
-- Bloomberg LP
-- NVIDIA
-- Splunk
-- Twitter
-- Reddit, Inc.
+Applied:
 - Apple
+- Asana
+- Bloomberg LP
+- Coinbase
+- Coursera
+- Datadog
 - Dropbox
+- GitHub
+- Google
+- Jane Street
+- LinkedIn
+- Lyft
+- MongoDB
+- NVIDIA
+- Reddit, Inc.
+- Slack
+- Splunk
 - Spotify
 - Square
-- MongoDB
-- Asana
-- Datadog
-- GitHub
-- Slack
-- Jane Street
+- Stripe
+- Twitter
 - Uber
 
+Need Referral:
 - Meta
