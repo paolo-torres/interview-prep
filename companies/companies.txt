@@ -7,18 +7,22 @@ In Progress:
 - Virtu Financial
 
 Applied:
+- Affirm
 - Apple
 - Asana
 - Blend  
 - Bloomberg LP
+- Citadel
 - Coinbase
 - Coursera
 - Datadog
 - Dropbox
 - Figma
-- Five Rings
+- Five Rings LLC
 - GitHub
+- Grubhub
 - Google
+- Hudson River Trading
 - Jane Street
 - LinkedIn
 - Lyft
@@ -28,10 +32,13 @@ Applied:
 - Plaid
 - Point72
 - Reddit, Inc.
+- Salesforce
+- SeatGeek
 - Slack
 - Splunk
 - Spotify
 - Square
+- Squarespace
 - Stripe
 - Twitter
 - Uber
