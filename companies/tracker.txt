@@ -1,22 +1,24 @@
 Companies
 
+Online Assessment:
+- Virtu Financial
+
 In Progress:
 - Luma Financial Technologies
 - Percent
 - Plaid
 - Twitter
 - Two Sigma
-- Virtu Financial
 
 Recruiter Call:
 - Affirm
+- Embark Trucks
 - Google
 - Palantir Technologies
 
 Applied:
 - Apple
 - Asana
-- Blend  
 - Bloomberg LP
 - Citadel
 - Coinbase
@@ -24,7 +26,6 @@ Applied:
 - Dropbox
 - Figma
 - Five Rings LLC
-- GitHub
 - Grubhub
 - Hudson River Trading
 - Jane Street
