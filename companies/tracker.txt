@@ -3,6 +3,8 @@ Companies
 In Progress:
 - Luma Financial Technologies
 - Percent
+- Plaid
+- Twitter
 - Two Sigma
 - Virtu Financial
 
@@ -10,7 +12,6 @@ Recruiter Call:
 - Affirm
 - Google
 - Palantir Technologies
-- Plaid
 
 Applied:
 - Apple
@@ -20,7 +21,6 @@ Applied:
 - Citadel
 - Coinbase
 - Coursera
-- Datadog
 - Dropbox
 - Figma
 - Five Rings LLC
@@ -43,5 +43,4 @@ Applied:
 - Square
 - Squarespace
 - Stripe
-- Twitter
 - Uber
