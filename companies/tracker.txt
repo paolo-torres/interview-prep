@@ -9,11 +9,10 @@ In Progress:
 Recruiter Call:
 - Affirm
 - Google
-- Palantir
+- Palantir Technologies
 - Plaid
 
 Applied:
-- Affirm
 - Apple
 - Asana
 - Blend  
@@ -27,7 +26,6 @@ Applied:
 - Five Rings LLC
 - GitHub
 - Grubhub
-- Google
 - Hudson River Trading
 - Jane Street
 - LinkedIn
@@ -35,8 +33,6 @@ Applied:
 - Meta
 - MongoDB
 - NVIDIA
-- Palantir Technologies
-- Plaid
 - Point72
 - Reddit, Inc.
 - Salesforce
