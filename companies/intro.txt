@@ -23,7 +23,5 @@ Interests
 So I'm primarily just looking to try something new. Like I mentioned, 
 until now I've been able to ship a few projects on my own, and I've 
 learned a lot of valuable things. But I'm really looking to just try 
-something brand new and interesting. So I've been interested in 
-trying to get opportunities in fintech and financial technology 
-space, because I've never really explored that area before. Then I 
-came across Plaid and thought it'd be cool to see what it's all about.
+something brand new and interesting. Then I came across 
+{COMPANY_NAME} and thought it'd be cool to see what it's all about.
