@@ -1,0 +1,29 @@
+Background
+
+My name is Paolo and I'm currently a Software Development Engineer at 
+Amazon. I've been here for around a year now, considering both 
+full-time and an internship, and I am currently a part of the Amazon 
+Freight team. This team is basically on the transporation side of the 
+company where we essentially provide shipping services for large 
+freights and small/medium businesses. So throughout my time here, 
+I've shipped multiple projects with the team, working on both the 
+backend and the frontend of our services. As for languages, I've 
+primarily been working in Java. Other notable experience I have is a 
+couple of software engineering internships at Microsoft down in 
+Redmond, Washington. There, I was on the Visual Studio team working 
+on implementing features for the Visual Studio product. There, I 
+primarily used C++. So I'd say my main programming languages I'm most 
+familiar with are Java and C++. And yeah that's me, in summary I'm 
+currently working full-time for Amazon, I have a total of two years 
+of software engineering internship experience, and I graduated in 
+Engineering from the University of Waterloo.
+
+Interests
+
+So I'm primarily just looking to try something new. Like I mentioned, 
+until now I've been able to ship a few projects on my own, and I've 
+learned a lot of valuable things. But I'm really looking to just try 
+something brand new and interesting. So I've been interested in 
+trying to get opportunities in fintech and financial technology 
+space, because I've never really explored that area before. Then I 
+came across Plaid and thought it'd be cool to see what it's all about.
