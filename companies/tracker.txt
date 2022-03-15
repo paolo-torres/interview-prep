@@ -6,6 +6,12 @@ In Progress:
 - Two Sigma
 - Virtu Financial
 
+Recruiter Call:
+- Affirm
+- Google
+- Palantir
+- Plaid
+
 Applied:
 - Affirm
 - Apple
@@ -26,6 +32,7 @@ Applied:
 - Jane Street
 - LinkedIn
 - Lyft
+- Meta
 - MongoDB
 - NVIDIA
 - Palantir Technologies
@@ -42,6 +49,3 @@ Applied:
 - Stripe
 - Twitter
 - Uber
-
-Need Referral:
-- Meta
