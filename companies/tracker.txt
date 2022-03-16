@@ -1,6 +1,7 @@
 Companies
 
 Online Assessment:
+- Citadel
 - Meta
 - Virtu Financial
 
@@ -21,7 +22,6 @@ Applied:
 - Apple
 - Asana
 - Bloomberg LP
-- Citadel
 - Coinbase
 - Coursera
 - Dropbox
