@@ -1,6 +1,7 @@
 Companies
 
 Online Assessment:
+- Meta
 - Virtu Financial
 
 In Progress:
