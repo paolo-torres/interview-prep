@@ -33,7 +33,6 @@ Applied:
 - LinkedIn
 - Lyft
 - Meta
-- MongoDB
 - NVIDIA
 - Point72
 - Reddit, Inc.
