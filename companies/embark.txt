@@ -1,0 +1,23 @@
+AV Frameworks
+- C++, safety libraries, tooling/monitoring, RTOS
+- General C++, Linux
+- Liason work
+- 4 engineers
+- 3/4 work with other teams
+- 1/4 working on just features
+- Hybrid
+
+Next Steps
+- Google Hangouts, Andy
+- Dig into technical background (send resume)
+- No need to prepare anything
+
+Timelines
+- Next week manager call
+- Technical call - not LeetCode but debugging - C++
+- Virtual onsite - will be told later
+
+Team
+- 1 east
+- 2 mid
+- 3 west
