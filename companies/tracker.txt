@@ -25,7 +25,6 @@ Applied:
 - Coinbase
 - Coursera
 - Dropbox
-- Figma
 - Five Rings LLC
 - Grubhub
 - Hudson River Trading
