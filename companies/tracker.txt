@@ -11,7 +11,6 @@ Online Assessment:
 In Progress:
 - Embark Trucks
 - Luma Financial Technologies
-- Palantir Technologies
 - Percent
 - Plaid
 - Twitter
@@ -39,7 +38,6 @@ Applied:
 - Point72
 - Reddit, Inc.
 - Salesforce
-- SeatGeek
 - Splunk
 - Square
 - Squarespace
