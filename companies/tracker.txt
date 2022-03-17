@@ -1,11 +1,15 @@
 Companies
 
+Interview:
+- Meta
+
 Online Assessment:
 - Citadel
 - Meta
 - Virtu Financial
 
 In Progress:
+- Embark Trucks
 - Luma Financial Technologies
 - Palantir Technologies
 - Percent
@@ -15,8 +19,8 @@ In Progress:
 
 Recruiter Call:
 - Affirm
-- Embark Trucks
 - Google
+- Stripe
 
 Applied:
 - Apple
@@ -31,16 +35,12 @@ Applied:
 - Jane Street
 - LinkedIn
 - Lyft
-- Meta
 - NVIDIA
 - Point72
 - Reddit, Inc.
 - Salesforce
 - SeatGeek
-- Slack
 - Splunk
-- Spotify
 - Square
 - Squarespace
-- Stripe
 - Uber
