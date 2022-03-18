@@ -43,3 +43,4 @@ Applied:
 - Square
 - Squarespace
 - Uber
+- Yext
