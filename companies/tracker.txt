@@ -18,6 +18,7 @@ In Progress:
 
 Recruiter Call:
 - Affirm
+- Cash App
 - Google
 - Stripe
 
