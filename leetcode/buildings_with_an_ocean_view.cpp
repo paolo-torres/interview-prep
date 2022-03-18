@@ -1,3 +1,5 @@
+// Start from end, iterate backwards, track max
+
 // Time: O(n)
 // Space: O(n)
 

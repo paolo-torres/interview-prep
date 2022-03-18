@@ -1,3 +1,5 @@
+// Same as intersection of 2 linked lists
+
 // Time: O(n)
 // Space: O(1)
 

@@ -1,3 +1,5 @@
+// vector pair (index, value), ignore all 0's
+
 // Time: O(n) SparseVector, O(l1 + l2) dotProduct
 // Space: O(l) SparseVector, O(1) dotProduct
 

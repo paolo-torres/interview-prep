@@ -1,3 +1,5 @@
+// Traverse using BST property, add if value is within range
+
 // Time: O(n)
 // Space: O(n)
 

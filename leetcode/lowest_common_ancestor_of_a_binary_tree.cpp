@@ -1,3 +1,5 @@
+// If one NULL the other must be LCA, if both non-NULL parent LCA
+
 // Time: O(n)
 // Space: O(n)
 
@@ -16,15 +18,17 @@ public:
         if (root == NULL || root == p || root == q) {
             return root;
         }
+        
         TreeNode* left = lowestCommonAncestor(root->left, p, q);
         TreeNode* right = lowestCommonAncestor(root->right, p, q);
+        
         if (left == NULL) {
             return right;
         }
         if (right == NULL) {
             return left;
-        } else {
-            return root;
         }
+        
+        return root;
     }
 };

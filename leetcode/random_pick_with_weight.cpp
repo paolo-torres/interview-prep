@@ -1,3 +1,5 @@
+// Visualize number line, higher weight = more range
+
 // Time: O(n) Solution, O(log n) pickIndex
 // Space: O(n) Solution, O(1) pickIndex
 

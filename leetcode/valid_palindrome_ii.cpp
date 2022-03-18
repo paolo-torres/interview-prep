@@ -1,3 +1,5 @@
+// 2 pointers, outside in until mismatch, try both ranges
+
 // Time: O(n)
 // Space: O(1)
 

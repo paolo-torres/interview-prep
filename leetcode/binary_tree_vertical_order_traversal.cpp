@@ -1,3 +1,5 @@
+// BFS traversal, hash map {col, list of nodes}, track min/max col
+
 // Time: O(n)
 // Space: O(n)
 
