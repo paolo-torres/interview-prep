@@ -1,3 +1,5 @@
+// BFS traversal, push right first before left, store only first value
+
 // Time: O(n)
 // Space: O(n)
 
@@ -15,14 +17,14 @@
 class Solution {
 public:
     vector<int> rightSideView(TreeNode* root) {
-        vector<int> result;
-        
         if (root == NULL) {
-            return result;
+            return {};
         }
         
         queue<TreeNode*> q;
         q.push(root);
+        
+        vector<int> result;
         
         while (!q.empty()) {
             int count = q.size();
@@ -30,7 +32,7 @@ public:
             for (int i = count; i > 0; i--) {
                 TreeNode* node = q.front();
                 q.pop();
-
+                
                 if (i == count) {
                     result.push_back(node->val);
                 }
