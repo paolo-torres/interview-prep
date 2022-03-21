@@ -1,0 +1,14 @@
+- Locations: Bay Area (30), New York (10)
+- RTO: Apr 10
+
+- NY: 1. Google Ads, 2. Platforms & Ecosystems
+
+1. Google Ads: 90% revenue, YT ads, display, shopping, express, travel, analytics
+- delivery
+- startup teams to larger teams
+
+2. Platforms & Ecosystems: bare users, Android, play, Chrome, users
+- startup teams
+
+- technical phone interview (skip???)
+- virtual onsite (4-5 rounds, 45 mins each, whiteboard, DS&A)
