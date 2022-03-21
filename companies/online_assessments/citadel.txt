@@ -1,7 +1,0 @@
-1. Disk Space Analysis (Sliding Window Maximum):
-
-https://github.com/paolo-torres/interview-prep/blob/master/leetcode/sliding_window_maximum.cpp
-
-2. Inversions:
-
-https://www.geeksforgeeks.org/count-inversions-of-size-three-in-a-give-array/
