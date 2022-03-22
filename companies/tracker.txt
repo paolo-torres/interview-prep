@@ -11,6 +11,7 @@ Interview:
 - Twitter
 
 Pending Interview:
+- Cash App
 - Citadel
 - Virtu Financial
 
@@ -26,7 +27,6 @@ Pending Online Assessment:
 - Two Sigma
 
 Recruiter Call:
-- Cash App
 - Stripe
 - Yext
 
