@@ -15,6 +15,13 @@
         "array": "cpp",
         "algorithm": "cpp",
         "chrono": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "unordered_map": "cpp"
     }
 }
