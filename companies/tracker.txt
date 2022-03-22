@@ -1,39 +1,43 @@
 Companies
 
+Pending Onsite:
+- Google
+
 Interview:
 - Affirm
 - Embark Trucks
 - Meta
 - Twitter
 
-Online Assessment Done:
+Pending Interview:
 - Citadel
+- Plaid
 - Virtu Financial
 
 Online Assessment:
 - Coinbase
+- Hudson River Trading
 - Meta
 
-Recruiter Call Done:
-- Google
+Pending Online Assessment:
 - Luma Financial Technologies
 - Percent
-- Plaid
 - Two Sigma
 
 Recruiter Call:
 - Cash App
 - Stripe
 
+Pending Recruiter Call:
+- Yext
+
 Applied:
 - Apple
 - Asana
-- Bloomberg LP
 - Coursera
 - Dropbox
 - Five Rings LLC
 - Grubhub
-- Hudson River Trading
 - LinkedIn
 - Lyft
 - NVIDIA
@@ -43,4 +47,3 @@ Applied:
 - Square
 - Squarespace
 - Uber
-- Yext
