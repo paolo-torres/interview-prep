@@ -7,11 +7,11 @@ Interview:
 - Affirm
 - Embark Trucks
 - Meta
+- Plaid
 - Twitter
 
 Pending Interview:
 - Citadel
-- Plaid
 - Virtu Financial
 
 Online Assessment:
@@ -28,8 +28,6 @@ Pending Online Assessment:
 Recruiter Call:
 - Cash App
 - Stripe
-
-Pending Recruiter Call:
 - Yext
 
 Applied:
