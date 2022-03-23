@@ -13,6 +13,7 @@ Interview:
 Pending Interview:
 - Cash App
 - Citadel
+- Stripe
 - Virtu Financial
 - Yext
 
@@ -27,9 +28,6 @@ Pending Online Assessment:
 - Percent
 - Two Sigma
 
-Recruiter Call:
-- Stripe
-
 Applied:
 - Apple
 - Coursera
@@ -38,7 +36,6 @@ Applied:
 - Grubhub
 - LinkedIn
 - Lyft
-- NVIDIA
 - Point72
 - Salesforce
 - Splunk
