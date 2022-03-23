@@ -32,7 +32,6 @@ Recruiter Call:
 
 Applied:
 - Apple
-- Asana
 - Coursera
 - Dropbox
 - Five Rings LLC
