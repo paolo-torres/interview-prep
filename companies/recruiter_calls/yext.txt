@@ -1,0 +1,18 @@
+- Backend: Go, Java
+- Frontend: React
+- 1,400 employees
+- NYC
+- 150 engineers
+- 3-7 per team
+- AI search
+
+- WLB good
+- Teams? General application, maybe product team, team matching at the end
+
+- Next steps?
+- 1 hr phone: zoom, webcam, coderpad, 2 problems (1 debugging + 1 ds&a)
+- virtual onsite: 5 rounds
+    - 2 rounds - ds&a - coderpad (1 debugging + 1 ds&a each)
+    - 1 round - lunch with hiring manager
+    - 1 round - design - ood - google doc - whiteboard - system design
+    - 1 round - behavioral - situational - projects

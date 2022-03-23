@@ -14,6 +14,7 @@ Pending Interview:
 - Cash App
 - Citadel
 - Virtu Financial
+- Yext
 
 Online Assessment:
 - Coinbase
@@ -28,7 +29,6 @@ Pending Online Assessment:
 
 Recruiter Call:
 - Stripe
-- Yext
 
 Applied:
 - Apple
