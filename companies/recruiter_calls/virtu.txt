@@ -1,3 +1,15 @@
-- New York is top choice
-- Interest level in finance
-- High impact
+What is Virtu Financial?
+- Financial services, trading products, and market making
+- Order execution, liquidity sourcing, and analytics
+- Equities, commodities, currencies, options, etc.
+- High-frequency trading firm
+
+About the position?
+- Trading Systems Developer - Atlas Development Team
+- Virtu's client trading infrastructure
+- Order management, exchange connectivity, order routing, etc.
+
+Why Virtu Financial?
+- High interest in finance, working in the financial technology space
+- Want to join a place that has high impact and responsibility
+- New York is my top choice for where I want to be in my career
