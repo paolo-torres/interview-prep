@@ -13,3 +13,21 @@ Why Virtu Financial?
 - High interest in finance, working in the financial technology space
 - Want to join a place that has high impact and responsibility
 - New York is my top choice for where I want to be in my career
+
+- market maker
+- buying/selling
+- speed/scale
+
+- Atlas
+- infrastructure behind everything
+- Java, React, Git, Python
+- trillions of dollars
+- NYC
+
+- triage, on call
+
+- under client technology
+- atlas team: 10-15 people
+
+- coding interview, zoom, 1 hr, 1 problem
+- virtual onsite, zoom, 3-4 rounds
