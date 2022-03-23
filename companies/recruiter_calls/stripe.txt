@@ -1,0 +1,16 @@
+- developer productivity
+- 90 engineers
+- make them more productive
+
+- developer environments
+- editor IDEs
+- auto-compliation
+- AWS
+- storage space
+
+- tech screen, coderpad, not ds&a, more hands on coding, zoom
+- onsite, 4 tech, 1 behavioral
+- like tech screen
+- backend systems
+- bug squash
+- integrations
