@@ -39,6 +39,5 @@ Applied:
 - Point72
 - Salesforce
 - Splunk
-- Square
 - Squarespace
 - Uber
