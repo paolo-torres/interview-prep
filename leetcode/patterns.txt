@@ -1,0 +1,38 @@
+If input array is sorted:
+- Binary Search
+- Two Pointers
+
+If asked for all permutations/subsets:
+- Backtracking
+
+If given a tree:
+- DFS
+- BFS
+
+If given a graph:
+- DFS
+- BFS
+
+If given a linked list:
+- Two Pointers
+
+If recursion is banned:
+- Stack
+
+If must solve in-place:
+- Swap corresponding values
+- Store one or more different values in same pointer
+
+If asked for maximum/minimum subarray/subset/options:
+- Dynamic Programming
+
+If asked for top/least k items:
+- Heap
+
+If asked for common strings:
+- Map
+- Trie
+
+Else:
+- Map/Set for O(1) time and O(n) space
+- Sort input for O(n log n) time and O(1) space
