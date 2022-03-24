@@ -1,19 +1,20 @@
 Companies
 
-Pending Onsite:
+Onsite:
 - Google
+
+Pending Onsite:
+- Twitter
 
 Interview:
 - Affirm
+- Cash App
 - Embark Trucks
 - Meta
 - Plaid
-- Twitter
 
 Pending Interview:
-- Cash App
 - Citadel
-- Stripe
 - Virtu Financial
 - Yext
 
@@ -21,7 +22,6 @@ Online Assessment:
 - Coinbase
 - GitHub
 - Hudson River Trading
-- Meta
 
 Pending Online Assessment:
 - Luma Financial Technologies
