@@ -1,3 +1,5 @@
+// Hash set (can't do random) -> hash map + vector (remove O(n)), swap w/ last + pop last (optimal)
+
 class RandomizedSet {
 private:
     vector<int> v;
@@ -23,11 +25,16 @@ public:
         if (m.find(val) == m.end()) {
             return false;
         }
-        int last = v.back();
-        m[last] = m[val];
-        v[m[val]] = last;
+        
+        int currValue = m[val];
+        int lastValue = v.back();
+        
+        v[currValue] = lastValue;
         v.pop_back();
+        
+        m[lastValue] = currValue;
         m.erase(val);
+        
         return true;
     }
     
