@@ -4,10 +4,10 @@ Onsite:
 - Google
 
 Pending Onsite:
+- Affirm
 - Twitter
 
 Interview:
-- Affirm
 - Cash App
 - Embark Trucks
 - Meta
