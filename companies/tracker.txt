@@ -15,13 +15,13 @@ Interview:
 
 Pending Interview:
 - Citadel
+- Coinbase
+- Hudson River Trading
 - Virtu Financial
 - Yext
 
 Online Assessment:
-- Coinbase
 - GitHub
-- Hudson River Trading
 
 Pending Online Assessment:
 - Luma Financial Technologies
