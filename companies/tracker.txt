@@ -4,21 +4,21 @@ Onsite:
 - Google
 
 Pending Onsite:
-- Affirm
+- Plaid
 - Twitter
 
 Interview:
+- Bloomberg
 - Cash App
 - Embark Trucks
 - Meta
-- Plaid
+- Virtu Financial
 
 Pending Interview:
 - Citadel
 - Coinbase
 - GitHub
 - Hudson River Trading
-- Virtu Financial
 - Yext
 
 Pending Online Assessment:
