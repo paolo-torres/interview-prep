@@ -3,10 +3,6 @@ Companies
 Onsite:
 - Google
 
-Pending Onsite:
-- Plaid
-- Twitter
-
 Interview:
 - Bloomberg
 - Cash App
@@ -19,6 +15,7 @@ Pending Interview:
 - Coinbase
 - GitHub
 - Hudson River Trading
+- Twitter
 - Yext
 
 Pending Online Assessment:
