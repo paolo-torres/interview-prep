@@ -24,6 +24,9 @@
         "set": "cpp",
         "unordered_map": "cpp",
         "__bit_reference": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "stack": "cpp",
+        "__node_handle": "cpp",
+        "filesystem": "cpp"
     }
 }
