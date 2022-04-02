@@ -9,6 +9,7 @@ Interview:
 - Embark Trucks
 - Meta
 - Virtu Financial
+- Yext
 
 Pending Interview:
 - Citadel
@@ -16,7 +17,6 @@ Pending Interview:
 - GitHub
 - Hudson River Trading
 - Twitter
-- Yext
 
 Pending Online Assessment:
 - Luma Financial Technologies
