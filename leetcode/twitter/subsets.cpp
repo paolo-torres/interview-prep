@@ -1,3 +1,5 @@
+// Backtracking, generate all combinations, push/pop + index checking to explore new combos
+
 // Time: O(n x 2^n)
 // Space: O(n)
 

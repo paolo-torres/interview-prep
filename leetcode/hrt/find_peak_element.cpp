@@ -1,3 +1,6 @@
+// Linear scan O(n) -> modified binary search O(log n)
+// Compare mid to right, move accordingly if rising or falling
+
 // Time: O(log n)
 // Space: O(1)
 
