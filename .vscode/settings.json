@@ -27,6 +27,7 @@
         "complex": "cpp",
         "stack": "cpp",
         "__node_handle": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "ios": "cpp"
     }
 }
