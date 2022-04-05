@@ -14,7 +14,6 @@ Interview:
 Pending Interview:
 - Citadel
 - Coinbase
-- GitHub
 - Hudson River Trading
 - Twitter
 
@@ -32,7 +31,6 @@ Applied:
 - LinkedIn
 - Lyft
 - Point72
-- Salesforce
 - Splunk
 - Squarespace
 - Uber
