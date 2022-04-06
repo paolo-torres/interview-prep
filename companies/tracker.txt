@@ -3,7 +3,11 @@ Companies
 Onsite:
 - Google
 
+Pending Onsite:
+- Coinbase
+
 Interview:
+- Bloomberg x2
 - Cash App
 - Embark Trucks
 - Meta
@@ -11,9 +15,7 @@ Interview:
 - Yext
 
 Pending Interview:
-- Bloomberg
 - Citadel
-- Coinbase
 - Twitter
 
 Pending Online Assessment:
@@ -21,13 +23,15 @@ Pending Online Assessment:
 - Percent
 - Two Sigma
 
+Pending Recruiter Call:
+- LinkedIn
+
 Applied:
 - Apple
 - Coursera
 - Dropbox
 - Five Rings LLC
 - Grubhub
-- LinkedIn
 - Lyft
 - Point72
 - Splunk
