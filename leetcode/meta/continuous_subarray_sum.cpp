@@ -1,5 +1,5 @@
 // Hash map {running sum mod k -> index}, if seen again return true
-// Ex. sums = [23,25,31,35,42], remainders = [5,1,1,5,0]
+// Ex. nums = [23,2,4,6,7], sums = [23,25,31,35,42], remainders = [5,1,1,5,0]
 // Remainder 5 at indices 0 & 3, means must've added multiples of k
 
 // Time: O(n)
