@@ -21,3 +21,23 @@ Team
 - 1 east
 - 2 mid
 - 3 west
+
+- 2 sister teams: perception, planning
+- AV Frameworks
+- General-purpose compute team
+- Own ROS framework, Linux, diagnostics, data from sensors
+- Under AV Frameworks: Kernels, Infrastructure (brain -> cloud)
+- C++, Docker, CI/CD (Jenkins)
+- Beefing up diagnostics, build system updates, upgrading OS
+
+- Technical phone screen, 120 lines compiles but crashes, 1 hour
+- Take C++ code and make it better
+- Adjust + re-writing, CoderPad
+- 1 page code editor, other page is stdout
+- C++17, STL data collection types
+
+- Virtual onsite, 4 hours
+- 1: roundtable
+- 2: C++, CoderPad, LeetCode, AV related
+- 3: Architecture, high-level, flow chart, whimsical
+- 4: Manager interview, behavioural
