@@ -7,8 +7,8 @@ Behavioural Questions
 5. What do you do if you're overworked & have too much to do?
 6. How would you start working on a new project?
 7. What are you trying to improve on?
-8. Why Twitter?
-9. What do you know about Twitter?
+8. Why {COMPANY}?
+9. What do you know about {COMPANY}?
 10. Why leaving?
 11. Strengths
 12. Weaknesses

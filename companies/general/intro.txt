@@ -1,4 +1,4 @@
-Background
+Introduction
 
 My name is Paolo and I'm currently a Software Development Engineer 
 here at Amazon, and I am currently a part of the Amazon Freight team. 
@@ -17,12 +17,3 @@ languages I'm most familiar with are Java and C++. And yeah that's
 me, currently working full-time for Amazon, I have done multiple 
 software engineering internships throughout my undergrad, and I 
 graduated in Engineering from the University of Waterloo.
-
-Interests
-
-So for me, I'm primarily looking to try something new. Like I 
-mentioned, until now I've been able to ship a few projects on my own, 
-and I've learned a lot of valuable things and learned some useful 
-skills. But now I'm really looking to pivot to something brand new 
-and interesting. Then I came across {COMPANY_NAME} and thought it'd 
-be cool to see what it's all about.
