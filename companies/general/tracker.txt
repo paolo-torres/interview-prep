@@ -7,7 +7,6 @@ Onsite:
 Interview:
 - Bloomberg x2
 - Cash App
-- Embark Trucks
 - Twitter
 - Virtu Financial
 
