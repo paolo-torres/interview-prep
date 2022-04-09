@@ -1,5 +1,7 @@
+// Level order traversal, at each level fix all next pointers beneath
+
 // Time: O(n)
-// Space: O(n)
+// Space: O(1)
 
 /*
 // Definition for a Node.
@@ -22,31 +24,44 @@ public:
 class Solution {
 public:
     Node* connect(Node* root) {
-        if (root == NULL) {
-            return NULL;
-        }
+        // curr node of curr level
+        Node* curr = root;
+        // head of next level
+        Node* head = NULL;
+        // leading node of next level
+        Node* prev = NULL;
         
-        queue<Node*> q;
-        q.push(root);
-        
-        while (!q.empty()) {
-            int count = q.size();
-            Node* rightNode = NULL;
-            
-            for (int i = count; i > 0; i--) {
-                Node* node = q.front();
-                q.pop();
-                
-                node->next = rightNode;
-                rightNode = node;
-                
-                if (node->right != NULL) {
-                    q.push(node->right);
+        while (curr != NULL) {
+            // iterate on curr level
+            while (curr != NULL) {
+                // left child
+                if (curr->left != NULL) {
+                    if (prev != NULL) {
+                        prev->next = curr->left;
+                    } else {
+                        head = curr->left;
+                    }
+                    prev = curr->left;
                 }
-                if (node->left != NULL) {
-                    q.push(node->left);
+                
+                // right child
+                if (curr->right != NULL) {
+                    if (prev != NULL) {
+                        prev->next = curr->right;
+                    } else {
+                        head = curr->right;
+                    }
+                    prev = curr->right;
                 }
+                
+                // move to next node
+                curr = curr->next;
             }
+            
+            // move to next level
+            curr = head;
+            head = NULL;
+            prev = NULL;
         }
         
         return root;

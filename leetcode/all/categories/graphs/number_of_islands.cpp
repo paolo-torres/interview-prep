@@ -1,5 +1,7 @@
+// DFS, set visited land to '0' to not visit it again, count islands
+
 // Time: O(m x n)
-// Space: O(1)
+// Space: O(m x n)
 
 class Solution {
 public:
@@ -26,6 +28,7 @@ private:
             return;
         }
         grid[i][j] = '0';
+        
         dfs(grid, i - 1, j, m, n);
         dfs(grid, i + 1, j, m, n);
         dfs(grid, i, j - 1, m, n);
