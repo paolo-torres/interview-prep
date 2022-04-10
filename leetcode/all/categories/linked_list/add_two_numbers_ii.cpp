@@ -1,3 +1,8 @@
+// Sum nodes & add to front w/o carry, then consider carry & reverse
+
+// Time: O(m + n)
+// Space: O(max(m, n))
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -11,11 +16,11 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int i = 0;
-        int j = 0;
-        int carry = 0;
+        // get length of both lists
         ListNode* curr1 = l1;
         ListNode* curr2 = l2;
+        int i = 0;
+        int j = 0;
         while (curr1 != NULL) {
             curr1 = curr1->next;
             i++;
@@ -24,9 +29,12 @@ public:
             curr2 = curr2->next;
             j++;
         }
+        
+        // sum nodes w/o taking into account the carry
+        // ex. 3->3->3 + 7->7 = 3->10->10 --> 10->10->3
         curr1 = l1;
         curr2 = l2;
-        ListNode* result = NULL;
+        ListNode* head = NULL;
         while (i > 0 && j > 0) {
             int sum = 0;
             if (i >= j) {
@@ -39,28 +47,31 @@ public:
                 curr2 = curr2->next;
                 j--;
             }
-            ListNode* temp = new ListNode(sum);
-            temp->next = result;
-            result = temp;
+            head = addToFront(sum, head);
         }
-        curr1 = result;
-        result = NULL;
+        
+        // now take into account the carry so all nodes < 10
+        // ex. 10->10->3 --> 0->1->4 --> 4->1->0
+        int carry = 0;
+        curr1 = head;
+        head = NULL;
         while (curr1 != NULL) {
-            curr1->val += carry;
-            carry = curr1->val / 10;
-            curr1->val %= 10;
-            ListNode* temp = new ListNode(curr1->val);
-            temp->next = result;
-            result = temp;
-            curr2 = curr1;
+            int sum = (curr1->val + carry) % 10;
+            carry = (curr1->val + carry) / 10;
+            head = addToFront(sum, head);
             curr1 = curr1->next;
-            delete curr2;
         }
+        
         if (carry == 1) {
-            ListNode* temp = new ListNode(carry);
-            temp->next = result;
-            result = temp;
+            head = addToFront(carry, head);
         }
-        return result;
+        
+        return head;
+    }
+private:
+    ListNode* addToFront(int value, ListNode* head) {
+        ListNode* curr = new ListNode(value);
+        curr->next = head;
+        return curr;
     }
 };
