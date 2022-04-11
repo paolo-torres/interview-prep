@@ -28,6 +28,20 @@ chained together through a single linked list,
 which can be traversed to access the item with 
 a unique search key.
 
+C++ vs Java
+
+Similarities
+- Both OOP
+
+Differences
+- Compiler & Interpreter: compiled vs. compiled & interpreted
+- Memory Management: manual (except smart ptrs) vs. garbage collection
+- Overloading: supports overloading vs. doesn't support overloading 
+- Language Support: system programming vs. application programming 
+- Data & Functions: global scope/outside class vs. package/class scope
+- Pointers: supports pointers vs. only limited support for pointers 
+- Parameter Passing: call by value & reference vs. only call by value 
+
 Project 1
 
 - Inputs: Kp, Ti, Td
