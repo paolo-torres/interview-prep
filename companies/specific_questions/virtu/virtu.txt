@@ -1,0 +1,27 @@
+A hash table (hash map) is a data structure 
+that can map keys to values. A hash table uses 
+a hash function to compute an index, also called 
+a hash code, into an array of buckets, from 
+which the desired value can be found. 
+
+Ideally, the hash function will assign each key 
+to a unique bucket, but most hash table designs 
+emply an imperfect hash function, which might 
+cause hash collisions where the hash function 
+generates the same index for more than one key.
+
+Example hash function: f(k) = H mod N
+f = hash function
+k = key
+H = hash
+N = size of hash table
+hash = hashFunction(key)
+index = hash % hashTableSize
+
+Collision resolution: chaining
+
+Building a linked list with key-value pair for 
+each search array index. The collided items are 
+chained together through a single linked list, 
+which can be traversed to access the item with 
+a unique search key.
