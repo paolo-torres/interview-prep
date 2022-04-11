@@ -1,3 +1,5 @@
+Hash Maps
+
 A hash table (hash map) is a data structure 
 that can map keys to values. A hash table uses 
 a hash function to compute an index, also called 
@@ -25,3 +27,17 @@ each search array index. The collided items are
 chained together through a single linked list, 
 which can be traversed to access the item with 
 a unique search key.
+
+Project 1
+
+- Inputs: Kp, Ti, Td
+- Optimal fitness value updated whenever curr gen is better, additive 
+- Outputs: ISE, tr, ts, Mp
+- Improve fitness value over 150 generations, explore/exploit inputs 
+- Crossover: +'ve & -'ve deltas for all params, mutation: for 1 param 
+
+Project 2
+
+- A* search implemented using min heap {F cost -> {x, y}}
+- F cost = G cost (start to curr) + H cost (curr to end)
+- BFS traversal with heuristic = A*, guarantees shortest paths
