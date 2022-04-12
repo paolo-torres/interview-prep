@@ -1,3 +1,5 @@
+// Sliding window, expand if unique, contract if duplicate
+
 // Time: O(n)
 // Space: O(n)
 
