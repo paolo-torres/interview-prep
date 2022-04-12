@@ -1,5 +1,7 @@
+// Sum digit-by-digit + carry, handle if one list becomes null
+
 // Time: O(max(m, n))
-// Space: O(1)
+// Space: O(max(m, n))
 
 /**
  * Definition for singly-linked list.
@@ -14,55 +16,33 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* dummy = new ListNode();
+        
+        ListNode* curr = dummy;
         int carry = 0;
-        ListNode* prev = l1;
-        ListNode* head = l1;
         
-        while (l1 != NULL && l2 != NULL) {
-            l1->val += l2->val + carry;
-            if (l1->val >= 10) {
-                l1->val %= 10;
-                carry = 1;
-            } else {
-                carry = 0;
+        while (l1 != NULL || l2 != NULL) {
+            int val1 = (l1 != NULL) ? l1->val : 0;
+            int val2 = (l2 != NULL) ? l2->val : 0;
+            
+            int sum = val1 + val2 + carry;
+            carry = sum / 10;
+            
+            curr->next = new ListNode(sum % 10);
+            curr = curr->next;
+            
+            if (l1 != NULL) {
+                l1 = l1->next;
             }
-            if (l1->next == NULL) {
-                prev = l1;
+            if (l2 != NULL) {
+                l2 = l2->next;
             }
-            l1 = l1->next;
-            l2 = l2->next;
-        }
-        
-        while (l1 != NULL) {
-            l1->val += carry;
-            if (l1->val >= 10) {
-                l1->val %= 10;
-                carry = 1;
-            } else {
-                carry = 0;
-            }
-            if (l1->next == NULL) {
-                prev = l1;
-            }
-            l1 = l1->next;
-        }
-        
-        while (l2 != NULL) {
-            prev->next = new ListNode(l2->val + carry);
-            prev = prev->next;
-            if (prev->val >= 10) {
-                prev->val %= 10;
-                carry = 1;
-            } else {
-                carry = 0;
-            }
-            l2 = l2->next;
         }
         
         if (carry == 1) {
-            prev->next = new ListNode(carry);
+            curr->next = new ListNode(1);
         }
         
-        return head;
+        return dummy->next;
     }
 };
