@@ -1,3 +1,5 @@
+// Stack of opens, check for matching closes & validity
+
 // Time: O(n)
 // Space: O(n)
 
