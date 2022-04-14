@@ -28,6 +28,7 @@
         "stack": "cpp",
         "__node_handle": "cpp",
         "filesystem": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "__string": "cpp"
     }
 }
