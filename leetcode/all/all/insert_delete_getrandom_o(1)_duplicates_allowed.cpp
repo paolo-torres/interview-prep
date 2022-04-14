@@ -1,3 +1,6 @@
+// Design data structure w/ O(1) insert, delete, and get random that can handle duplicates
+
+// Hash set (can't do random) -> hash map + vector (remove O(n)), swap w/ last + pop last (optimal)
 // Duplicates: need to store indices of all same value elements
 // remove(): remove idx, swap last w/ removed, remove old + add new
 

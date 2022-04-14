@@ -29,6 +29,7 @@
         "__node_handle": "cpp",
         "filesystem": "cpp",
         "ios": "cpp",
-        "__string": "cpp"
+        "__string": "cpp",
+        "functional": "cpp"
     }
 }

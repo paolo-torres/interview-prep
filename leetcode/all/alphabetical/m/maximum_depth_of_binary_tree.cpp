@@ -1,3 +1,5 @@
+// Given root of binary tree, return max depth (# nodes along longest path from root to leaf)
+
 // Time: O(n)
 // Space: O(n)
 
@@ -21,3 +23,30 @@ public:
         return 1 + max(maxDepth(root->left), maxDepth(root->right));
     }
 };
+
+// class Solution {
+// public:
+//     int maxDepth(TreeNode* root) {
+//         if (root == NULL) {
+//             return 0;
+//         }
+//         queue<TreeNode*> q;
+//         q.push(root);
+//         int result = 0;
+//         while (!q.empty()) {
+//             int count = q.size();
+//             for (int i = 0; i < count; i++) {
+//                 TreeNode* node = q.front();
+//                 q.pop();
+//                 if (node->left != NULL) {
+//                     q.push(node->left);
+//                 }
+//                 if (node->right != NULL) {
+//                     q.push(node->right);
+//                 }
+//             }
+//             result++;
+//         }
+//         return result;
+//     }
+// };

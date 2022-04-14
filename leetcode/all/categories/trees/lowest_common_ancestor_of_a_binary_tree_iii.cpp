@@ -1,3 +1,5 @@
+// LCA of 2 trees, each node has ref to its parent
+
 // Same as intersection of 2 linked lists
 
 // Time: O(n)

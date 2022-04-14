@@ -1,3 +1,7 @@
+// Given array after some possible rotation, find if target is in nums
+
+// Modified binary search, if low <= mid left sorted, else right sorted
+
 // Time: O(log n)
 // Space: O(1)
 
