@@ -4,8 +4,12 @@ Onsite:
 - Coinbase
 - Google
 
-Interview:
+Pending Onsite:
 - Bloomberg x2
+- Twitter
+- Virtu Financial
+
+Interview:
 - LinkedIn
 
 Pending Online Assessment:
