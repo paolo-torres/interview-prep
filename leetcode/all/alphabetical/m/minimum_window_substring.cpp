@@ -1,3 +1,6 @@
+// Given 2 strings, return min window substring
+// of s such that all chars in t are in window
+
 // Sliding window + hash map {char -> count}
 // Move j until valid, move i to find smaller
 

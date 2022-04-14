@@ -1,3 +1,6 @@
+// Row of n houses, each painted 1 of 3 colors, diff costs, no adj houses same color
+// Return min cost to paint all houses
+
 // // Time: O(2^n)
 // // Space: O(n)
 

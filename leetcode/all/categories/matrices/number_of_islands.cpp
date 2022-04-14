@@ -1,3 +1,5 @@
+// Given grid where '1' is land & '0' is water, return # of islands
+
 // DFS, set visited land to '0' to not visit it again, count islands
 
 // Time: O(m x n)
