@@ -1,3 +1,8 @@
+// Given int array & k, return true if possible to divide array into k non-empty subsets w/ equal sums
+// Ex. nums = [4,3,2,3,5,2,1], k = 4 -> output = true, 4 subsets (5), (1, 4), (2, 3), (2, 3) w/ sum 5
+
+// Determine target, backtracking, try diff sums, maintain visited for dupes, sort + end early to optimize
+
 // Time: O(k x 2^n)
 // Space: O(n)
 

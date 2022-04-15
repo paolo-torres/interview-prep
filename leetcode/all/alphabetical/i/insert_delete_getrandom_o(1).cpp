@@ -1,4 +1,9 @@
+// Design data structure w/ O(1) insert, delete, and get random
+
 // Hash set (can't do random) -> hash map + vector (remove O(n)), swap w/ last + pop last (optimal)
+
+// Time: O(1)
+// Space: O(n)
 
 class RandomizedSet {
 private:

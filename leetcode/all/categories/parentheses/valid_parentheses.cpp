@@ -1,3 +1,6 @@
+// Given s w/ '(, ), {, }, [, ]', determine if valid
+// Ex. s = "()[]{}" -> true, s = "(]" -> false
+
 // Stack of opens, check for matching closes & validity
 
 // Time: O(n)

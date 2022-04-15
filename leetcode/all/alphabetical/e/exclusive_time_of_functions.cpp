@@ -1,3 +1,6 @@
+// Exclusive time is sum of execution times for all function calls, return for each ID
+// Ex. n = 2, logs = ["0:start:0","1:start:2","1:end:5","0:end:6"], output = [3,4]
+
 // If start & there is already a prev running, add up to this point
 // If end, add time diff b/w curr end + stack end
 // Also if end, set start time of stack to be end of curr

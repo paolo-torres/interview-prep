@@ -1,4 +1,10 @@
-// Time: O(m x n log k)
+// Given 2 int arrays in ascending order, define pair (u, v) w/ 1 from 1, 1 from the other
+// Return k pairs (u1, v1), (u2, v2), ..., (uk, vk) w/ the smallest sums
+// Ex. nums1 = [1,7,11], nums2 = [2,4,6], k = 3 -> output = [[1,2],[1,4],[1,6]]
+
+// Max heap {sum -> {u, v}}, maintain k smallest, top of heap will be largest sum
+
+// Time: O(k log k)
 // Space: O(k)
 
 class Solution {
