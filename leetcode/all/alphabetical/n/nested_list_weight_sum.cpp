@@ -1,3 +1,6 @@
+// Each element either int or list of elements, return sum of each int multiplied by depth
+// Ex. nestedList = [[1,1],2,[1,1]] -> output = 10, 1x2 + 1x2 + 2x1 + 1x2 + 1x2 = 10
+
 // DFS traversal, if integer add to result, if list DFS and add depth
 
 // Time: O(n)
