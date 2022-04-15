@@ -6,17 +6,17 @@ Onsite:
 
 Pending Onsite:
 - Bloomberg x2
-- Twitter
-- Virtu Financial
-
-Interview:
 - LinkedIn
+- Twitter
 
 Pending Online Assessment:
 - Galaxy Digital
 - Luma Financial Technologies
 - Percent
 - Two Sigma
+
+Recruiter Call:
+- Spotify
 
 Applied:
 - Apple
