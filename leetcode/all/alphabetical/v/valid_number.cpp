@@ -1,4 +1,7 @@
-// >= 1 digit, if +/- must be first, <= 1 exp, <= 1 dot
+// Given string, return true if valid number (decimal number + int)
+// Ex. Valid: "2", "-0.1", "2e10", invalid: "abc", "1a", "99e2.5"
+
+// Check rules: >= 1 digit, if +/- must be first, <= 1 exp, <= 1 dot
 
 // Time: O(n)
 // Space: O(1)
