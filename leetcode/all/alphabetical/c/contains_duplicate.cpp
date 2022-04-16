@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given int array, return true if any value appears at least twice
+    Ex. nums = [1,2,3,1] -> true, nums = [1,2,3,4] -> false
+
+    If seen num previously then has dupe, else insert into hash set
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:
