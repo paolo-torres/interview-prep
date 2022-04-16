@@ -1,5 +1,12 @@
-// Time: O(n^2)
-// Space: O(1)
+/*
+    Given int array, return all unique triplets that sum to 0
+    Ex. nums = [-1,0,1,2,-1,-4] -> [[-1,-1,2],[-1,0,1]]
+
+    Sort, for each i, have j & k go outside in, check for 0 sums
+
+    Time: O(n^2)
+    Space: O(n)
+*/
 
 class Solution {
 public:

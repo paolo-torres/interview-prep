@@ -1,7 +1,12 @@
-// 2 pointers, skip non-letters, tolower & compare
+/*
+    Given a string s, return true if it's a palindrome
+    Ex. s = "A man, a plan, a canal: Panama" -> true
 
-// Time: O(n)
-// Space: O(1)
+    2 pointers, outside in, skip non-letters & compare
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
