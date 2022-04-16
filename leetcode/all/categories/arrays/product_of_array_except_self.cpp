@@ -1,5 +1,13 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given an integer array nums, return an array such that:
+    answer[i] is equal to the product of all elements of nums except nums[i]
+    Ex. nums = [1,2,3,4] -> [24,12,8,6], nums = [-1,1,0,-3,3] -> [0,0,9,0,0]
+
+    Calculate prefix products forward, then postfix backwards in a 2nd pass
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
