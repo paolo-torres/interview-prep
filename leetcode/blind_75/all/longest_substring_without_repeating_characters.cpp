@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given string, find longest substring w/o repeating chars
+    Ex. s = "abcabcbb" -> 3 "abc", s = "bbbbb" -> 1 "b"
+
+    Sliding window, expand if unique, contract if duplicate
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

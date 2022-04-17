@@ -1,8 +1,14 @@
-// Sliding window + hash map {char -> count}
-// Move j until valid, move i to find smaller
+/*
+    Given 2 strings s & t, return min window substring
+    of s such that all chars in t are included in window
+    Ex. s = "ADOBECODEBANC" t = "ABC" -> "BANC"
 
-// Time: O(m + n)
-// Space: O(m + n)
+    Sliding window + hash map {char -> count}
+    Move j until valid, move i to find smaller
+
+    Time: O(m + n)
+    Space: O(m + n)
+*/
 
 class Solution {
 public:

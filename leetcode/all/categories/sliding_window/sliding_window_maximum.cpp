@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given int array & sliding window size k, return max sliding window
+    Ex. nums = [1,3,-1,-3,5,3,6,7] k = 3 -> [3,3,5,5,6,7]
+
+    Sliding window deque, ensure monotonic decr, leftmost largest
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

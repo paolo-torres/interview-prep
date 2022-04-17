@@ -1,5 +1,13 @@
-// Time: O(n)
-// Space: O(26)
+/*
+    Given a string s & an int k, can change any char k times:
+    Return length of longest substring containing same letter
+    Ex. s = "ABAB" k = 2 -> 4 "AAAA", s = "AABABBA" k = 1 -> 4
+
+    Sliding window, expand if can change char, contract if > k
+
+    Time: O(n)
+    Space: O(26)
+*/
 
 class Solution {
 public:
