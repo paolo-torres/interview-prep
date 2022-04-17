@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given s w/ '(, ), {, }, [, ]', determine if valid
+    Ex. s = "()[]{}" -> true, s = "(]" -> false
+
+    Stack of opens, check for matching closes & validity
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

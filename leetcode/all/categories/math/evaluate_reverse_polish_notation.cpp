@@ -1,9 +1,11 @@
-// Evaluate RPN, valid operators: +, -, *, /
+/*
+    Evaluate RPN, valid operators: +, -, *, /
 
-// Stack, if num push, if op apply to top 2 nums
+    Stack, if num push, if operator apply to top 2 nums
 
-// Time: O(n)
-// Space: O(n)
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

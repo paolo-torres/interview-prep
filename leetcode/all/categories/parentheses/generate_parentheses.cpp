@@ -1,5 +1,12 @@
-// Time: O(2^n)
-// Space: O(n)
+/*
+    Given n pairs of parentheses, generate all combos of well-formed parentheses
+    Ex. n = 3 -> ["((()))","(()())","(())()","()(())","()()()"], n = 1 -> ["()"]
+
+    Backtracking, keep valid, favor trying opens, then try closes if still valid
+
+    Time: O(2^n)
+    Space: O(n)
+*/
 
 class Solution {
 public:
