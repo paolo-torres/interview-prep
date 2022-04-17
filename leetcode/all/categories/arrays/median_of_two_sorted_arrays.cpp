@@ -1,7 +1,16 @@
-// https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2481/Share-my-O(log(min(mn)))-solution-with-explanation
+/*
+    Given 2 sorted arrays of size m & n, return the median of these arrays
+    Ex. nums1 = [1,3] nums2 = [2] -> 2, nums1 = [1,2] nums2 = [3,4] -> 2.5
 
-// Time: O(log min(m, n))
-// Space: O(1)
+    Binary search, partition each array until partitions are correct, get median
+    [1,2,3,4,5]
+    |  a|b    |
+    [1,2,3,4,5,6,7,8]    -->    a <= d ? yes, c <= b ? no, so need to fix
+    |      c|d      |
+
+    Time: O(log min(m, n))
+    Space: O(1)
+*/
 
 class Solution {
 public:
@@ -21,25 +30,30 @@ public:
         double result = 0.0;
         
         while (low <= high) {
+            // nums1
             int i = low + (high - low) / 2;
+            // nums2
             int j = (total + 1) / 2 - i;
             
-            int left1 = (i == 0) ? INT_MIN : nums1[i - 1];
-            int right1 = (i == m) ? INT_MAX : nums1[i];
-            int left2 = (j == 0) ? INT_MIN : nums2[j - 1];
-            int right2 = (j == n) ? INT_MAX : nums2[j];
+            int left1 = (i > 0) ? nums1[i - 1] : INT_MIN;
+            int right1 = (i < m) ? nums1[i] : INT_MAX;
+            int left2 = (j > 0) ? nums2[j - 1] : INT_MIN;
+            int right2 = (j < n) ? nums2[j] : INT_MAX;
             
-            if (left1 > right2) {
-                high = i - 1;
-            } else if (left2 > right1) {
-                low = i + 1;
-            } else {
+            // partition is correct
+            if (left1 <= right2 && left2 <= right1) {
+                // even
                 if (total % 2 == 0) {
                     result = (max(left1, left2) + min(right1, right2)) / 2.0;
+                // odd
                 } else {
                     result = max(left1, left2);
                 }
                 break;
+            } else if (left1 > right2) {
+                high = i - 1;
+            } else {
+                low = i + 1;
             }
         }
         

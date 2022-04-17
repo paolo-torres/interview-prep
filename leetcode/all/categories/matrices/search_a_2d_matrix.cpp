@@ -1,5 +1,11 @@
-// Time: O(log m + log n)
-// Space: O(1)
+/*
+    Search for target value in matrix where every row & col is sorted
+
+    Perform 2 binary searches: 1 to find row, then another to find col
+
+    Time: O(log m + log n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

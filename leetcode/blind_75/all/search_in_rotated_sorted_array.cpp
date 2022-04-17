@@ -1,5 +1,12 @@
-// Time: O(log n)
-// Space: O(1)
+/*
+    Given array after some possible rotation, find if target is in nums
+    Ex. nums = [4,5,6,7,0,1,2] target = 0 -> 4 (value 0 is at index 4)
+
+    Modified binary search, if low <= mid left sorted, else right sorted
+
+    Time: O(log n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
