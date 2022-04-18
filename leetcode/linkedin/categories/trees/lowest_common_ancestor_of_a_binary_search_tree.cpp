@@ -1,9 +1,11 @@
-// Given a binary search tree (BST), find the LCA of 2 given nodes in the BST
+/*
+    Given a binary search tree (BST), find the LCA of 2 given nodes in the BST
 
-// Use BST property: if curr > left & right go left, else if < go right, else done
+    Use BST property: if curr > left & right go left, else if < go right, else done
 
-// Time: O(n)
-// Space: O(n)
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

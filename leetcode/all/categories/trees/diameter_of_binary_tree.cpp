@@ -1,7 +1,11 @@
-// Max path b/w 2 leaf nodes, "1 +" to add path
+/*
+    Given root of binary tree, return length of diameter of tree (longest path b/w any 2 nodes)
 
-// Time: O(n)
-// Space: O(n)
+    Max path b/w 2 leaf nodes, "1 +" to add path
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

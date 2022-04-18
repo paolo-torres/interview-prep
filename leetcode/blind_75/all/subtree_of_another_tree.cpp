@@ -1,5 +1,11 @@
-// Time: O(mn)
-// Space: O(m)
+/*
+    Given the roots of 2 binary trees, return true if a tree has a subtree of the other tree
+
+    Check at each node of the root tree if it's the same as the subRoot tree (structure + values)
+
+    Time: O(m x n)
+    Space: O(m)
+*/
 
 /**
  * Definition for a binary tree node.

@@ -1,7 +1,11 @@
-// Given root of binary tree, return max depth (# nodes along longest path from root to leaf)
+/*
+    Given root of binary tree, return max depth (# nodes along longest path from root to leaf)
 
-// Time: O(n)
-// Space: O(n)
+    At every node, max depth is the max depth between its left & right children + 1
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

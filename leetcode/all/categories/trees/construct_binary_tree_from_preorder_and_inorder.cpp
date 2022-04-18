@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given 2 integer arrays preorder & inorder, construct & return the binary tree
+    Ex. preorder = [3,9,20,15,7], inorder = [9,3,15,20,7] -> [3,9,20,null,null,15,7]
+
+    Preorder dictates nodes, inorder dictates subtrees (preorder values, inorder positions)
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

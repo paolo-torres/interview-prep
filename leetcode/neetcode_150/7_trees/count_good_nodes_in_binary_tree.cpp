@@ -1,7 +1,7 @@
 /*
-    Given root of binary tree, return length of diameter of tree (longest path b/w any 2 nodes)
+    Given binary tree, node is "good" if path from root has no nodes > X, return # of "good"
 
-    Max path b/w 2 leaf nodes, "1 +" to add path
+    Maintain greatest value seen so far on a path, if further node >= this max, "good" node
 
     Time: O(n)
     Space: O(n)
@@ -20,21 +20,22 @@
  */
 class Solution {
 public:
-    int diameterOfBinaryTree(TreeNode* root) {
+    int goodNodes(TreeNode* root) {
         int result = 0;
-        dfs(root, result);
+        dfs(root, root->val, result);
         return result;
     }
 private:
-    int dfs(TreeNode* root, int& result) {
+    void dfs(TreeNode* root, int maxSoFar, int& result) {
         if (root == NULL) {
-            return 0;
+            return;
         }
         
-        int left = dfs(root->left, result);
-        int right = dfs(root->right, result);
+        if (root->val >= maxSoFar) {
+            result++;
+        }
         
-        result = max(result, left + right);
-        return 1 + max(left, right);
+        dfs(root->left, max(maxSoFar, root->val), result);
+        dfs(root->right, max(maxSoFar, root->val), result);
     }
 };

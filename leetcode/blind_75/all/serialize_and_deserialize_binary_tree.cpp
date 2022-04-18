@@ -1,9 +1,11 @@
-// Design an algorithm to serialize & deserialize a binary tree
+/*
+    Design an algorithm to serialize & deserialize a binary tree
 
-// Use stringstream to concisely handle negatives, nulls, etc.
+    Use stringstream to concisely handle negatives, nulls, etc.
 
-// Time: O(n) serialize, O(n) deserialize
-// Space: O(n) serialize, O(n) deserialize
+    Time: O(n) serialize, O(n) deserialize
+    Space: O(n) serialize, O(n) deserialize
+*/
 
 /**
  * Definition for a binary tree node.

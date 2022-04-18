@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given root of BST & int k, return kth smallest value (1-indexed) of all values in tree
+    Ex. root = [3,1,4,null,2] k = 1 -> 1, root = [5,3,6,2,4,null,null,1] k = 3 -> 3
+
+    Inorder traversal, each visit decrement k, when k = 0 return, works because inorder
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

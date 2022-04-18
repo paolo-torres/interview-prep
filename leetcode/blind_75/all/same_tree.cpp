@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given roots of 2 binary trees, check if they're the same or not (same structure & values)
+    Ex. p = [1,2,3] q = [1,2,3] -> true, p = [1,2] q = [1,null,2] -> false
+
+    Check: (1) matching nulls, (2) non-matching nulls, (3) non-matching values
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

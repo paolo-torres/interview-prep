@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given root of binary tree, return level order traversal of its nodes (left to right)
+    Ex. root = [3,9,20,null,null,15,7] -> [[3],[9,20],[15,7]]
+
+    Standard BFS traversal, at each level, push left & right nodes if they exist to queue
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

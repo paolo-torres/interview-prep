@@ -1,5 +1,11 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given root of binary tree, return max path sum (seq of adj node values added together)
+
+    Path can only have <= 1 split point, assume curPath has it, so return can't split again
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

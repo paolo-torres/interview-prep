@@ -1,7 +1,11 @@
-// BFS traversal, push right first before left, store only first value
+/*
+    Given root of binary tree, return values that can only be seen from the right side
 
-// Time: O(n)
-// Space: O(n)
+    BFS traversal, push right first before left, store only first value
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.
