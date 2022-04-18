@@ -5,7 +5,7 @@ Onsite:
 - Google
 
 Pending Onsite:
-- Bloomberg x2
+- Bloomberg
 - LinkedIn
 - Twitter
 
