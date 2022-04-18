@@ -1,8 +1,12 @@
-// Hash map + doubly linked list, left = LRU, right = MRU
-// get: update to MRU, put: update to MRU, remove LRU if full
+/*
+    Design data structure that follows constraints of an LRU cache
 
-// Time: O(1)
-// Space: O(capacity)
+    Hash map + doubly linked list, left = LRU, right = MRU
+    get: update to MRU, put: update to MRU, remove LRU if full
+
+    Time: O(1)
+    Space: O(capacity)
+*/
 
 class Node {
 public:

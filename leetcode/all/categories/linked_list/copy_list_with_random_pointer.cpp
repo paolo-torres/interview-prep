@@ -1,6 +1,13 @@
-// Hash map {old -> new}, O(n) space
-// Optimize interweave old and new nodes, O(1) space
-// A -> A' -> B -> B' -> C -> C', A'.random = A.random.next
+/*
+    Given linked list w/ also a random pointer, construct deep copy
+
+    Hash map {old -> new}, O(n) space
+    Optimize interweave old and new nodes, O(1) space
+    A -> A' -> B -> B' -> C -> C', A'.random = A.random.next
+
+    Time: O(n)
+    Space: O(n) -> can optimize to O(1)
+*/
 
 /*
 // Definition for a Node.
@@ -37,7 +44,6 @@ public:
 //     }
 // private:
 //     unordered_map<Node*, Node*> visited;
-    
 //     Node* getClonedNode(Node* node) {
 //         if (node == NULL) {
 //             return NULL;
@@ -49,9 +55,6 @@ public:
 //         return visited[node];
 //     }
 // };
-
-// Time: O(n)
-// Space: O(1)
 
 class Solution {
 public:

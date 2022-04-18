@@ -1,7 +1,12 @@
-// Sum digit-by-digit + carry, handle if one list becomes null
+/*
+    Given 2 linked lists, digits stored in reverse order, add them
+    Ex. l1 = [2,4,3] l2 = [5,6,4] -> [7,0,8] (342 + 465 = 807)
 
-// Time: O(max(m, n))
-// Space: O(max(m, n))
+    Sum digit-by-digit + carry, handle if one list becomes null
+
+    Time: O(max(m, n))
+    Space: O(max(m, n))
+*/
 
 /**
  * Definition for singly-linked list.

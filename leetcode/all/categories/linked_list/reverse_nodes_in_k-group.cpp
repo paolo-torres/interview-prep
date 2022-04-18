@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given head of linked list, reverse nodes of list k at a time
+    Ex. head = [1,2,3,4,5], k = 2 -> [2,1,4,3,5]
+
+    Maintain prev, curr, & temp pointers to reverse, count k times
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 /**
  * Definition for singly-linked list.

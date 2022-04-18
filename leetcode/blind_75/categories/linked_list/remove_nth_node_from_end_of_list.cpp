@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given head of a linked list, remove nth node from end of list
+    Ex. head = [1,2,3,4,5], n = 2 -> [1,2,3,5]
+
+    Create 2 pointers "n" apart, iterate until end, will be at nth
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 /**
  * Definition for singly-linked list.

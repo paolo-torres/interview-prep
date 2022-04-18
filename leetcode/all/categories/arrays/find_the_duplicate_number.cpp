@@ -1,21 +1,30 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given int array, return the one repeated number
+    Ex. nums = [1,3,4,2,2] -> 2, nums = [3,1,3,4,2] -> 3
+
+    If there's duplicate, must be a cycle, find meeting point
+    Take 1 back to start, they'll intersect at the duplicate
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        unordered_set<int> s;
-        int result = 0;
+        int slow = nums[0];
+        int fast = nums[nums[0]];
         
-        for (int i = 0; i < nums.size(); i++) {
-            if (s.find(nums[i]) != s.end()) {
-                result = nums[i];
-                break;
-            } else {
-                s.insert(nums[i]);
-            }
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
         }
         
-        return result;
+        slow = 0;
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        return slow;
     }
 };

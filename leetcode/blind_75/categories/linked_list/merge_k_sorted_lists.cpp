@@ -1,4 +1,12 @@
-// Min heap -> optimize space w/ divide-and-conquer, merge 2 each time
+/*
+    Given array of k sorted linked-lists, merge all into 1 sorted list
+    Ex. lists = [[1,4,5],[1,3,4],[2,6]] -> [1,1,2,3,4,4,5,6]
+
+    Min heap -> optimize space w/ divide-and-conquer, merge 2 each time
+
+    Time: O(n log k)
+    Space: O(n) -> O(1)
+*/
 
 /**
  * Definition for singly-linked list.
@@ -11,14 +19,10 @@
  * };
  */
 
-// // Time: O(n log k)
-// // Space: O(n)
-
 // class Solution {
 // public:
 //     ListNode* mergeKLists(vector<ListNode*>& lists) {
 //         priority_queue<int, vector<int>, greater<int>> pq;
-        
 //         for (int i = 0; i < lists.size(); i++) {
 //             ListNode* node = lists[i];
 //             while (node != NULL) {
@@ -26,27 +30,20 @@
 //                 node = node->next;
 //             }
 //         }
-        
 //         if (pq.empty()) {
 //             return NULL;
 //         }
-        
 //         ListNode* node = new ListNode(pq.top());
 //         pq.pop();
 //         ListNode* head = node;
-        
 //         while (!pq.empty()) {
 //             node->next = new ListNode(pq.top());
 //             pq.pop();
 //             node = node->next;
 //         }
-        
 //         return head;
 //     }
 // };
-
-// Time: O(n log k)
-// Space: O(1)
 
 class Solution {
 public:

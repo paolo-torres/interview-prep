@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given head of linked-list, reorder list alternating outside in
+    Ex. head = [1,2,3,4] -> [1,4,2,3], head = [1,2,3,4,5] -> [1,5,2,4,3]
+
+    Find middle node, split in half, reverse 2nd half of list, merge
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 /**
  * Definition for singly-linked list.

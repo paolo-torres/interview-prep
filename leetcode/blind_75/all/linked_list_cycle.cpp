@@ -1,5 +1,11 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given head of a linked list, determine if it has a cycle in it
+
+    Slow/fast pointers, if they ever intersect then there's a cycle
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 /**
  * Definition for singly-linked list.
