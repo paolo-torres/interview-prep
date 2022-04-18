@@ -1,7 +1,12 @@
-// Given array and int k, return kth largest element in array
+/*
+    Given array and int k, return kth largest element in array
+    Ex. nums = [3,2,1,5,6,4], k = 2 -> 5
 
-// // Time: O(n log k)
-// // Space: O(k)
+    Quickselect, partition until pivot = k, left side all > k
+
+    Time: O(n) -> optimized from O(n log k) min heap solution
+    Space: O(1)
+*/
 
 // class Solution {
 // public:
@@ -13,15 +18,9 @@
 //                 pq.pop();
 //             }
 //         }
-
 //         return pq.top();
 //     }
 // };
-
-// Quickselect, partition until pivot = k, left side all > k
-
-// Time: O(n)
-// Space: O(1)
 
 class Solution {
 public:

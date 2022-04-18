@@ -1,7 +1,13 @@
-// https://leetcode.com/problems/task-scheduler/discuss/104500/Java-O(n)-time-O(1)-space-1-pass-no-sorting-solution-with-detailed-explanation
+/*
+    Given array of tasks & cooldown b/w same tasks, return least # of units of time
+    Ex. tasks = ["A","A","A","B","B","B"] n = 2 -> 8 (A->B->idle->A->B->idle->A->B)
 
-// Time: O(n)
-// Space: O(26)
+    Key is to determine # of idles, greedy: always arrange task w/ most freq first
+    3A, 2B, 1C -> A??A??A -> AB?AB?A -> ABCAB#A, since A most freq, needs most idles
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

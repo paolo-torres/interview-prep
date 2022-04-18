@@ -1,5 +1,11 @@
-// Time: O(log n) + O(1)
-// Space: O(n)
+/*
+    Implement data structure that gets the median from a data stream
+
+    Max heap of lower values & min heap of higher values, access to mids
+
+    Time: O(log n) + O(1)
+    Space: O(n)
+*/
 
 class MedianFinder {
 public:

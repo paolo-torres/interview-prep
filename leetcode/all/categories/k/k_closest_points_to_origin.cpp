@@ -1,5 +1,12 @@
-// // Time: O(n log k)
-// // Space: O(k)
+/*
+    Given array of points & an int k, return k closest points to (0, 0)
+    Ex. points = [[1,3],[-2,2]], k = 1 -> [[-2,2]]
+
+    Quickselect, partition until pivot = k, left side all < k
+
+    Time: O(n) -> optimized from O(n log k) max heap solution
+    Space: O(1)
+*/
 
 // class Solution {
 // public:
@@ -22,11 +29,6 @@
 //         return result;
 //     }
 // };
-
-// Quickselect, partition until pivot = k, left side all < k
-
-// Time: O(n)
-// Space: O(1)
 
 class Solution {
 public:
