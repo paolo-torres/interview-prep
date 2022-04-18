@@ -1,42 +1,69 @@
-// Time: O(1) addWord, O(num words of size n x n) search
-// Space: O(num words) addWord, O(1) search
+/*
+    Design add & search words data structure
+
+    Implement trie, handle wildcards: traverse all children & search substrings
+
+    Time: O(m x 26^n) -> m = # of words, n = length of words
+    Space: O(n)
+*/
+
+class TrieNode {
+public:
+    TrieNode* children[26];
+    bool isWord;
+    
+    TrieNode() {
+        for (int i = 0; i < 26; i++) {
+            children[i] = NULL;
+        }
+        isWord = false;
+    }
+};
 
 class WordDictionary {
 public:
-    /** Initialize your data structure here. */
     WordDictionary() {
-        
+        root = new TrieNode();
     }
     
     void addWord(string word) {
-        m[word.size()].push_back(word);
+        TrieNode* node = root;
+        int curr = 0;
+        
+        for (int i = 0; i < word.size(); i++) {
+            curr = word[i] - 'a';
+            if (node->children[curr] == NULL) {
+                node->children[curr] = new TrieNode();
+            }
+            node = node->children[curr];
+        }
+        
+        node->isWord = true;
     }
     
     bool search(string word) {
-        auto it = m.find(word.size());
-        if (it != m.end()) {
-            vector<string> words = it->second;
-            for (int i = 0; i < words.size(); i++) {
-                if (isEqual(words[i], word)) {
-                    return true;
-                }
+        TrieNode* node = root;
+        return searchInNode(word, 0, node);
+    }
+private:
+    TrieNode* root;
+    
+    bool searchInNode(string& word, int i, TrieNode* node) {
+        if (node == NULL) {
+            return false;
+        }
+        if (i == word.size()) {
+            return node->isWord;
+        }
+        if (word[i] != '.') {
+            return searchInNode(word, i + 1, node->children[word[i] - 'a']);
+        }
+        for (int j = 0; j < 26; j++) {
+            if (searchInNode(word, i + 1, node->children[j])) {
+                return true;
             }
         }
         return false;
-    }
-private:
-    unordered_map<int, vector<string>> m;
-    
-    bool isEqual(string curr, string word) {
-        for (int i = 0; i < curr.size(); i++) {
-            if (word[i] == '.') {
-                continue;
-            }
-            if (word[i] != curr[i]) {
-                return false;
-            }
-        }
-        return true;
     }
 };
 

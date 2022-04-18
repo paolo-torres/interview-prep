@@ -1,5 +1,11 @@
-// Time: O(n) insert, O(n) search, O(n) startsWith
-// Space: O(n) insert, O(1) search, O(1) startsWith
+/*
+    Implement trie (store/retrieve keys in dataset of strings)
+
+    Each node contains pointer to next letter & is word flag
+
+    Time: O(n) insert, O(n) search, O(n) startsWith
+    Space: O(n) insert, O(1) search, O(1) startsWith
+*/
 
 class TrieNode {
 public:

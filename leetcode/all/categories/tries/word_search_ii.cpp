@@ -1,5 +1,11 @@
-// Time: O(4^(m x n))
-// Space: O(m x n)
+/*
+    Given a board of characters & a list of words, return all words on the board
+
+    Implement trie, for search: iterate thru children until isWord, add to result
+
+    Time: O(m x (4 x 3^(l - 1))) -> m = # of cells, l = max length of words
+    Space: O(n) -> n = total number of letters in dictionary (no overlap in Trie)
+*/
 
 class TrieNode {
 public:
