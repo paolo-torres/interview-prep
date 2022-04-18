@@ -1,5 +1,12 @@
-// Time: O(1)
-// Space: O(1)
+/*
+    Return number of '1' bits in an int
+    Ex. n = 00001011 -> 3
+
+    Simply count bit-by-bit & shift it off
+
+    Time: O(1)
+    Space: O(1)
+*/
 
 class Solution {
 public:

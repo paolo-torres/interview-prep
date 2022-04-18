@@ -1,5 +1,12 @@
-// Time: O(1)
-// Space: O(1)
+/*
+    Reverse bits of a given integer
+    Ex. n = 10011100 -> 00111001 = 57
+
+    Shift into result & shift out of n
+
+    Time: O(1)
+    Space: O(1)
+*/
 
 class Solution {
 public:

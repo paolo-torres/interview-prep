@@ -1,3 +1,13 @@
+/*
+    Given a signed 32-bit integer, return it with its digits reversed
+    Ex. x = 123 -> 321, x = -123 -> -321, x = 120 -> 21
+
+    Reverse bit-by-bit starting from right, shift right off every time
+
+    Time: O(log x)
+    Space: O(1)
+*/
+
 class Solution {
 public:
     int reverse(int x) {
