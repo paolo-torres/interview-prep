@@ -1,5 +1,12 @@
-// Time: O(n x 2^n)
-// Space: O(n)
+/*
+    Given an integer array of unique elements, return all possible subsets (the power set)
+    Ex. nums = [1,2,2] -> [[],[1],[1,2],[1,2,2],[2],[2,2]]
+
+    Backtracking, generate all combos, push/pop + to explore new combos, skip duplicates
+
+    Time: O(n x 2^n)
+    Space: O(n)
+*/
 
 class Solution {
 public:
@@ -9,23 +16,19 @@ public:
         vector<int> curr;
         vector<vector<int>> result;
         
-        findSubsets(nums, 0, curr, result);
+        dfs(nums, 0, curr, result);
         return result;
     }
 private:
-    void findSubsets(vector<int>& nums, int index, vector<int>& curr, vector<vector<int>>& result) {
-        if (index == nums.size()) {
-            result.push_back(curr);
-            return;
+    void dfs(vector<int>& nums, int start, vector<int>& curr, vector<vector<int>>& result) {
+        result.push_back(curr);
+        for (int i = start; i < nums.size(); i++) {
+            if (i > start && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            curr.push_back(nums[i]);
+            dfs(nums, i + 1, curr, result);
+            curr.pop_back();
         }
-        
-        curr.push_back(nums[index]);
-        findSubsets(nums, index + 1, curr, result);
-        curr.pop_back();
-        
-        while (index < nums.size() - 1 && nums[index] == nums[index + 1]) {
-            index++;
-        }
-        findSubsets(nums, index + 1, curr, result);
     }
 };

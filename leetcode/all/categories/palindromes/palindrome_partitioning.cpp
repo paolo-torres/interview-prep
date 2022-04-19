@@ -1,16 +1,23 @@
-// Time: O(n x 2^n)
-// Space: O(n)
+/*
+    Given a string, partition such that every substring is a palindrome, return all possible ones
+    Ex. s = "aab" -> [["a","a","b"],["aa","b"]], s = "a" -> [["a"]]
+
+    Generate all possible substrings at idx, if palindrome potential candidate, backtrack after
+
+    Time: O(n x 2^n)
+    Space: O(n)
+*/
 
 class Solution {
 public:
     vector<vector<string>> partition(string s) {
         vector<string> curr;
         vector<vector<string>> result;
-        findPartitions(s, 0, curr, result);
+        dfs(s, 0, curr, result);
         return result;
     }
 private:
-    void findPartitions(string s, int start, vector<string>& curr, vector<vector<string>>& result) {
+    void dfs(string s, int start, vector<string>& curr, vector<vector<string>>& result) {
         if (start == s.size()) {
             result.push_back(curr);
             return;
@@ -19,7 +26,7 @@ private:
             if (isPalindrome(s, start, i)) {
                 string str = s.substr(start, i - start + 1);
                 curr.push_back(str);
-                findPartitions(s, i + 1, curr, result);
+                dfs(s, i + 1, curr, result);
                 curr.pop_back();
             }
         }

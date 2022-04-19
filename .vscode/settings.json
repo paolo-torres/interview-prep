@@ -31,6 +31,7 @@
         "ios": "cpp",
         "__string": "cpp",
         "functional": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "__functional_03": "cpp"
     }
 }

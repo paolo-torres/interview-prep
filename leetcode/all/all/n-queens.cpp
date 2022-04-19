@@ -1,16 +1,22 @@
-// Time: O(n!)
-// Space: O(n)
+/*
+    N-Queens: place n queens such that no 2 queens atk each other, return all soln's
+
+    Place queens per row, try all possibilities & validate for further rows, backtrack
+
+    Time: O(n!)
+    Space: O(n^2)
+*/
 
 class Solution {
 public:
     vector<vector<string>> solveNQueens(int n) {
         vector<string> board(n, string(n, '.'));
         vector<vector<string>> result;
-        solve(n, 0, board, result);
+        dfs(n, 0, board, result);
         return result;
     }
 private:
-    void solve(int n, int row, vector<string>& board, vector<vector<string>>& result) {
+    void dfs(int n, int row, vector<string>& board, vector<vector<string>>& result) {
         if (row == n) {
             result.push_back(board);
             return;
@@ -19,7 +25,7 @@ private:
         for (int col = 0; col < n; col++) {
             if (isValid(n, row, col, board)) {
                 board[row][col] = 'Q';
-                solve(n, row + 1, board, result);
+                dfs(n, row + 1, board, result);
                 board[row][col] = '.';
             }
         }

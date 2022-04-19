@@ -1,7 +1,11 @@
-// DFS traversal, set visited cells to '#', search in 4 directions, backtrack
+/*
+    Given a char board & a word, return true if word exists in the grid
 
-// Time: O(n x 3^l) -> n = # of cells, l = length of word
-// Space: O(l)
+    DFS traversal, set visited cells to '#', search in 4 directions, backtrack
+
+    Time: O(n x 3^l) -> n = # of cells, l = length of word
+    Space: O(l)
+*/
 
 class Solution {
 public:
