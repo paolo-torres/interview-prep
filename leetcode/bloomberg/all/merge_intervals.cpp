@@ -1,7 +1,12 @@
-// Sort by earliest start time, merge overlapping intervals (take longer end time)
+/*
+    Given an array of intervals, merge all overlapping intervals
+    Ex. intervals = [[1,3],[2,6],[8,10],[15,18]] -> [[1,6],[8,10],[15,18]]
 
-// Time: O(n log n)
-// Space: O(n)
+    Sort by earliest start time, merge overlapping intervals (take longer end time)
+
+    Time: O(n log n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

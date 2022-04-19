@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given array of non-overlapping intervals & a new interval, insert & merge if necessary
+    Ex. intervals = [[1,3],[6,9]], newInterval = [2,5] -> [[1,5],[6,9]]
+
+    To merge: while intervals are still overlapping the new one, take the larger bounds
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

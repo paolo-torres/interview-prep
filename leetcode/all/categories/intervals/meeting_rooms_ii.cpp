@@ -1,15 +1,18 @@
-// Min heap for earliest end times, most overlap will be heap size
+/*
+    Given array of time intervals, determine min # of meeting rooms required
+    Ex. intervals = [[0,30],[5,10],[15,20]] -> 2
 
-// Time: O(n log n)
-// Space: O(n)
+    Min heap for earliest end times, most overlap will be heap size
+
+    Time: O(n log n)
+    Space: O(n)
+*/
 
 class Solution {
 public:
     int minMeetingRooms(vector<vector<int>>& intervals) {
         // sort intervals by start time
-        sort(intervals.begin(), intervals.end(), [](const auto& a, const auto&b) {
-            return a[0] < b[0];
-        });
+        sort(intervals.begin(), intervals.end());
         
         // min heap to track min end time of merged intervals
         priority_queue<int, vector<int>, greater<int>> pq;
