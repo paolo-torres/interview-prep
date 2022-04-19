@@ -1,27 +1,18 @@
-1. Is this for a specific team or general application? bay area? nyc!
-2. What location is this for?
-3. Current plan for WFH? In-person, remote, hybrid?
-4. Next steps in the process?
-
-applications, consumer space
-
-- tech phone screen - 1-2 folks - 1 hr - Zoom - CoderPad - 1-2 Q's
-- onsite
-
-__________
-
 1. Should I be concerned with how early or how late I schedule my 
 onsite? I want enough time to prepare, but at the same time, if it's 
 in my best interest to interview earlier, I'll do that. Any thoughts 
 here? Are there other candidates currently in the pipeline? When do 
 you think I should schedule it?
 
-- 
+- Other candidates in the onsite stage right now, sooner the better
 
 2. New York? Relocation assistance? TN visa?
 
-- 
+- New York, will touch base
+- Follow up with TN visa requirements
 
 3. Virtual onsite process? How many rounds? What is each round?
 
-- 
+- Backend content
+- New recruiter
+- Coding, sys. design, behavioural, 60 mins each, 3 interviews
