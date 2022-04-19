@@ -1,11 +1,13 @@
-// Given s containing '(', ')', or '*', determine if valid
-// Ex. s = "()" -> true, s = "(*)" -> true, s = "(*))" -> false
+/*
+    Given s containing '(', ')', or '*', determine if valid
+    Ex. s = "()" -> true, s = "(*)" -> true, s = "(*))" -> true
 
-// Brute force: try both possibilities for each asterisk
-// Optimal: greedy, "balance", track min/max lefts
+    Brute force: try both possibilities for each asterisk
+    Optimal: greedy, "balance", track min/max lefts
 
-// Time: O(n)
-// Space: O(1)
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
