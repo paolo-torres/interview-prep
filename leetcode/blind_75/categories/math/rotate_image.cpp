@@ -1,5 +1,11 @@
-// Time: O(n^2)
-// Space: O(1)
+/*
+    Given a 2D image matrix, rotate image 90 deg CW
+
+    Transpose + reflect (rev on diag then rev left to right)
+
+    Time: O(n^2)
+    Space: O(1)
+*/
 
 class Solution {
 public:

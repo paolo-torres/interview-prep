@@ -1,5 +1,11 @@
-// Time: O(mn)
-// Space: O(1)
+/*
+    Given matrix, if element 0, set entire row/col to 0
+
+    Use 1st row/col as flag to determine if entire row/col 0
+
+    Time: O(mn)
+    Space: O(1)
+*/
 
 class Solution {
 public:

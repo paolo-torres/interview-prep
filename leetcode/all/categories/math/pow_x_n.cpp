@@ -1,7 +1,12 @@
-// // Divide-and-conquer, even x^n = A * A, odd x^n = A * A * x
+/*
+    Implement pow(x, n), which calculates x raised to the power n
+    Ex. x = 2 n = 10 -> 1024, x = 2.1 n = 3 -> 9.261, x = 2 n = -2 -> 0.25
 
-// // Time: O(log n)
-// // Space: O(log n)
+    Divide-and-conquer, even x^n = A * A, odd x^n = A * A * x
+
+    Time: O(log n)
+    Space: O(1) -> optimized from recursive O(log n) to do iteratively
+*/
 
 // class Solution {
 // public:
@@ -21,7 +26,6 @@
 //         if (n == 0) {
 //             return 1.0;
 //         }
-        
 //         double result = helper(x * x, n / 2);
 //         if (n % 2 == 0) {
 //             return result;
@@ -29,9 +33,6 @@
 //         return result * x;
 //     }
 // };
-
-// Time: O(log n)
-// Space: O(1)
 
 class Solution {
 public:

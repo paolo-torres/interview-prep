@@ -1,5 +1,11 @@
-// Time: O(mn)
-// Space: O(mn)
+/*
+    Given a matrix, return all elements in spiral order
+
+    Set up boundaries, go outside in CW: top->right->bottom->left
+
+    Time: O(m x n)
+    Space: O(m x n)
+*/
 
 class Solution {
 public:
