@@ -1,10 +1,13 @@
-// Graph of nodes, list of edges, determine if edges make valid tree
+/*
+    Graph of nodes, list of edges, determine if edges make valid tree
+    Ex. n = 5, edges = [[0,1],[0,2],[0,3],[1,4]] -> true
 
-// (1) For graph to be valid tree, must have exactly n - 1 edges
-// (2) If graph fully connected & has n - 1 edges, can't contain cycle
+    (1) For graph to be a valid tree, must have exactly n - 1 edges
+    (2) If graph fully connected & has n - 1 edges, can't contain cycle
 
-// Time: O(n)
-// Space: O(n)
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

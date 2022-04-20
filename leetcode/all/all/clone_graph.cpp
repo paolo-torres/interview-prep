@@ -1,4 +1,11 @@
-// Both BFS & DFS work, map original node to its copy
+/*
+    Given ref of a node in connected undirected graph, return deep copy
+
+    Both BFS & DFS work, map original node to its copy
+
+    Time: O(m + n)
+    Space: O(n)
+*/
 
 /*
 // Definition for a Node.
@@ -21,16 +28,12 @@ public:
 };
 */
 
-// // Time: O(m + n)
-// // Space: O(n)
-
 // class Solution {
 // public:
 //     Node* cloneGraph(Node* node) {
 //         if (node == NULL) {
 //             return NULL;
-//         }
-        
+//         } 
 //         if (m.find(node) == m.end()) {
 //             m[node] = new Node(node->val);
 //             for (int i = 0; i < node->neighbors.size(); i++) {
@@ -38,15 +41,11 @@ public:
 //                 m[node]->neighbors.push_back(cloneGraph(neighbor));
 //             }
 //         }
-        
 //         return m[node];
 //     }
 // private:
 //     unordered_map<Node*, Node*> m;
 // };
-
-// Time: O(m + n)
-// Space: O(n)
 
 class Solution {
 public:

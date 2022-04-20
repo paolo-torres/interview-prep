@@ -1,7 +1,11 @@
-// Distinguish captured vs escaped, 'X' vs 'O' vs 'E'
+/*
+    Given a matrix, capture ('X') all regions that are surrounded ('O')
 
-// Time: O(m x n)
-// Space: O(m x n)
+    Distinguish captured vs escaped, 'X' vs 'O' vs 'E'
+
+    Time: O(m x n)
+    Space: O(m x n)
+*/
 
 class Solution {
 public:

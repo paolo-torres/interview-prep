@@ -1,8 +1,12 @@
-// BFS traversal, shortest path from each gate to all empty rooms
-// Each gate only looks at within 1 space, then next gate, guarantees shortest
+/*
+    Given grid: -1 wall, 0 gate, INF empty, fill each empty w/ dist to nearest gate
 
-// Time: O(m x n)
-// Space: O(m x n)
+    BFS traversal, shortest path from each gate to all empty rooms
+    Each gate only looks at within 1 space, then next gate, guarantees shortest
+
+    Time: O(m x n)
+    Space: O(m x n)
+*/
 
 class Solution {
 public:
@@ -20,25 +24,23 @@ public:
         }
         
         while (!q.empty()) {
-            auto cell = q.front();
+            int row = q.front().first;
+            int col = q.front().second;
             q.pop();
             
-            int row = cell.first;
-            int col = cell.second;
-            
             for (int i = 0; i < 4; i++) {
-                int r = row + directions[i][0];
-                int c = col + directions[i][1];
+                int x = row + dirs[i][0];
+                int y = col + dirs[i][1];
                 
-                if (r < 0 || r >= m || c < 0 || c >= n || rooms[r][c] != INT_MAX) {
+                if (x < 0 || x >= m || y < 0 || y >= n || rooms[x][y] != INT_MAX) {
                     continue;
                 }
                 
-                rooms[r][c] = rooms[row][col] + 1;
-                q.push({r, c});
+                rooms[x][y] = rooms[row][col] + 1;
+                q.push({x, y});
             }
         }
     }
 private:
-    vector<vector<int>> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    vector<vector<int>> dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 };
