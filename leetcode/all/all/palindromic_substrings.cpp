@@ -1,7 +1,12 @@
-// 2 pointers, middle out, check both odd & even sized strings
+/*
+    Given a string, return # of palindromic substrings in it
+    Ex. s = "babad" -> "bab", s = "cbbd" -> "bb"
 
-// Time: O(n^2)
-// Space: O(1)
+    2 pointers, middle out, check both odd & even sized strings
+
+    Time: O(n^2)
+    Space: O(1)
+*/
 
 class Solution {
 public:

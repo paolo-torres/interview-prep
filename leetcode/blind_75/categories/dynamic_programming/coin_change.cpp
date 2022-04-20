@@ -1,5 +1,12 @@
-// Time: O(n x amount)
-// Space: O(amount)
+/*
+    Given array of coins & an amount, return fewest coins to make that amount
+    Ex. coins = [1,2,5], amount = 11 -> 3, $11 = $5 + $5 + $1
+
+    Compute all min counts for amounts up to i, "simulate" use of a coin
+
+    Time: O(m x n) -> m = # of coins, n = amount
+    Space: O(n)
+*/
 
 class Solution {
 public:
@@ -15,9 +22,9 @@ public:
             }
         }
         
-        if (dp[amount] != amount + 1) {
-            return dp[amount];
+        if (dp[amount] == amount + 1) {
+            return -1;
         }
-        return -1;
+        return dp[amount];
     }
 };

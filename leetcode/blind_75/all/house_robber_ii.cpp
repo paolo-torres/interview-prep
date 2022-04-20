@@ -1,5 +1,13 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given int array in a circle, return max amount can rob (can't rob adj houses)
+    Ex. nums = [2,3,2] -> 3, can't rob house 1 & 3 b/c circular adj, so rob 2
+
+    Recursion w/ memo -> DP, rob either 2 away + here, or 1 away, try both ranges
+    Recurrence relation: robFrom[i] = max(robFrom[i-2] + nums[i], robFrom[i-1])
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

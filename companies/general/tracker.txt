@@ -1,11 +1,11 @@
 Companies
 
 Onsite:
+- Bloomberg
 - Coinbase
 - Google
 
 Pending Onsite:
-- Bloomberg
 - LinkedIn
 - Twitter
 

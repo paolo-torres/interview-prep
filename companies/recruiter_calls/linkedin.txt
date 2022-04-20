@@ -16,12 +16,47 @@ in my best interest to interview earlier, I'll do that. Any thoughts
 here? Are there other candidates currently in the pipeline? When do 
 you think I should schedule it?
 
-- 
+- 1-2 weeks
+- how many days of availability? 3
+- email availability to Evan
 
-2. New York? Relocation assistance? TN visa?
+2. Virtual onsite process? How many rounds? What is each round?
+How many questions asked in each coding round?
 
-- 
+- 2 coding rounds
+- 2 questions each
+- be prepared to run the code
+- can use any language
 
-3. Virtual onsite process? How many rounds? What is each round?
+- 1 software design round
+- like system design
+- design choices
+- will it be just 1 question? design 1 system? yes just one question
+- shared diagram tool
+- a little bit more weighted towards mobile/frontend
+- start simple, extend more complex
 
-- 
+- 1 tech comm. round
+- deep dive into projects, design decisions
+- what i've done, certain challenges, approaches I took
+- technical/behavioural type of thing
+- scenarios
+- STAR approach
+- interact with non-technical teams
+
+- 1 host leader
+- similar to tech comm. round
+- 1 on 1 with hiring manager
+- work history
+- classic tell my story, resume, accomplishments
+- behavioural
+
+Additional
+
+- all in 1 day
+- ~3 days after interviews, decision made
+- some breaks between rounds
+- spread out a bit
+- team gets together, discusses all the rounds as a whole
+- am i interviewing with 1 team or is it in general?
+- Hamad

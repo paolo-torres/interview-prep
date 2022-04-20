@@ -1,5 +1,12 @@
-// Time: O(n^2)
-// Space: O(1)
+/*
+    Given a string s, return the longest palindromic substring in s
+    Ex. s = "babad" -> "bab", s = "cbbd" -> "bb"
+
+    Expand around center, extend as far as possible, store max length
+
+    Time: O(n^2)
+    Space: O(1)
+*/
 
 class Solution {
 public:

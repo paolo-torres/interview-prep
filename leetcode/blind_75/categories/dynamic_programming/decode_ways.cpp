@@ -1,5 +1,13 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given a string w/ only digits, return # ways to decode it (letter -> digit)
+    Ex. s = "12" -> 2 (AB 1 2 or L 12), s = "226" -> 3 (2 26 or 22 6 or 2 2 6)
+
+    DP: At each digit, check validity of ones & tens, if valid add to # ways
+    Recurrence relation: dp[i] += dp[i-1] (if valid) + dp[i-2] (if valid)
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:
@@ -9,7 +17,8 @@ public:
         }
         
         int n = s.size();
-        vector<int> dp(n + 1, 0);
+        
+        vector<int> dp(n + 1);
         dp[0] = 1;
         dp[1] = 1;
         

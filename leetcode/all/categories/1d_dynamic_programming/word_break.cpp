@@ -1,7 +1,12 @@
-// DP, at each loop, substring, check if in dict, & store
+/*
+    Given a string & dictionary, return true if:
+    Can segment string into 1 or more dictionary words
 
-// Time: O(n^3)
-// Space: O(n)
+    DP, at each loop, substring, check if in dict, & store
+
+    Time: O(n^3)
+    Space: O(n)
+*/
 
 class Solution {
 public:
@@ -12,7 +17,7 @@ public:
         }
         
         int n = s.size();
-        vector<bool> dp(n + 1, false);
+        vector<bool> dp(n + 1);
         dp[0] = true;
         
         for (int i = 1; i <= n; i++) {

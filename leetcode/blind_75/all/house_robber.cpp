@@ -1,5 +1,13 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given int array, return max amount can rob (can't rob adjacent houses)
+    Ex. nums = [1,2,3,1] -> 4, rob house 1 then house 3: 1 + 3 = 4
+
+    Recursion w/ memoization -> DP, rob either 2 away + here, or 1 away
+    Recurrence relation: robFrom[i] = max(robFrom[i-2] + nums[i], robFrom[i-1])
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
