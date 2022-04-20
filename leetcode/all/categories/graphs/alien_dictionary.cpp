@@ -1,7 +1,13 @@
-// Build graph + record edges, BFS + topological sort, check cyclic
+/*
+    Given list of words in another language, return string such that:
+    Letters are sorted in lexicographical incr order wrt this language
+    Ex. words = ["wrt","wrf","er","ett","rftt"]
 
-// Time: O(n)
-// Space: O(n)
+    Build graph + record edges, BFS + topological sort, check cyclic
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

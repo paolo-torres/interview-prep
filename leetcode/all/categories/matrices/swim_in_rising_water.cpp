@@ -1,7 +1,12 @@
-// Shortest path w/ min heap: at every step, find lowest water level to move fwd
+/*
+    Given an integer elevation matrix, rain falls, at time t, depth everywhere is t
+    Can swim iff elevation at most t, return least time get from top left to bottom right
 
-// Time: O(n^2 log n)
-// Space: O(n^2)
+    Shortest path w/ min heap: at every step, find lowest water level to move forward
+
+    Time: O(n^2 log n)
+    Space: O(n^2)
+*/
 
 class Solution {
 public:
@@ -11,10 +16,8 @@ public:
             return 0;
         }
         
-        vector<vector<bool>> visited(n, vector<bool>(n, false));
+        vector<vector<bool>> visited(n, vector<bool>(n));
         visited[0][0] = true;
-        
-        vector<int> dirs({-1, 0, 1, 0, -1});
         
         int result = max(grid[0][0], grid[n - 1][n - 1]);
         
@@ -28,20 +31,24 @@ public:
             result = max(result, curr[0]);
             
             for (int i = 0; i < 4; i++) {
-                int row = curr[1] + dirs[i];
-                int col = curr[2] + dirs[i + 1];
+                int x = curr[1] + dirs[i][0];
+                int y = curr[2] + dirs[i][1];
                 
-                if (row >= 0 && row < n && col >= 0 && col < n && !visited[row][col]) {
-                    if (row == n - 1 && col == n - 1) {
-                        return result;
-                    }
-                    
-                    pq.push({grid[row][col], row, col});
-                    visited[row][col] = true;
+                if (x < 0 || x >= n || y < 0 || y >= n || visited[x][y]) {
+                    continue;
                 }
+                
+                if (x == n - 1 && y == n - 1) {
+                    return result;
+                }
+
+                pq.push({grid[x][y], x, y});
+                visited[x][y] = true;
             }
         }
         
         return -1;
     }
+private:
+    vector<vector<int>> dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 };
