@@ -1,5 +1,13 @@
-// Time: O(m x n)
-// Space: O(m x n)
+/*
+    Given grid, return # of unique paths from top-left to bottom-right
+    Ex. m = 3, n = 2 -> 3 unique paths (R->D->D, D->D->R, D->R->D)
+
+    DP: edges have 1 unique path, inner cells consider where it comes from
+    Recurrence relation: grid[i][j] = grid[i-1][j] + grid[i][j-1]
+
+    Time: O(m x n)
+    Space: O(m x n)
+*/
 
 class Solution {
 public:

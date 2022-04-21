@@ -1,9 +1,14 @@
-// DP to return max coins obtainable in each interval [left, right]
-// Divide & conquer left & right depends on previous bursts, so think backwards
-// Instead of which one to burst first, need to think which one to burst last
+/*
+    Given array of balloons w/ coins, if burst ith, get (i-1) + i + (i+1) coins
+    Return max coins can collect by bursting the balloons wisely
 
-// Time: O(n^3) -> O(n^2) states, for each states, determining max coins is O(n)
-// Space: O(n^2) -> O(n^2) to store all states
+    DP to return max coins obtainable in each interval [left, right]
+    Divide & conquer left & right depends on previous bursts, so think backwards
+    Instead of which one to burst first, need to think which one to burst last
+
+    Time: O(n^3) -> O(n^2) states, for each states, determining max coins is O(n)
+    Space: O(n^2) -> O(n^2) to store all states
+*/
 
 class Solution {
 public:

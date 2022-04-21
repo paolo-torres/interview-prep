@@ -1,11 +1,13 @@
-// Given 2 strings, return minimum number of operations to convert word1 to word2
+/*
+    Given 2 strings, return minimum number of operations to convert word1 to word2
 
-// Naive: check all possible edit sequences & choose shortest one
-// Optimal: DP, if chars at i & j no operations needed, else 3 cases:
-// (1) replace (i - 1, j - 1), (2) delete (i - 1, j), (3) insert (i, j - 1)
+    Naive: check all possible edit sequences & choose shortest one
+    Optimal: DP, if chars at i & j same, no operations needed, else 3 cases:
+    (1) replace (i - 1, j - 1), (2) delete (i - 1, j), (3) insert (i, j - 1)
 
-// Time: O(m x n)
-// Space: O(m x n)
+    Time: O(m x n)
+    Space: O(m x n)
+*/
 
 class Solution {
 public:
@@ -46,7 +48,7 @@ public:
     }
 };
 
-// // Since we only need at most dp[i - 1][j - 1], can space optimize to O(n)
+// Since we only need at most dp[i - 1][j - 1], can space optimize to O(n)
 // class Solution {
 // public:
 //     int minDistance(string word1, string word2) {

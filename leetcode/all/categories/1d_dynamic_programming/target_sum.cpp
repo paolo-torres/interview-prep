@@ -1,33 +1,34 @@
-// https://leetcode.com/problems/target-sum/discuss/97334/Java-(15-ms)-C%2B%2B-(3-ms)-O(ns)-iterative-DP-solution-using-subset-sum-with-explanation
+/*
+    Given int array & a target, want to build expressions w/ '+' & '-'
+    Return number of different expressions that evaluates to target
 
-// Time: O(n x target)
-// Space: O(target)
+    Recursion w/ memoization, cache on (index, total), which stores # ways
+    If total ever reaches the target, return 1 (this is a way), else 0
+
+    Time: O(n x target)
+    Space: O(n x target)
+*/
 
 class Solution {
 public:
     int findTargetSumWays(vector<int>& nums, int target) {
-        int sum = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            sum += nums[i];
-        }
-        
-        if (sum < target || sum + target < 0 || (sum + target) % 2 > 0) {
-            return 0;
-        }
-        
-        return subsetSum(nums, (sum + target) / 2);
+        return backtrack(nums, target, 0, 0);
     }
 private:
-    int subsetSum(vector<int>& nums, int sum) {
-        vector<int> dp(sum + 1, 0);
-        dp[0] = 1;
-        
-        for (int i = 0; i < nums.size(); i++) {
-            for (int j = sum; j >= nums[i]; j--) {
-                dp[j] = dp[j] + dp[j - nums[i]];
-            }
+    // {(index, total) -> # of ways}
+    map<pair<int, int>, int> dp;
+    
+    int backtrack(vector<int>& nums, int target, int i, int total) {
+        if (i == nums.size()) {
+            return total == target ? 1 : 0;
+        }
+        if (dp.find({i, total}) != dp.end()) {
+            return dp[{i, total}];
         }
         
-        return dp[sum];
+        dp[{i, total}] = backtrack(nums, target, i + 1, total + nums[i])
+                       + backtrack(nums, target, i + 1, total - nums[i]);
+        
+        return dp[{i, total}];
     }
 };

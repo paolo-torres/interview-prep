@@ -4,9 +4,9 @@ Onsite:
 - Bloomberg
 - Coinbase
 - Google
+- LinkedIn
 
 Pending Onsite:
-- LinkedIn
 - Twitter
 
 Pending Phone Screen:
