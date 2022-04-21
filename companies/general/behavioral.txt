@@ -73,7 +73,7 @@ that will help future engineers from making the same mistake.
 3. Big hurdle on a project, how did you overcome it?
 
 Example 1: So the project I worked on was a Help Center. So you can 
-imagine on any website, I'd imagine Twitter has one too, is a Help 
+imagine on any website, I'd imagine {COMPANY} has one too, is a Help 
 Center type page where users can go & look for help for the website.
 Well, the biggest hurdle on this project was fully implementing the 
 search bar & being able to handle all edge cases. In particular, what 
@@ -135,7 +135,7 @@ tasks in a logical & orderly way.
 So for me, I'm definitely trying to improve on my breadth of skills.
 So although I've been enjoying my time here & what I've been doing, I 
 want to experience something else, something more. And I think a place 
-like Twitter can provide something like that.
+like {COMPANY} can provide something like that.
 
 8. Why {COMPANY}?
 
