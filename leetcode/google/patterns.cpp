@@ -271,7 +271,7 @@ void dfs(vector<int>& candidates, int target, int sum, int start
 
 // Figure 11.1.a. Graph Type 1 DFS
 void dfs(vector<vector<char>>& grid, int i, int j, int m, int n) {
-    // almost always check out of bounds like this, plus anything else
+    // almost always check out of bounds like this, + anything else
     if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] == '0') {
         return;
     }
