@@ -1,10 +1,12 @@
-// Given root of binary tree: collect all leaf nodes, remove all leaf nodes, repeat until empty
-// Ex. root = [1,2,3,4,5], output = [[4,5,3],[2],[1]]
+/*
+    Given root of binary tree: collect all leaf nodes, remove all leaf nodes, repeat until empty
+    Ex. root = [1,2,3,4,5], output = [[4,5,3],[2],[1]]
 
-// DFS, insert node values at correct locations
+    DFS, insert node values at correct locations
 
-// Time: O(n)
-// Space: O(n)
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.
