@@ -19,13 +19,25 @@ Example 1: During a design review meeting for part of the project I
 was leading, there was lots of debate over how a certain part should 
 be implemented. There was essentially 2 options & the team was split. 
 I really thought my solution was good, but I didn't want to just 
-discard their solution. So what I did was I created a small demo using 
-each of the solutions & demonstrated them in a follow-up meeting. 
-And it turns out, the optimal solution the entire team agreed upon was 
-a combo of both solutions. So kind of the moral here was to always 
-consider everyone's opinions & try things out if possible, because 
-looking back now, this combined solution was definitely better than 
-either solution individually.
+discard their solution. In particular, the design decision was over 
+how we should structure the backend content to be displayed. So we 
+have this system where we store all the Help Center strings, like a 
+database. And the design here was how we should structure this data. 
+Essentially, I proposed a very hierarchical approach where it was 
+split into topics, topic name, then articles, article name, then 
+article content. Another member suggested a more flat approach with 
+just topic names and article names. So what I did was I created a 
+small demo using each of the solutions & demonstrated them in a 
+follow-up meeting. And it turns out, the optimal solution the 
+entire team agreed upon was a combo of both solutions. So rather than 
+a super hierarchical approach with every step laid out, and also 
+rather than a flat approach with everything on one level, we combined 
+the two. The hybrid model we came up with kind of met in the middle. 
+Topics, articles, and article content. No extra levels added for 
+granularity, but also just enough so that the structure made sense. 
+So kind of the moral here was to always consider everyone's opinions 
+& try things out if possible, because looking back now, this combined 
+solution was definitely better than either solution individually.
 
 Example 2: During another project I was on, which was previous to the 
 main one I worked on, was a project that was already months overdue. 
