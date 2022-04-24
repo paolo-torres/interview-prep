@@ -1,20 +1,20 @@
-// Given array of strings & a max width, format text such that each line is fully justified
 /*
+    Given array of strings & a max width, format text such that each line is fully justified
     Ex. words = ["This", "is", "an", "example", "of", "text", "justification."], maxWidth = 16
     Output:
         "This    is   an",
         "example of text",
         "justification. "
+
+    Start w/ left as 1st word, findRight: greedily right as possible until max
+    Then justify one line at a time: in all cases we pad right side w/ spaces
+    (1) if 1 word then result is just that word
+    (2) if last line then result is all words separated by single space
+    (3) else calculate size of each space evenly, if remainder distribute
+
+    Time: O(n)
+    Space: O(n)
 */
-
-// Start w/ left as 1st word, findRight: greedily right as possible until max
-// Then justify one line at a time: in all cases we pad right side w/ spaces
-// (1) if 1 word then result is just that word
-// (2) if last line then result is all words separated by single space
-// (3) else calculate size of each space evenly, if remainder distribute
-
-// Time: O(n)
-// Space: O(n)
 
 class Solution {
 public:
