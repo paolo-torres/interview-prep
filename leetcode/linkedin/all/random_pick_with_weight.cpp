@@ -1,16 +1,18 @@
-// Given array of weights, randomly pick an index where prob = w[i] / sum(w)
-
-// Visualize number line, higher weight = more range, sampling
-// Further on the number line -> higher chance -> cumulative sum
 /*
+    Given array of weights, randomly pick an index where prob = w[i] / sum(w)
+
+    Visualize number line, higher weight = more range, sampling
+    Further on the number line -> higher chance -> cumulative sum
+
     Ex. [1,2,3,4,3] -> want index 1 2/13 prob instead of equal
     [0,1,1,2,2,2,3,3,3,3,4,4,4] -> if we were to use normal rand
     i = 0: range < 1, i = 1: range < 3, i = 2, range < 6, etc.
     This above is the prefix sums, therefore this approach works
-*/
 
-// Time: O(n) Solution, O(log n) pickIndex
-// Space: O(n) Solution, O(1) pickIndex
+
+    Time: O(n) Solution, O(log n) pickIndex
+    Space: O(n) Solution, O(1) pickIndex
+*/
 
 class Solution {
 public:
