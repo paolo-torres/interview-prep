@@ -1,8 +1,10 @@
-// Given 2 points on a diagonal, can determine area
-// Hash map {x value -> set of y values w/ same x value}
+/*
+    Given 2 points on a diagonal, can determine area
+    Hash map {x value -> set of y values w/ same x value}
 
-// Time: O(n^2)
-// Space: O(n)
+    Time: O(n^2)
+    Space: O(n)
+*/
 
 class Solution {
 public:

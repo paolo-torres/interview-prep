@@ -1,8 +1,10 @@
-// Map to save disjoint intervals
-// Ex. m[left] = right means interval [left, right)
+/*
+    Map to save disjoint intervals
+    Ex. m[left] = right means interval [left, right)
 
-// Time: O(log n)
-// Space: O(n)
+    Time: O(log n)
+    Space: O(n)
+*/
 
 class RangeModule {
 public:
