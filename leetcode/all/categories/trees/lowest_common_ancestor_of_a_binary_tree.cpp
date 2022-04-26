@@ -1,9 +1,11 @@
-// Given binary tree, find LCA of 2 given nodes in the tree
+/*
+    Given binary tree, find LCA of 2 given nodes in the tree
 
-// If one NULL the other must be LCA, if both non-NULL parent LCA
+    If one NULL the other must be LCA, if both non-NULL parent LCA
 
-// Time: O(n)
-// Space: O(n)
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.

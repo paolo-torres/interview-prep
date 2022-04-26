@@ -1,9 +1,11 @@
-// LCA of 2 trees, each node has ref to its parent
+/*
+    LCA of 2 trees, each node has ref to its parent
 
-// Same as intersection of 2 linked lists
+    Same as intersection of 2 linked lists
 
-// Time: O(n)
-// Space: O(1)
+    Time: O(n)
+    Space: O(1)
+*/
 
 /*
 // Definition for a Node.

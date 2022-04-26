@@ -1,7 +1,13 @@
-// Maintain char counts, if count = k remove
+/*
+    Given a string & an int k, make k duplicate removals until we no longer can
+    Return final string after all such duplicate removals have been made
+    s = "deeedbbcccbdaa", k = 3 -> "aa", delete: "eee", "ccc", "bbb", "ddd"
 
-// Time: O(n)
-// Space: O(n)
+    Maintain char counts, if count = k remove, use stack to perform removals
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 class Solution {
 public:

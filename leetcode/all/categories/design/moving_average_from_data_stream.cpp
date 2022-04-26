@@ -1,7 +1,11 @@
-// Maintain window w/ queue
+/*
+    Given stream of ints & a window size, calculate moving average
 
-// Time: O(1)
-// Space: O(n)
+    Maintain window w/ queue, when new val comes in, update sum & window
+
+    Time: O(1)
+    Space: O(n) -> n = size of the moving window
+*/
 
 class MovingAverage {
 public:
