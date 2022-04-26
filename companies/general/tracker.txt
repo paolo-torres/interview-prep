@@ -9,7 +9,7 @@ Onsite:
 Pending Onsite:
 - Twitter
 
-Pending Phone Screen:
+Phone Screen:
 - Spotify
 
 Pending Online Assessment:
