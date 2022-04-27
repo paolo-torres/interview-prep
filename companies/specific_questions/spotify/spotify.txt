@@ -1,0 +1,193 @@
+Domain Questions
+
+1. JavaScript/HTML/CSS trivia
+2. Java/Spring trivia
+3. Public/private/etc., polymorphism, inheritance, DOM
+4. TypeScript/React/Redux trivia
+5. HTTP/HTTPS/web architecture/MVC/GET/POST/APIs
+6. TCP vs. UDP, what messages are exchanged in a TCP handshake
+7. Processes, threads, multi-threaded, concurrency, parallelism
+
+1. JavaScript/HTML/CSS trivia
+
+JavaScript:
+- What is it: interpreted programming language w/ OOP capabilities
+- vs. Java: runs in the browser vs needs to be compiled
+- this operator: refers to the object it belongs to, owner
+- Callback: JS function passed in to be executed after another func
+- var vs. let: let is scoped only in the block it's defined in
+- "==" vs. "===": triple equals also checks type
+- null vs. undefined: undefined is declared but not assigned
+- strict: can't use implicit vars, can't assign value to read-only
+
+HTML:
+- Used to create and display pages on the web
+- Typical layout: header > nav > section > article > aside > footer
+- div vs. span: block-line vs. in-line
+
+CSS:
+- id vs. class: unique vs. common/can be used by multiple elements
+- Flexbox: layout, can modify width/height to fill available space
+- Positioning: static, relative, absolute, fixed
+
+2. Java/Spring trivia
+
+Java:
+- JDK: to compile, document, and package Java programs
+- JRE: runtime env in which Java code can be executed, impl of JVM
+- JVM: abstract machine, spec that provides runtime for Java
+- Platform independent: because its code can run on any system
+- super keyword: refers to immediate parent class object
+- Strings: are immutable, can't be modified
+
+Spring:
+- Application framework for developing enterprise apps in Java
+- Spring Context: dependency injection
+- Spring MVC: model-view-controller for creating web apps/services
+- Beans: objects instantiated, assembled, and managed by Spring
+- @Controller, @Repository, @Service
+- @RequestMapping: URI mappings in controllers
+- @ResponseBody: sending Object as response, usually XML or JSON
+- @PathVariable: mapping dynamic values from URI to handler method
+
+3. Public/private/etc., polymorphism, inheritance, DOM
+
+- public: method accessible by any class
+- private: method accessible only by its own class
+- protected: method accessible by all classes except non-subclasses
+
+- static: keyword in Java which identifies it is class-based
+- Stack vs. heap memory: local primitives/vars vs. objects
+- Garbage collection: by default in Java, memory deletion, no ptrs
+
+- OOP: focuses on objects rather than logic and functions
+- Inheritance: one class acquires properties of another
+- Encapsulation: wrapping up the data and code together as one
+- Abstraction: hiding implementation details from user
+- Polymorphism: ability of a var/func/obj to take multiple forms
+
+- DOM: Document Object Model, standard representation of the objects
+- JS can access and change all the elements
+- Tree: doc, <html>, <head>, <title>, <body>, <a>, <h1>, ...
+
+4. TypeScript/React/Redux trivia
+
+TypeScript:
+- TS: superset of JS, pure OOP w/ classes, interfaces, etc., compiled
+- vs. JS: OOP vs. scripting, enforce types, support for modules
+- vs. JS: takes long to compile, no support for abstract classes
+
+React:
+- Real vs. virtual DOM: directly update HTML vs. can't
+- React: component-based front-end library, reusable
+- Features: virtual DOM, server-side rendering, 1-way data flow
+- Advantages: perf, readability, healthy support
+- Limitations: large and takes time to learn, complex
+- JSX: JS XML, expressiveness of JS + HTML template syntax, perf
+- Virtual DOM: JS object which just a copy of the real DOM
+    1. whenever any data changes, entire UI is re-rendered
+    2. Diff b/w previous DOM and new one is calculated
+    3. Real DOM is updated with only things that actually changed
+- render(): returns a single React element
+- Props: properties, pure read-only components, passed down, 1-dir
+- State: source of data, objects that determine rendering/behavior
+- Phases: initial rendering, updating, unmounting (removed)
+- Router: routing library, add new screens/flows, URL in sync w/ data
+
+// JSX
+render() {
+    return(
+        <div>
+            <h1> Hello World! </h1>
+        </div>
+    )
+}
+
+// Component and function
+class MyComponent extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1> Hello World! </h1>
+            </div>
+        )
+    }
+}
+
+// Props
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1> Hello {this.props.name}! </h1>
+            </div>
+        )
+    }
+}
+
+// State
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1> Hello {this.props.name}! </h1>
+            </div>
+        )
+    }
+}
+
+Redux:
+- Front-end library, state management
+- 1 source of truth, state is read-only, changes w/ pure functions
+- Redux store: its single source of truth, entire state
+- Components: action, reducer, store, view
+- Action: object that describes what happened
+- Reducer: place to determine how the state will change
+- Store: state/object tree of entire application
+- View: displays the data provided by the store
+- Redux > React: predictable (1 source of truth), maintainable
+
+5. HTTP/HTTPS/web architecture/MVC/GET/POST/APIs
+
+- HTTPS is HTTP with encryption, uses TLS (SSL cert) to encrypt data
+- HTTP: protocol for transferring data over a network
+- Website content and API calls
+- GET request to retrieve data, POST request to post data
+- HTTPS: public key encryption, 2 keys public and private
+
+6. TCP vs. UDP, what messages are exchanged in a TCP handshake
+
+- Transmission control protocol vs. user datagram protocol
+- TCP: connection-oriented, devices should establish a connection
+       before transmitting data and close it after transmitting
+- UDP: datagram-oritented, no overhead for handling a connection,
+       efficient for broadcast/multicast types of networks
+- Handshakes: TCP SYN/ACK/SYN-ACK, UDP connectionless no handshake
+- Protocols: TCP HTTP/HTTPS/FTP/SMTP, UDP DNS/DHCP/TFTP/SNMP/VoIP
+
+- Ex. 2 houses, letter needs to be sent from 1 to 2, there's a river
+    - Sol. 1: make a bridge over the river and deliver
+    - Sol. 2: get it delivered through a pigeon
+    - Sol. 1 TCP, connection made, data reliable, no data loss
+    - Sol. 2 UDP, no connection, faster, but less reliable
+
+7. Processes, threads, multi-threaded, concurrency, parallelism
+
+- Process: executing instance of a program
+- Thread: subset of the process, smallest piece of instructions
+- Synchronization: keeps all concurrent threads in execution in sync
+
+- Both processes and threads are units of concurrency
+- Difference: processes don't share common memory, while threads do
+- From OS POV:
+    - Process independent, own memory, isolated, separate from others
+    - Thread shares common memory, less overhead, exchange data
+
+- Multi-threaded: multiple threads executing concurrently
+- Improves perf since CPU not idle if threads are waiting
+
+- Concurrency: when 2 or more tasks can start, run, and finish
+    in overlapping time periods, not necessarily at the same time
+- Parallelism: when tasks literally run at the same time
+- Ex. concurrency is 2 lines of customers ordering from 1 cashier
+      parallelism is 2 lines of customers ordering from 2 cashiers
