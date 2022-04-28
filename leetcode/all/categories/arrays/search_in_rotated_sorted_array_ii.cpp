@@ -1,5 +1,12 @@
-// Time: O(log n)
-// Space: O(1)
+/*
+    Given array after some rotation w/ duplicates, find if target is in nums
+    Ex. nums = [2,5,6,0,0,1,2] target = 0 -> true
+
+    Modified binary search, if low <= mid left sorted, else right sorted
+
+    Time: O(log n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
@@ -12,6 +19,7 @@ public:
             if (nums[mid] == target) {
                 return true;
             }
+            // can't use binary search, so just iterate the pointers
             if (nums[low] == nums[mid] && nums[mid] == nums[high]) {
                 low++;
                 high--;

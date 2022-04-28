@@ -1,27 +1,79 @@
+/*
+    Design a HashMap without using any built-in hash table libraries
+
+    Array, hash func (multiplicative, prime), linked list for collisions
+
+    Time: O(1)
+    Space: O(n)
+*/
+
+struct Node {
+    int key;
+    int value;
+    Node* next;
+    
+    Node(int k, int v, Node* n) {
+        key = k;
+        value = v;
+        next = n;
+    }
+};
+
 class MyHashMap {
-private:
-    int hashMap[1000001];
 public:
-    /** Initialize your data structure here. */
+    // at least greater than # of possible calls
+    const static int size = 19997;
+    // any random large multiplier, pref prime
+    const static int mult = 12582917;
+    Node* data[size] = {};
+    
     MyHashMap() {
-        for (int i = 0; i < 1000000; i++) {
-            hashMap[i] = -1;
+        
+    }
+    
+    void put(int key, int value) {
+        remove(key);
+        int h = hash(key);
+        Node* node = new Node(key, value, data[h]);
+        data[h] = node;
+    }
+    
+    int get(int key) {
+        int h = hash(key);
+        Node* node = data[h];
+        while (node != NULL) {
+            if (node->key == key) {
+                return node->value;
+            }
+            node = node->next;
+        }
+        return -1;
+    }
+    
+    void remove(int key) {
+        int h = hash(key);
+        Node* node = data[h];
+        if (node == NULL) {
+            return;
+        }
+        if (node->key == key) {
+            data[h] = node->next;
+            delete node;
+            return;
+        }
+        while (node->next != NULL) {
+            if (node->next->key == key) {
+                Node* temp = node->next;
+                node->next = temp->next;
+                delete temp;
+                return;
+            }
+            node = node->next;
         }
     }
-    
-    /** value will always be non-negative. */
-    void put(int key, int value) {
-        hashMap[key] = value;
-    }
-    
-    /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
-    int get(int key) {
-        return hashMap[key];
-    }
-    
-    /** Removes the mapping of the specified value key if this map contains a mapping for the key */
-    void remove(int key) {
-        hashMap[key] = -1;
+private:
+    int hash(int key) {
+        return (int)((long)key * mult % size);
     }
 };
 
