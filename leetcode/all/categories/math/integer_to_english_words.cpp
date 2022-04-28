@@ -1,7 +1,11 @@
-// Group nums by 1's & 10's naming, compute w/ divide + name + remainder
+/*
+    Convert a non-negative integer num to its English words representation
 
-// Time: O(1)
-// Space: O(n)
+    Group nums by 1's & 10's naming, compute w/ divide + name + remainder
+
+    Time: O(1)
+    Space: O(n)
+*/
 
 class Solution {
 public:

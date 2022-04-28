@@ -1,7 +1,12 @@
-// 2 pointers, start from end, write min(p1, p2) into i, decrement
+/*
+    Given 2 sorted int arrays, merge into a single sorted array
+    Ex. nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3 -> [1,2,2,3,5,6]
 
-// Time: O(m + n)
-// Space: O(1)
+    2 pointers, start from end, write min(p1, p2) into i, decrement
+
+    Time: O(m + n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

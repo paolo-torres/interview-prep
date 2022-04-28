@@ -1,10 +1,22 @@
-// 1. Goal: group common emails together, sounds like union find
-// 2. Group emails initially with themselves as the parent
-// 3. Common emails should be joined by assigning the same parent
-// Union find + disjoint-set: finds subset element is in, join subsets
+/*
+    Given 2D list of accounts, where accounts[i][0] is name, rest are emails
+    Merge accounts together, 2 accounts belong to same person if common email
+    Ex. accounts = [["John","johnsmith@mail.com","john_newyork@mail.com"],
+                    ["John","johnsmith@mail.com","john00@mail.com"],
+                    ["Mary","mary@mail.com"],
+                    ["John","johnnybravo@mail.com"]]
+        [["John","john00@mail.com","john_newyork@mail.com","johnsmith@mail.com"],
+         ["Mary","mary@mail.com"],
+         ["John","johnnybravo@mail.com"]]
 
-// Time: O((m x n) log (m x n))
-// Space: O(m x n)
+    1. Goal: group common emails together, sounds like union find
+    2. Group emails initially with themselves as the parent
+    3. Common emails should be joined by assigning the same parent
+    Union find + disjoint-set: finds subset element is in, join subsets
+
+    Time: O((m x n) log (m x n))
+    Space: O(m x n)
+*/
 
 class Solution {
 public:
