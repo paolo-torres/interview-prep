@@ -1,7 +1,12 @@
-// 2 binary searches, slightly diff (biased towards left/right)
+/*
+    Given sorted int array, find start & end of a given target
+    Ex. nums = [5,7,7,8,8,10], target = 8 -> [3,4]
 
-// Time: O(log n)
-// Space: O(1)
+    2 binary searches, slightly diff (biased towards left/right)
+
+    Time: O(log n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
