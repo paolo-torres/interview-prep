@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given root of a binary tree, return zigzag level order traversal of its nodes' values
+    Ex. root = [3,9,20,null,null,15,7] -> [[3],[20,9],[15,7]]
+
+    BFS traversal, even levels go left to right, odd levels go right to left
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.
