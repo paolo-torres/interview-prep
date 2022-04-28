@@ -1,7 +1,13 @@
-// Hash map {char -> index}, compare adj words
+/*
+    Given a sequence of words written in alien language & order of their alphabet
+    Return true if given words are sorted lexicographically in this alien language
+    Ex. words = ["hello","leetcode"], order = "hlabcdefgijkmnopqrstuvwxyz" -> true
 
-// Time: O(n)
-// Space: O(1)
+    Compare adjacent words, hash map {char -> index}
+
+    Time: O(n) -> n = total number of characters in words
+    Space: O(1)
+*/
 
 class Solution {
 public:

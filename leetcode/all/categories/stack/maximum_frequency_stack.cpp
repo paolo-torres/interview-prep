@@ -1,5 +1,12 @@
-// Time: O(1)
-// Space: O(n)
+/*
+    Design stack-like data structure:
+    Push to stack, pop most freq element from stack
+
+    Map val to freq, & map freq to stack of vals w/ this freq
+
+    Time: O(1)
+    Space: O(n)
+*/
 
 class FreqStack {
 public:
@@ -9,15 +16,16 @@ public:
     
     void push(int val) {
         freq[val]++;
-        m[freq[val]].push(val);
         maxFreq = max(maxFreq, freq[val]);
+        
+        group[freq[val]].push(val);
     }
     
     int pop() {
-        int val = m[maxFreq].top();
-        m[maxFreq].pop();
+        int val = group[maxFreq].top();
+        group[maxFreq].pop();
         
-        if (m[freq[val]].empty()) {
+        if (group[freq[val]].empty()) {
             maxFreq--;
         }
         
@@ -25,8 +33,10 @@ public:
         return val;
     }
 private:
+    // {val -> frequency}
     unordered_map<int, int> freq;
-    unordered_map<int, stack<int>> m;
+    // {frequency -> stack of elements with this frequency}
+    unordered_map<int, stack<int>> group;
     int maxFreq;
 };
 
