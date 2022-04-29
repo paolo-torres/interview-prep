@@ -1,16 +1,16 @@
 # System Design Interviews: A Step By Step Guide
 
-## Step 1: Requirements Clarification
-## Step 2: Back-of-the-Envelope Estimation
-## Step 3: System Interface
-## Step 4: Defining Data Model
-## Step 5: High-Level Design
-## Step 6: Detailed Design
-## Step 7: Identifying and Resolving Bottlenecks
+### Step 1: Requirements Clarification
+### Step 2: Back-of-the-Envelope Estimation
+### Step 3: System Interface
+### Step 4: Defining Data Model
+### Step 5: High-Level Design
+### Step 6: Detailed Design
+### Step 7: Identifying and Resolving Bottlenecks
 
 ---
 
-### Step 1: Requirements Clarification
+## Step 1: Requirements Clarification
 
 It is always a good idea to ask questions about the exact scope of the problem we are solving. Design questions are mostly open-ended, and they don't have one correct answer, that's why clarifying ambiguities early in the interview becomes critical.
 
@@ -25,7 +25,7 @@ Let's expand this with an actual example of designing a Twitter-like service. He
 
 ---
 
-### Step 2: Back-of-the-Envelope Estimation
+## Step 2: Back-of-the-Envelope Estimation
 
 It is always a good idea to estimate the scale of the system we're going to design. This will also help later when we will be focusing on scaling, partitioning, load balancing, and caching.
 
@@ -35,7 +35,7 @@ It is always a good idea to estimate the scale of the system we're going to desi
 
 ---
 
-### Step 3: System Interface Definition
+## Step 3: System Interface Definition
 
 Define what APIs are expected from the system. This will not only establish the exact contract expected from the system, but will also ensure if we haven't gotten any requirements wrong. Some examples of APIs for our Twitter-like service will be:
 
@@ -47,7 +47,7 @@ Define what APIs are expected from the system. This will not only establish the 
 
 ---
 
-### Step 4: Defining Data Model
+## Step 4: Defining Data Model
 
 Defining the data model in the early part of the interview will clarify how data will flow between different components of the system. Later, it will guide for data partitioning and management. Here are some entities for our Twitter-like service:
 
@@ -63,7 +63,7 @@ Which database system should we use? Will NoSQL like Cassandra best fit our need
 
 ---
 
-### Step 5: High-Level Design
+## Step 5: High-Level Design
 
 Draw a block diagram with 5-6 boxes representing the core components of our system. We should identify enough components that are needed to solve the actual problem from end-to-end.
 
@@ -73,7 +73,7 @@ For Twitter, at a high-level, we will need multiple application servers to serve
 
 ---
 
-### Step 6: Detailed Design
+## Step 6: Detailed Design
 
 Dig deeper into 2 or 3 major components; interviewer's feedback should always guide us to what parts of the system need further discussion. We should be able to present different approaches, their pros and cons, and explain why we will prefer one approach over the other. Remember there is no single answer; the only important thing is to consider tradeoffs between different options while keeping system constraints in mind.
 
@@ -85,7 +85,7 @@ Dig deeper into 2 or 3 major components; interviewer's feedback should always gu
 
 ---
 
-### Step 7: Identifying and Resolving Bottlenecks
+## Step 7: Identifying and Resolving Bottlenecks
 
 Try to discuss as many bottlenecks as possible and different approaches to mitigate them.
 

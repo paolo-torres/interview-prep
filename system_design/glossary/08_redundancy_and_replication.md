@@ -1,4 +1,4 @@
-Redundancy and Replication
+# Redundancy and Replication
 
 Redundancy is the duplication of critical components or functions of a
 system with the intention of increasing the reliability of the system,
@@ -8,7 +8,7 @@ stored on a single server, then losing that server means losing the
 file. Redundancy plays a key role in removing the single points of
 failure in the system and provides backups if needed in a crisis.
 
-Refer: 08_redundancy_and_replication.png
+![08_redundancy_and_replication](08_redundancy_and_replication.png)
 
 Replication means sharing information to ensure consistency between
 redundant resources, such as software or hardware components, to
