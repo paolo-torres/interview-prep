@@ -32,7 +32,8 @@
         "__string": "cpp",
         "functional": "cpp",
         "random": "cpp",
-        "__functional_03": "cpp"
+        "__functional_03": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
