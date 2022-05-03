@@ -6,7 +6,7 @@ Scalability is the capability of a system, process, or a network to grow and man
 
 **Horizontal vs. Vertical Scaling:** Horizontal scaling means that you scale by adding more servers into your pool of resources, whereas vertical scaling means that you scale by adding more power (CPU, RAM, storage, etc.) to an existing server. Good examples of horizontal scaling are Cassandra and MongoDB as they both provide an easy way to scale horizontally by adding more machines to meet growing needs. Similarly, a good example of vertical scaling is MySQL as it allows for an easy way to scale vertically by switching from smaller to bigger machines, however this process often involves downtime.
 
-![02_horizontal_vertical_scaling](02_horizontal_vertical_scaling.png)
+![02_distributed_systems](02_distributed_systems.png)
 
 ---
 
