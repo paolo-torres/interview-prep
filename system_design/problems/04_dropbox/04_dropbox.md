@@ -72,7 +72,7 @@ Essential operations:
 
 1 solution could be that the clients periodically check with the server if there are any changes. Problem with this approach is that we will have a delay in reflecting changes locally as clients will be checking for changes periodically compared to a server notifying whenever there is some change.
 
-A solution to the above problem could be to use HTTP long polling. With long polling, the client requests info from the server with the expectation that the server may not respond immediately. If the server has no new data for the client when the polll is received, instead of sending an empty response, the server holds the request open and waits for response info to become available.
+A solution to the above problem could be to use HTTP long polling. With long polling, the client requests info from the server with the expectation that the server may not respond immediately. If the server has no new data for the client when the poll is received, instead of sending an empty response, the server holds the request open and waits for response info to become available.
 
 Based on the above considerations, we can divide our client into the following 4 parts:
 

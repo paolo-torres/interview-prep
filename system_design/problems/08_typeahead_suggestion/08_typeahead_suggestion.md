@@ -20,7 +20,7 @@ Enable users to search for known and frequently searched terms. As users type in
 
 ## 3. Basic System Design and Algorithm
 
-Since have to srve a lot of queries with minimum latency, need scheme that can efficiently store data such that it can be queried quickly. Can't depend upon some database for this, need to store index in memory in a highly efficient data structure.
+Since have to serve a lot of queries with minimum latency, need scheme that can efficiently store data such that it can be queried quickly. Can't depend upon some database for this, need to store index in memory in a highly efficient data structure.
 
 One of the most appropriate data structures for this is the Trie. Tree-like data structure used to store phrases where each node stores a character of the phrase in a sequential manner. For example, if need to store 'cap, cat, caption, captain, capital' in the trie:
 

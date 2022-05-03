@@ -66,7 +66,7 @@ JSON containing info about list of businesses matching search query. Each result
 
 ---
 
-## 6. Basic System Design and Algoritm
+## 6. Basic System Design and Algorithm
 
 At a high level, need to store and index each dataset (places, reviews, etc.). For users to query this massive databse, indexing should be read efficient. Different ways to store this data:
 

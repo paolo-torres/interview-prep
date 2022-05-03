@@ -190,7 +190,7 @@ To scale out our DB, we need to partition it so that it can store info about bil
 
 **a. Range Based Partitioning:** We can store URLs in separate partitions based on the first letter of the hash key. The main problem with this approach is that it can lead to unbalanced DB servers.
 
-**b. Hash Based Partitioning:** We take a hash of the object we are storing. We then calculate which partition to used based upon the hash. Our hashing function will randomly distribute URLs into different partitions (e.g., our hashing function can always map any 'key' to a number between [1...256]), and this number would represent the partition.
+**b. Hash Based Partitioning:** We take a hash of the object we are storing. We then calculate which partition to use based upon the hash. Our hashing function will randomly distribute URLs into different partitions (e.g., our hashing function can always map any 'key' to a number between [1...256]), and this number would represent the partition.
 
 ---
 
@@ -202,7 +202,7 @@ We can cache URLs that are frequently accessed. The application servers, before 
 
 **Which cache eviction policy would best fit our needs?** When the cache is full, and we want to replace a link with a newer/hotter URL, Least Recently Used (LRU) can be a reasonable policy for our system. To further increase the efficiency, we can replicate our caching servers to distribute the load between them.
 
-**how can each cache replica be updated?** Whenever there is a cache miss, our servers would be hitting a backend database. Whenever this happens, we can update the cache and pass the new entry to all the cache replicas.
+**How can each cache replica be updated?** Whenever there is a cache miss, our servers would be hitting a backend database. Whenever this happens, we can update the cache and pass the new entry to all the cache replicas.
 
 ![flow_accessing_url](flow_accessing_url.png)
 
