@@ -9,9 +9,6 @@ Onsite:
 Pending Onsite:
 - Twitter
 
-Phone Screen:
-- Spotify
-
 Pending Online Assessment:
 - Galaxy Digital
 - Luma Financial Technologies
