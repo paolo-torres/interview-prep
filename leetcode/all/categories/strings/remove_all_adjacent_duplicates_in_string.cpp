@@ -1,7 +1,12 @@
-// Stack, pop if last char in result = curr char, else push
+/*
+    Given string, repeatedly make duplicate removals (2 adj & equal)
+    Ex. s = "abbaca" -> "ca"
 
-// Time: O(n)
-// Space: O(n - d) -> length of string - # of duplicates
+    Stack, pop if last char in result = curr char, else push
+
+    Time: O(n)
+    Space: O(n - d) -> length of string - # of duplicates
+*/
 
 class Solution {
 public:

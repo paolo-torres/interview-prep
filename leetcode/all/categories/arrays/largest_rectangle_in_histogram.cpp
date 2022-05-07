@@ -1,11 +1,11 @@
 /*
-Given array of heights, return area of largest rectangle
-Ex. heights = [2,1,5,6,2,3] -> 10 (5 x 2 at index 2 and 3)
+    Given array of heights, return area of largest rectangle
+    Ex. heights = [2,1,5,6,2,3] -> 10 (5 x 2 at index 2 and 3)
 
-Monotonic incr stack, if curr height lower extend back, find max area
+    Monotonic incr stack, if curr height lower extend back, find max area
 
-Time: O(n)
-Space: O(n)
+    Time: O(n)
+    Space: O(n)
 */
 
 class Solution {
