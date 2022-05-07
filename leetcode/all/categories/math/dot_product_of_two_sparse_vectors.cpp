@@ -1,7 +1,13 @@
-// vector pair (index, value), ignore all 0's
+/*
+    Given 2 sparse vectors, compute dot product
+    Ex. nums1 = [1,0,0,2,3], nums2 = [0,3,0,4,0] -> 8
 
-// Time: O(n) SparseVector, O(l1 + l2) dotProduct
-// Space: O(l) SparseVector, O(1) dotProduct
+    Brute force: store entire array, then just loop thru
+    Optimal: vector pair (index, value), ignore all 0's
+
+    Time: O(n) SparseVector, O(l1 + l2) dotProduct
+    Space: O(l) SparseVector, O(1) dotProduct
+*/
 
 class SparseVector {
 public:

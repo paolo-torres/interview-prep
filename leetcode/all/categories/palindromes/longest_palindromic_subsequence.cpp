@@ -1,11 +1,13 @@
-// Given string s, find longest palindromic subsequence (LPS)
+/*
+    Given string s, find the longest palindromic subsequence (LPS)
 
-// If helper(i, j) is longest LPS of s[i...j], then we have 2 options:
-// 1. if s[i] = s[j], then chars match, so LPS here is inner LPS + 2
-// 2. if s[i] != s[j], then don't match, so LPS is max of LPS w/ i or w/ j
+    If helper(i, j) is longest LPS of s[i...j], then we have 2 options:
+    1. if s[i] = s[j], then chars match, so LPS here is inner LPS + 2
+    2. if s[i] != s[j], then don't match, so LPS is max of LPS w/ i or w/ j
 
-// Time: O(n^2)
-// Space: O(n^2)
+    Time: O(n^2)
+    Space: O(n^2) -> optimize space to O(n) since only need 2 states
+*/
 
 class Solution {
 public:
@@ -39,11 +41,8 @@ private:
 // public:
 //     int longestPalindromeSubseq(string s) {
 //         int n = s.size();
-        
-//         // Optimize space to O(n) since only need 2 states
 //         vector<int> dp(n);
 //         vector<int> dpPrev(n);
-        
 //         for (int i = n - 1; i >= 0; i--) {
 //             dp[i] = 1;
 //             for (int j = i + 1; j < n; j++) {
@@ -55,7 +54,6 @@ private:
 //             }
 //             dp.swap(dpPrev);
 //         }
-        
 //         return dpPrev[n - 1];
 //     }
 // };

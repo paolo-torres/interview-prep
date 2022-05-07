@@ -1,8 +1,13 @@
-// From end: find first decrease, find first greater
-// Swap, reverse suffix
+/*
+    Next lexicographically greater permutation, find it
+    Ex. nums = [1,2,3] -> [1,3,2], nums = [3,2,1] -> [1,2,3]
 
-// Time: O(n)
-// Space: O(1)
+    From end: find first decrease, find first greater
+    Swap, reverse suffix
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
