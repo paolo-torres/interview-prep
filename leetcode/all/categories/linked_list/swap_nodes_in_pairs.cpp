@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given a linked list, swap every 2 adjacent nodes
+    Ex. head = [1,2,3,4] -> [2,1,4,3]
+
+    Maintain 2 pointers at a time, perform swaps
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 /**
  * Definition for singly-linked list.

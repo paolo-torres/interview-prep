@@ -1,32 +1,27 @@
+/*
+    Given 2 num arrays, return array of their intersection
+    Ex. nums1 = [1,2,2,1], nums2 = [2,2] -> [2,2]
+
+    Hash map counter, can also do sort + 2 pointers
+
+    Time: O(m + n)
+    Space: O(m)
+*/
+
 class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+        // {num -> count}
+        unordered_map<int, int> m;
+        for (int i = 0; i < nums1.size(); i++) {
+            m[nums1[i]]++;
+        }
+        
         vector<int> result;
-        if (nums1.empty() || nums2.empty()) {
-            return result;
-        }
-        vector<int> bigger;
-        vector<int> smaller;
-        if (nums1.size() >= nums2.size()) {
-            bigger = nums1;
-            smaller = nums2;
-        } else {
-            bigger = nums2;
-            smaller = nums1;
-        }
-        sort(bigger.begin(), bigger.end());
-        sort(smaller.begin(), smaller.end());
-        int i = 0;
-        int j = 0;
-        while (i < bigger.size() && j < smaller.size()) {
-            if (bigger[i] == smaller[j]) {
-                result.push_back(bigger[i]);
-                i++;
-                j++;
-            } else if (bigger[i] > smaller[j]) {
-                j++;
-            } else {
-                i++;
+        for (int i = 0; i < nums2.size(); i++) {
+            if (m[nums2[i]] > 0) {
+                m[nums2[i]]--;
+                result.push_back(nums2[i]);
             }
         }
         return result;

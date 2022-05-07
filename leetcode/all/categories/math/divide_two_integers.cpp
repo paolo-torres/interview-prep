@@ -1,54 +1,57 @@
+/*
+    Given ints dividend & divisor, divide w/o *, /, %
+    Ex. dividend = 10, divisor = 3 -> 3
+
+    Add powers of 2 w/ bit shifting
+    Work w/ -'ve bc more -'ve than +'ve to avoid overflow
+
+    Time: O(log n)
+    Space: O(1)
+*/
+
 class Solution {
 public:
     int divide(int dividend, int divisor) {
-        if (dividend == divisor) {
-            return 1;
-        } else if (dividend == 0 || divisor == INT_MIN) {
-            return 0;
-        } else if (divisor == 1) {
-            return dividend;
-        } else if (dividend == INT_MIN && divisor == -1) {
+        // overflow
+        if (dividend == INT_MIN && divisor == -1) {
             return INT_MAX;
-        } else if (dividend == -divisor) {
-            return -1;
         }
-        bool isNegative = false;
-        if (dividend > 0 && divisor < 0
-           || dividend < 0 && divisor > 0) {
-            isNegative = true;
+        
+        // convert both numbers to -'ve & count -'ves
+        int negatives = 2;
+        if (dividend > 0) {
+            negatives--;
+            dividend = -dividend;
         }
-        bool isMin = false;
-        if (dividend == INT_MIN) {
-            isMin = true;
-            dividend++;
+        if (divisor > 0) {
+            negatives--;
+            divisor = -divisor;
         }
-        dividend = abs(dividend);
-        divisor = abs(divisor);
-        if (dividend < divisor) {
-            return 0;
+        
+        // find largest double of divisor
+        int highestDouble = divisor;
+        int highestPowerOfTwo = -1;
+        while (highestDouble >= (INT_MIN / 2)
+            && dividend <= highestDouble + highestDouble) {
+            highestPowerOfTwo += highestPowerOfTwo;
+            highestDouble += highestDouble;
         }
-        int result = 0;
-        while (dividend >= divisor) {
-            int temp = divisor;
-            int n = 1;
-            while (temp << 1 > 0 && temp << 1 <= dividend) {
-                temp <<= 1;
-                n <<= 1;
+        
+        // work out which powers of two fit in
+        int quotient = 0;
+        while (dividend <= divisor) {
+            if (dividend <= highestDouble) {
+                quotient += highestPowerOfTwo;
+                dividend -= highestDouble;
             }
-            result += n;
-            dividend -= temp;
+            highestPowerOfTwo >>= 1;
+            highestDouble >>= 1;
         }
-        if (isMin) {
-            dividend++;
-            while (dividend >= divisor) {
-                result++;
-                dividend -= divisor;
-            }
+        
+        // if there was originally 1 -'ve, remains -'ve
+        if (negatives != 1) {
+            return -quotient;
         }
-        if (isNegative) {
-            return -result;
-        } else {
-            return result;
-        }
+        return quotient;
     }
 };

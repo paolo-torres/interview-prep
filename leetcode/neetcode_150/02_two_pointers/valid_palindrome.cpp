@@ -2,6 +2,7 @@
     Given a string s, return true if it's a palindrome
     Ex. s = "A man, a plan, a canal: Panama" -> true
 
+    Compare w/ reverse of string -> optimize w/:
     2 pointers, outside in, skip non-letters & compare
 
     Time: O(n)

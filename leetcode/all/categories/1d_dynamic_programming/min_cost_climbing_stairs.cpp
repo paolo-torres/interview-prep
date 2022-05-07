@@ -10,6 +10,27 @@
     Space: O(1)
 */
 
+// class Solution {
+// public:
+//     int minCostClimbingStairs(vector<int>& cost) {
+//         return dfs(cost.size(), cost);
+//     }
+// private:
+//     unordered_map<int, int> memo;
+//     int dfs(int i, vector<int>& cost) {
+//         if (i <= 1) {
+//             return 0;
+//         }
+//         if (memo.find(i) != memo.end()) {
+//             return memo[i];
+//         }
+//         int downOne = cost[i - 1] + dfs(i - 1, cost);
+//         int downTwo = cost[i - 2] + dfs(i - 2, cost);
+//         memo[i] = min(downOne, downTwo);
+//         return memo[i];
+//     }
+// };
+
 class Solution {
 public:
     int minCostClimbingStairs(vector<int>& cost) {
