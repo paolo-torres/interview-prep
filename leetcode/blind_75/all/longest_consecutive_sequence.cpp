@@ -2,6 +2,7 @@
     Given unsorted array, return length of longest consecutive sequence
     Ex. nums = [100,4,200,1,3,2] -> 4, longest is [1,2,3,4]
 
+    Sorting & check adjacent values, store longest streak -> optimize:
     Store in hash set, only check for longer seq if it's the beginning
 
     Time: O(n)

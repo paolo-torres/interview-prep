@@ -2,6 +2,7 @@
     Given int array, find contiguous subarray w/ max sum
     Ex. nums = [-2,1,-3,4,-1,2,1,-5,4] -> 6, [4,-1,2,1]
 
+    Brute force: for each num at i, loop thru each num j = i & track max
     At each point, determine if it's better to add to curr sum or start over
 
     Time: O(n)

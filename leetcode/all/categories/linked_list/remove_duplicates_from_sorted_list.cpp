@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given head of sorted linked list, delete all duplicates
+    Ex. head = [1,1,2] -> [1,2]
+
+    Compare adjacent nodes, remove by changing prev->next ptr
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 /**
  * Definition for singly-linked list.
