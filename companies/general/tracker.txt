@@ -2,27 +2,8 @@ Companies
 
 Onsite:
 - Bloomberg
-- Coinbase
 - Google
 - LinkedIn
 
 Pending Onsite:
 - Twitter
-
-Pending Online Assessment:
-- Galaxy Digital
-- Luma Financial Technologies
-- Percent
-- Two Sigma
-
-Applied:
-- Apple
-- Coursera
-- Dropbox
-- Five Rings LLC
-- Grubhub
-- Lyft
-- Point72
-- Splunk
-- Squarespace
-- Uber
