@@ -1,7 +1,12 @@
-// 2 pointers, outside in until mismatch, try both ranges
+/*
+    Given string, return true if can be palindrome after deleting at most 1 char
+    Ex. s = "abca" -> true delete 'c', s = "abc" -> false
 
-// Time: O(n)
-// Space: O(1)
+    2 pointers, outside in until mismatch, try both ranges
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

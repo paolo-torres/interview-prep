@@ -1,5 +1,13 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given a target & nums array, return min contiguous subarray
+    where sum of the subarray is >= target
+    Ex. target = 7, nums = [2,3,1,2,4,3] -> 2, [4,3]
+
+    Sliding window, expand while sum < target, contract until valid
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
