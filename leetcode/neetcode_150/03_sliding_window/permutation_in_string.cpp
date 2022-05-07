@@ -2,6 +2,7 @@
     Given 2 strings, return true if s2 contains permutation of s1
     Ex. s1 = "ab", s2 = "eidbaooo" -> true, s2 contains "ba"
 
+    Sort s1, loop thru s2 check sorted substrings -> optimize w/:
     Sliding window, expand + count down char, contract + count up char
 
     Time: O(n)
