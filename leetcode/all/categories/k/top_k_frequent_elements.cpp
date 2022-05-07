@@ -3,10 +3,10 @@
     Ex. nums = [1,1,1,2,2,3] k = 2 -> [1,2], nums = [1] k = 1 -> [1]
     
     Heap -> optimize w/ freq map & bucket sort (no freq can be > n), get results from end
+    
+    Time: O(n log k) -> optimize to O(n)
+    Space: O(n + k) -> optimize to O(n)
 */
-
-// Time: O(n log k)
-// Space: O(n + k)
 
 // class Solution {
 // public:
@@ -30,9 +30,6 @@
 //         return result;
 //     }
 // };
-
-// Time: O(n)
-// Space: O(n)
 
 class Solution {
 public:

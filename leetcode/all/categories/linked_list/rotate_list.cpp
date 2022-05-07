@@ -1,5 +1,12 @@
-// Time: O(n)
-// Space: O(1)
+/*
+    Given head of linked list, rotate list to the right by k
+    Ex. head = [1,2,3,4,5], k = 2 -> [4,5,1,2,3]
+
+    Close linked list into ring, break ring after new tail
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 /**
  * Definition for singly-linked list.

@@ -1,5 +1,11 @@
-// Time: O(n)
-// Space: O(n)
+/*
+    Given binary tree, return max width (max width among all levels, length b/w end nodes)
+
+    BFS traversal, if index of parent is Ci, left child (2 x Ci), right child (2 x Ci + 1)
+
+    Time: O(n)
+    Space: O(n)
+*/
 
 /**
  * Definition for a binary tree node.
