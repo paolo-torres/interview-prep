@@ -19,6 +19,36 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+// class Solution {
+// public:
+//     bool isSameTree(TreeNode* p, TreeNode* q) {
+//         queue<TreeNode*> queue;
+//         queue.push(p);
+//         queue.push(q);
+//         while (!queue.empty()) {
+//             TreeNode* curr2 = queue.front();
+//             queue.pop();
+//             TreeNode* curr1 = queue.front();
+//             queue.pop();
+//             if (curr1 == NULL && curr2 == NULL) {
+//                 continue;
+//             }
+//             if (curr1 == NULL || curr2 == NULL) {
+//                 return false;
+//             }
+//             if (curr1->val != curr2->val) {
+//                 return false;
+//             }
+//             queue.push(curr1->left);
+//             queue.push(curr2->left);
+//             queue.push(curr1->right);
+//             queue.push(curr2->right);
+//         }
+//         return true;
+//     }
+// };
+
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {

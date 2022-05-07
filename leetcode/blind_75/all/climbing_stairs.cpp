@@ -10,6 +10,28 @@
     Space: O(1)
 */
 
+// class Solution {
+// public:
+//     int climbStairs(int n) {
+//         vector<int> memo(n + 1);
+//         return dfs(0, n, memo);
+//     }
+// private:
+//     int dfs(int i, int n, vector<int>& memo) {
+//         if (i > n) {
+//             return 0;
+//         }
+//         if (i == n) {
+//             return 1;
+//         }
+//         if (memo[i] > 0) {
+//             return memo[i];
+//         }
+//         memo[i] = dfs(i + 1, n, memo) + dfs(i + 2, n, memo);
+//         return memo[i];
+//     }
+// };
+
 class Solution {
 public:
     int climbStairs(int n) {
