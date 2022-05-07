@@ -8,6 +8,38 @@
     Space: O(n)
 */
 
+// class Solution {
+// public:
+//     int coinChange(vector<int>& coins, int amount) {
+//         if (amount < 1) {
+//             return 0;
+//         }
+//         vector<int> count(amount);
+//         return dfs(coins, amount, count);
+//     }
+// private:
+//     int dfs(vector<int>& coins, int remainder, vector<int>& count) {
+//         if (remainder < 0) {
+//             return -1;
+//         }
+//         if (remainder == 0) {
+//             return 0;
+//         }
+//         if (count[remainder - 1] != 0) {
+//             return count[remainder - 1];
+//         }
+//         int min = INT_MAX;
+//         for (int i = 0; i < coins.size(); i++) {
+//             int curr = dfs(coins, remainder - coins[i], count);
+//             if (curr >= 0 && curr < min) {
+//                 min = 1 + curr;
+//             }
+//         }
+//         count[remainder - 1] = min == INT_MAX ? -1 : min;
+//         return count[remainder - 1];
+//     }
+// };
+
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {

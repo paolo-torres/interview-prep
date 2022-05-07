@@ -1,7 +1,12 @@
-// Sliding window, expand when able, contract when more than k flips
+/*
+    Given binary array & an int k, return max # of consecutive 1's w/ at most k 0's flips
+    Ex. nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2 -> 6, [1,1,1,0,0,1,1,1,1,1,1]
 
-// Time: O(n)
-// Space: O(1)
+    Sliding window, expand when able, contract when more than k flips
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

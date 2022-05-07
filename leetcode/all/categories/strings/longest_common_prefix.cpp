@@ -1,20 +1,24 @@
+/*
+    Find longest common prefix string amongst array of strings
+    Ex. strs = ["flower","flow","flight"]
+
+    For each char in 1st string, compare w/ every other string
+
+    Time: O(m x n) -> m = # of strings, n = length of longest string
+    Space: O(1)
+*/
+
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-        string result;
-        if (strs.empty()) {
-            return result;
-        }
-        result = strs[0];
-        for (int i = 1; i < strs.size(); i++) {
-            while (!result.empty() && result != strs[i]) {
-                if (result.size() < strs[i].size()) {
-                    strs[i] = strs[i].substr(0, result.size());
-                } else {
-                    result = result.substr(0, result.size() - 1);
+        for (int i = 0; i < strs[0].size(); i++) {
+            char c = strs[0][i];
+            for (int j = 1; j < strs.size(); j++) {
+                if (i == strs[j].size() || strs[j][i] != c) {
+                    return strs[0].substr(0, i);
                 }
             }
         }
-        return result;
+        return strs[0];
     }
 };
