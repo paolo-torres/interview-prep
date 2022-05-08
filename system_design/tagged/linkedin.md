@@ -1,4 +1,6 @@
-# LinkedIn Top k Shared Posts
+# LinkedIn
+
+## LinkedIn Top k Shared Posts
 
 Q: LinkedIn users can share posts with each other and externally (outside of LinkedIn). Design a system that tracks the top N shared posts by the following time-intervals; 1 minute, 1 hour, and 1 day.
 
