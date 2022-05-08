@@ -1,60 +1,33 @@
+/*
+    Given an integer, convert it to a roman numeral
+    Ex. num = 3 -> "III", num = 58 -> "LVIII", num = 1994 -> "MCMXCIV"
+
+    Greedy, try bigger values first, divide to determine # of uses
+
+    Time: O(1)
+    Space: O(1)
+*/
+
 class Solution {
 public:
     string intToRoman(int num) {
-        map <int, char> m = {
-            {1, 'I'},
-            {5, 'V'},
-            {10, 'X'},
-            {50, 'L'},
-            {100, 'C'},
-            {500, 'D'},
-            {1000, 'M'}
+        vector<pair<string, int>> v = {
+            {"I", 1}, {"IV", 4}, {"V", 5}, {"IX", 9},
+            {"X", 10}, {"XL", 40}, {"L", 50}, {"XC", 90},
+            {"C", 100}, {"CD", 400}, {"D", 500}, {"CM", 900},
+            {"M", 1000}
         };
-        int exponent = 0;
-        if (num > 0 && num < 10) {
-            exponent = 0;
-        } else if (num >= 10 && num < 100) {
-            exponent = 1;
-        } else if (num >= 100 && num < 1000) {
-            exponent = 2;
-        } else if (num >= 1000 && num < 4000) {
-            exponent = 3;
-        }
-        string result;
-        while (num != 0) {
-            int multiplier = pow(10, exponent);
-            int temp = ((num / multiplier) % 10) * multiplier;
-            num -= temp;
-            exponent--;
-            if (temp == 4) {
-                result.append("IV");
-            } else if (temp == 9) {
-                result.append("IX");
-            } else if (temp == 40) {
-                result.append("XL");
-            } else if (temp == 90) {
-                result.append("XC");
-            } else if (temp == 400) {
-                result.append("CD");
-            } else if (temp == 900) {
-                result.append("CM");
-            } else {
-                auto it = m.find(temp);
-                if (it != m.end()) {
-                    result.push_back(it->second);
-                } else {
-                    while (temp != 0) {
-                        it = m.begin();
-                        while (temp >= it->first && next(it) != m.end()) {
-                            ++it;
-                        }
-                        if (temp < it->first) {
-                            it = prev(it);
-                        }
-                        result.push_back(it->second);
-                        temp -= it->first;
-                    }
+        
+        string result = "";
+        for (int i = v.size() - 1; i >= 0; i--) {
+            string sym = v[i].first;
+            int val = v[i].second;
+            if (num / val) {
+                int count = num / val;
+                for (int j = 0; j < count; j++) {
+                    result += sym;
                 }
+                num = num % val;
             }
         }
         return result;

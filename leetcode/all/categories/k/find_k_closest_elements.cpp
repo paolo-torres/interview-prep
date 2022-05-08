@@ -1,7 +1,12 @@
-// Binary search to find left side of k window closest to x
+/*
+    Given sorted nums, int k, int x, return k closest ints to x in array
+    Ex. arr = [1,2,3,4,5], k = 4, x = 3 -> [1,2,3,4]
 
-// Time: O(log (n - k) + k) -> log (n - k) for search, k for output
-// Space: O(1)
+    Binary search to find left side of k window closest to x
+
+    Time: O(log (n - k) + k) -> log (n - k) for search, k for output
+    Space: O(1)
+*/
 
 class Solution {
 public:
