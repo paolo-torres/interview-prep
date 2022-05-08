@@ -1,10 +1,14 @@
-// Optimal: compare with top left neighbor
-// Follow up: what if can only load 1 row at a time?
-// Answer: Hash map {i-j -> mat[i][j]}
-// If not exists insert, else if not equal return false
+/*
+    Given matrix, return true if every diagonal has same elements
 
-// Time: O(m x n)
-// Space: O(1)
+    Optimal: compare with top left neighbor
+    Follow up: what if can only load 1 row at a time?
+    Answer: Hash map {i-j -> mat[i][j]}
+    If not exists insert, else if not equal return false
+
+    Time: O(m x n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

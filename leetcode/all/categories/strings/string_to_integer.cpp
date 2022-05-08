@@ -1,7 +1,12 @@
-// Skip whitespace -> handle sign -> handle overflow -> convert valid chars
+/*
+    Implement myAtoi(string s): converts a string to a 32-bit signed integer
+    Ex. s = "42" -> 42, s = "   -42" -> -42, s = "4193 with words" -> 4193
 
-// Time: O(n)
-// Space: O(1)
+    Skip whitespace -> handle sign -> handle overflow -> convert valid chars
+
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

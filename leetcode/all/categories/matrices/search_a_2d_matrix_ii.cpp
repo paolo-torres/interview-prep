@@ -1,5 +1,12 @@
-// Time: O(m + n)
-// Space: O(1)
+/*
+    Search for a target value in row & col sorted matrix
+
+    Brute force O(m x n) search -> optimize w/:
+    search space reduction, start top right & go to bottom left
+
+    Time: O(m + n)
+    Space: O(1)
+*/
 
 class Solution {
 public:

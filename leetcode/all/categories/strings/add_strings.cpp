@@ -1,7 +1,12 @@
-// 2 pointers, start from end, get sum, maintain carry
+/*
+    Given 2 nums as strings, return sum w/o direct conversion
+    Ex. num1 = "11", num2 = "123" -> "134"
 
-// Time: O(max(m, n))
-// Space: O(max(m, n))
+    2 pointers, start from end, get sum, maintain carry
+
+    Time: O(max(m, n))
+    Space: O(max(m, n))
+*/
 
 class Solution {
 public:

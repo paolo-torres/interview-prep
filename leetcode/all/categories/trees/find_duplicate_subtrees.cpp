@@ -1,10 +1,10 @@
 /*
-Given root of binary tree, return all duplicate subtrees (same structure & node values)
+    Given root of binary tree, return all duplicate subtrees (same structure & node values)
 
-Postorder traversal (because need structure), serialize & hash, detect dupes
+    Postorder traversal (because need structure), serialize & hash, detect dupes
 
-Time: O(n^2)
-Space: O(n)
+    Time: O(n^2)
+    Space: O(n)
 */
 
 /**
