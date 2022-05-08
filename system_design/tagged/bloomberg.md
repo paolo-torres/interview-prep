@@ -94,10 +94,42 @@ If we don't do batch processing then we could just do realtime processing in mem
 
 ---
 
-## Design a system that allow users to retrieve stock info as fast as possible
-
----
-
 ## Implement Uber bike kinda functionality
 
 Discussed how many calls to you anticipate. Initially I said that Google handles 60k requests per sec so let's assum 0.5% of that in the peak hours. Then it also occured to me the calls here are limited by the number of inventory aka cycles we have. Then they asked my about what all APIs would I implement - acquireBike, releaseBike. Then they asked what should be the SLA of this API. I said not more than 500 ms or so because the user should scan his phone or slide the CC and bike should unlock almost immediately. Then they discussed what all components will be critical here. I mentioned Payment is the most critical component. Then somehow the discussion was directed towards the storage layer. I mentioned Bike, User table and trips to save all past trips. My idea was to save all in-progress trips in the Redis Cache. Also, I suggested we can keep some data on the user's phone itself. Then they asked if it was a security concern. I told them if we are just saving the current trip user's info then it shouldn't be a concern. And when the trip ends we invalidate the cache and move the info to persistent storage.
+
+---
+
+## Design Market Depth Platform
+
+- Input trade events like Security _ buy/sell  _ quantity _ price
+- Real-time updates to the UI
+- Should handle huge load and present suitable trades on market depth terminal in real time
+
+---
+
+## Design service for users to request info about stock prices across all exchanges
+
+I talked a little bit about how I would design the connection protocol (i.e. HTTP vs TCP) and bit about how I would store the data for efficient lookup and updates (B-tree). I wasn't sure how I did during this round of the interview, but I was told afterwards that it went very well.
+
+---
+
+## Design Logging System
+
+I was asked to draw the high level design including components I think could be used for the question. I used a distributed messaging queue because thats what I have seen generally.
+
+I had proposed a solution with queue+processing service. But I reached this solution after a lot of discussion and thinking so it was my bad. You can also go through other questions which are frequently asked like topK.
+
+---
+
+## Design a Stock System
+
+- Design a system that pulls in stock information from multiple stock exchanges
+- A client needs stock prices for a certain stock from all these exchanges
+- Top K stocks throughout the day
+
+Maybe something like: For each publisher, let them put each ticker in a queue assigned to a client. Then, the element from each queue goes thru consistent hash step to figure out the exact node where this ticker should be placed. Assume you have a cluster of distributed K-V DB. Now, each node of this DB also maintains a global max-heap for all the stocks on its server. Now, when the request comes we just combine the values in n-way external merge fashion. My guess, is probably the interviewer wanted to hear terms like consistent hashing, bloom filter, queue, Kafka, Load balancing etc
+
+For top K stocks throughout the day, a probable solution would be using count-min sketch(per node assuming distributed system) along with min-heap, with some agreed percentage of error.
+
+To feed the client with the stock prices, Server-Sent Events (SSE) could be a solution
