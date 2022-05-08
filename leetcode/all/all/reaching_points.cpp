@@ -1,7 +1,13 @@
-// // Recursive exhaustive -> work backwards, t to s, visualize tree
+/*
+    Given sx, sy, tx, ty, return true if possible to convert point (sx, sy)
+    to point (tx, ty) through some operations: (x, x + y) or (x + y, y)
+    Ex. sx = 1, sy = 1, tx = 3, ty = 5 -> true, (1,1), (1,2), (3,2), (3,5)
 
-// // Time: O(max(tx, ty))
-// // Space: O(1)
+    Work backwards naive -> work backwards modulo, t to s, visualize tree
+
+    Time: O(max(tx, ty)) -> optimize to O(log(max(tx, ty)))
+    Space: O(1)
+*/
 
 // class Solution {
 // public:
@@ -19,9 +25,6 @@
 //         return false;
 //     }
 // };
-
-// O(log(max(tx, ty)))
-// Space: O(1)
 
 class Solution {
 public:
