@@ -91,3 +91,13 @@ I guess for a given stock, at every second we calculate the % change (lets say w
 I've heard though that they might say the window size can be fixed for everyone. Lets say 10 mins. In which case, I'm thinking maybe batch processing would be a good idea, where the sliding window service will get the stock tick data in maybe 1 hour batches (the batch would have to be larger than the window size, we need to move our 10 minute window across a reasonable timeframe). It can get it from a time series database that we are constantly writing to. However, lets say we just did our sliding window through a batch from t = 0 to t = 60, when we get the t = 60 to t = 120 batch, we would possibly need to iterate from t = 50, depending on the final state of our window in the previous batch. So we shouldn't discard all our data, only data from t = 0 to t = 50.
 
 If we don't do batch processing then we could just do realtime processing in memory, whereby as soon as we get the latest stock data, we would process it into our sliding window service instantly. This would be more consistent and more realtime I guess, but with 1000 stocks we would need 1000 in memory sliding window services running at once.
+
+---
+
+## Design a system that allow users to retrieve stock info as fast as possible
+
+---
+
+## Implement Uber bike kinda functionality
+
+Discussed how many calls to you anticipate. Initially I said that Google handles 60k requests per sec so let's assum 0.5% of that in the peak hours. Then it also occured to me the calls here are limited by the number of inventory aka cycles we have. Then they asked my about what all APIs would I implement - acquireBike, releaseBike. Then they asked what should be the SLA of this API. I said not more than 500 ms or so because the user should scan his phone or slide the CC and bike should unlock almost immediately. Then they discussed what all components will be critical here. I mentioned Payment is the most critical component. Then somehow the discussion was directed towards the storage layer. I mentioned Bike, User table and trips to save all past trips. My idea was to save all in-progress trips in the Redis Cache. Also, I suggested we can keep some data on the user's phone itself. Then they asked if it was a security concern. I told them if we are just saving the current trip user's info then it shouldn't be a concern. And when the trip ends we invalidate the cache and move the info to persistent storage.
