@@ -1,7 +1,11 @@
-// Controlled recursion, iterative DFS/in-order traversal, all the way left then right, repeat
+/*
+    BSTIterator: next(): moves ptr to right, hasNext(): true if exists num to the right
 
-// Time: O(1)
-// Space: O(h)
+    Controlled recursion, iterative DFS/in-order traversal, all the way left then right, repeat
+
+    Time: O(1)
+    Space: O(h)
+*/
 
 /**
  * Definition for a binary tree node.

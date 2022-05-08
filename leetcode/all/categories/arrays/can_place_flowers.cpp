@@ -1,11 +1,13 @@
-// Given int array w/ 0's empty & 1's non-empty, and int n
-// Return if n flowers can be planted w/o adjacent flowers
-// Ex. [1,0,0,0,1] n = 1 -> true, [1,0,0,0,1] n = 2 -> false
+/*
+    Given int array w/ 0's empty & 1's non-empty, and int n
+    Return if n flowers can be planted w/o adjacent flowers
+    Ex. [1,0,0,0,1] n = 1 -> true, [1,0,0,0,1] n = 2 -> false
 
-// Scan in 3-sized window, if all empty can plant flower, if n planted return early
+    Scan in 3-sized window, if all empty can plant flower, if n planted return early
 
-// Time: O(n)
-// Space: O(1)
+    Time: O(n)
+    Space: O(1)
+*/
 
 class Solution {
 public:
