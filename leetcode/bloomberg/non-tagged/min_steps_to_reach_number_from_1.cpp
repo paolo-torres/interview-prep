@@ -58,6 +58,7 @@ public:
             int multiply = curr->num * 2;
             int divide = curr->num / 3;
             if (multiply == target || divide == target) {
+                // cout << curr->path + (multiply == target ? "x2" : "/3") << endl;
                 return curr->numOperations + 1;
             }
 

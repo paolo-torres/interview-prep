@@ -108,6 +108,10 @@ Discussed how many calls to you anticipate. Initially I said that Google handles
 
 ---
 
+## Design a system that allow users to retrieve stock info as fast as possible
+
+---
+
 ## Design service for users to request info about stock prices across all exchanges
 
 I talked a little bit about how I would design the connection protocol (i.e. HTTP vs TCP) and bit about how I would store the data for efficient lookup and updates (B-tree). I wasn't sure how I did during this round of the interview, but I was told afterwards that it went very well.
@@ -120,6 +124,11 @@ I was asked to draw the high level design including components I think could be 
 
 I had proposed a solution with queue+processing service. But I reached this solution after a lot of discussion and thinking so it was my bad. You can also go through other questions which are frequently asked like topK.
 
+Hi, I was asked to design some kind of logging system that takes data from some kind of services and later writes it to the database. The input was a stream of stocks.
+Idk what their expectation was but I used Distributed queues to approach this question
+
+https://leetcode.com/discuss/interview-question/system-design/622704/Design-a-system-to-store-and-retrieve-logs-for-all-of-eBay
+
 ---
 
 ## Design a Stock System
@@ -128,8 +137,72 @@ I had proposed a solution with queue+processing service. But I reached this solu
 - A client needs stock prices for a certain stock from all these exchanges
 - Top K stocks throughout the day
 
+https://www.youtube.com/watch?v=kx-XDoPjoHw&ab_channel=SystemDesignInterview
+
 Maybe something like: For each publisher, let them put each ticker in a queue assigned to a client. Then, the element from each queue goes thru consistent hash step to figure out the exact node where this ticker should be placed. Assume you have a cluster of distributed K-V DB. Now, each node of this DB also maintains a global max-heap for all the stocks on its server. Now, when the request comes we just combine the values in n-way external merge fashion. My guess, is probably the interviewer wanted to hear terms like consistent hashing, bloom filter, queue, Kafka, Load balancing etc
 
 For top K stocks throughout the day, a probable solution would be using count-min sketch(per node assuming distributed system) along with min-heap, with some agreed percentage of error.
 
 To feed the client with the stock prices, Server-Sent Events (SSE) could be a solution
+
+Some version of the top-k stock trades by Volume and Value.
+Discussed several algorithmic approaches
+Deployment discussion.
+Functional requirements: Api end points, return types, user types
+Non Functional requirements: Real time? Latency, expected throughput, traffic, etc
+
+i mentioned heap to store top 100. also for load balancing mentioned round-robin (first come first serve) also hashing to each server.
+
+---
+
+## Logging Key Events From Trade System
+
+- Also provide UI reports based on their search.
+
+---
+
+## Bloomberg Terminal
+
+- Optimizing query time for a Bloomberg-specific terminal function.
+- Designing a help system so that respondents can take care of problems if a part of the terminal/product crashes.
+
+---
+
+## Design System to Handle Packets Out of Order
+
+3 methods, all should be O(1):
+1. Add new customers to the end of the queue (waiting line).
+2. Place first customer in the queue to an available table.
+3. Let a customer in the queue move forward by 1 position when they pay $1.
+
+https://leetcode.com/discuss/interview-question/737605/Bloomberg-New-Grad-or-Hiring-Manager-System-Design-Round-or-Gathering-Questions
+
+---
+
+## Design system that streams data from a stock exchange to different programs
+
+The task of design interview was to create a program which would stream data from some eternal data provider to several applications that are running on a machine. External data provider sends info about trades being done on stock exchange. Other applications are run as separate processes on the same machine, they can ask your program to send them data about exchange data on certain stock. The main questions of the design were about how to transfer data from your process to other processes, how to support streaming of data of multiple stocks. There were also extra questions about what to do when other processes that queried data die, how do you manage the state of the application. There was no coding in my system design interview, we have just discussed different approaches to the problem and I drawed my solution on paper.
+
+https://www.youtube.com/watch?v=dUMWMZmMsVE&list=PLkQkbY7JNJuC99VDJcpQdww-4aT3QhdJv
+
+---
+
+## Various Designs
+
+Design data structure and algorithm for an ipod with play(),pause(),next(),previous(),shuffle(),addSong(),deleteSong()
+Design a system that allow users to retrieve stock info as fast as possible.
+Design a OOP class
+Design Phonebook
+Design Graph with addRoute,printRoutes
+Design AWS S3
+Design Traffic light system.
+Design Browser History
+Design Autocomplete you send a prefix "a", this should return "abc", "abd".
+
+---
+
+## Design an E-Commerce Website
+
+---
+
+## Design Parking Lot
