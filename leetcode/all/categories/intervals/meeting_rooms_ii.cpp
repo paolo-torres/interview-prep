@@ -8,6 +8,25 @@
     Space: O(n)
 */
 
+// class Solution {
+// public:
+//     int minMeetingRooms(vector<vector<int>>& intervals) {
+//         // {time -> val (+1 if start, -1 if end)}
+//         map<int, int> m;
+//         for (int i = 0; i < intervals.size(); i++) {
+//             m[intervals[i][0]]++;
+//             m[intervals[i][1]]--;
+//         }
+//         int count = 0;
+//         int result = 0;
+//         for (auto it = m.begin(); it != m.end(); it++) {
+//             count += it->second;
+//             result = max(result, count);
+//         }
+//         return result;
+//     }
+// };
+
 class Solution {
 public:
     int minMeetingRooms(vector<vector<int>>& intervals) {
