@@ -189,15 +189,15 @@ https://www.youtube.com/watch?v=dUMWMZmMsVE&list=PLkQkbY7JNJuC99VDJcpQdww-4aT3Qh
 
 ## Various Designs
 
-Design data structure and algorithm for an ipod with play(),pause(),next(),previous(),shuffle(),addSong(),deleteSong()
-Design a system that allow users to retrieve stock info as fast as possible.
-Design a OOP class
-Design Phonebook
-Design Graph with addRoute,printRoutes
-Design AWS S3
-Design Traffic light system.
-Design Browser History
-Design Autocomplete you send a prefix "a", this should return "abc", "abd".
+- Design data structure and algorithm for an ipod with play(),pause(),next(),previous(),shuffle(),addSong(),deleteSong()
+- Design a system that allow users to retrieve stock info as fast as possible.
+- Design a OOP class
+- Design Phonebook
+- Design Graph with addRoute,printRoutes
+- Design AWS S3
+- Design Traffic light system.
+- Design Browser History
+- Design Autocomplete you send a prefix "a", this should return "abc", "abd".
 
 ---
 
