@@ -1,14 +1,12 @@
 # Bloomberg
 
-## Design AWS S3
+---
 
-I explained the consistency model of AWS S3 is eventually consistent and how Bloomberg would want a strictly consistent model. I suggested that when a user queries S3 after inserting data, they should be blocked from retrieving data until the inserted data arrives in all availabilty zones.
+## Stock System
 
-The interviewer was suggesting maybe we only need to wait till the data gets replicated to 1 avalability zone and then in the background the data gets replicated to other availability zones.
+Maybe something like: For each publisher, let them put each ticker in a queue assigned to a client. Then, the element from each queue goes thru consistent hash step to figure out the exact node where this ticker should be placed. Assume you have a cluster of distributed K-V DB. Now, each node of this DB also maintains a global max-heap for all the stocks on its server. Now, when the request comes we just combine the values in n-way external merge fashion. My guess, is probably the interviewer wanted to hear terms like consistent hashing, bloom filter, queue, Kafka, Load balancing etc
 
-I also explained that when replicating we want to replicate to the availability zones closest to you.
-
-Note: AWS S3 supports both eventual consistency (for deletion of objects) as well as strong consistency for new objects.
+The task of design interview was to create a program which would stream data from some external data provider to several applications that are running on a machine. External data provider sends info about trades being done on stock exchange. Other applications are run as separate processes on the same machine, they can ask your program to send them data about exchange data on certain stock. The main questions of the design were about how to transfer data from your process to other processes, how to support streaming of data of multiple stocks. There were also extra questions about what to do when other processes that queried data die, how do you manage the state of the application. There was no coding in my system design interview, we have just discussed different approaches to the problem and I drawed my solution on paper.
 
 ---
 
@@ -94,13 +92,25 @@ If we don't do batch processing then we could just do realtime processing in mem
 
 ---
 
-## Implement Uber bike kinda functionality
+## Uber Bike
 
 Discussed how many calls to you anticipate. Initially I said that Google handles 60k requests per sec so let's assum 0.5% of that in the peak hours. Then it also occured to me the calls here are limited by the number of inventory aka cycles we have. Then they asked my about what all APIs would I implement - acquireBike, releaseBike. Then they asked what should be the SLA of this API. I said not more than 500 ms or so because the user should scan his phone or slide the CC and bike should unlock almost immediately. Then they discussed what all components will be critical here. I mentioned Payment is the most critical component. Then somehow the discussion was directed towards the storage layer. I mentioned Bike, User table and trips to save all past trips. My idea was to save all in-progress trips in the Redis Cache. Also, I suggested we can keep some data on the user's phone itself. Then they asked if it was a security concern. I told them if we are just saving the current trip user's info then it shouldn't be a concern. And when the trip ends we invalidate the cache and move the info to persistent storage.
 
 ---
 
-## Design Logging System
+## AWS S3
+
+I explained the consistency model of AWS S3 is eventually consistent and how Bloomberg would want a strictly consistent model. I suggested that when a user queries S3 after inserting data, they should be blocked from retrieving data until the inserted data arrives in all availabilty zones.
+
+The interviewer was suggesting maybe we only need to wait till the data gets replicated to 1 avalability zone and then in the background the data gets replicated to other availability zones.
+
+I also explained that when replicating we want to replicate to the availability zones closest to you.
+
+Note: AWS S3 supports both eventual consistency (for deletion of objects) as well as strong consistency for new objects.
+
+---
+
+## Logging System
 
 I was asked to draw the high level design including components I think could be used for the question. I used a distributed messaging queue because thats what I have seen generally.
 
@@ -115,37 +125,4 @@ https://leetcode.com/discuss/interview-question/system-design/622704/Design-a-sy
 
 ---
 
-## Design a Stock System
-
-- Design a system that pulls in stock information from multiple stock exchanges
-- A client needs stock prices for a certain stock from all these exchanges
-
-Maybe something like: For each publisher, let them put each ticker in a queue assigned to a client. Then, the element from each queue goes thru consistent hash step to figure out the exact node where this ticker should be placed. Assume you have a cluster of distributed K-V DB. Now, each node of this DB also maintains a global max-heap for all the stocks on its server. Now, when the request comes we just combine the values in n-way external merge fashion. My guess, is probably the interviewer wanted to hear terms like consistent hashing, bloom filter, queue, Kafka, Load balancing etc
-
-The task of design interview was to create a program which would stream data from some external data provider to several applications that are running on a machine. External data provider sends info about trades being done on stock exchange. Other applications are run as separate processes on the same machine, they can ask your program to send them data about exchange data on certain stock. The main questions of the design were about how to transfer data from your process to other processes, how to support streaming of data of multiple stocks. There were also extra questions about what to do when other processes that queried data die, how do you manage the state of the application. There was no coding in my system design interview, we have just discussed different approaches to the problem and I drawed my solution on paper.
-
----
-
-## Bloomberg Terminal
-
-- Optimizing query time for a Bloomberg-specific terminal function.
-- Designing a help system so that respondents can take care of problems if a part of the terminal/product crashes.
-
----
-
-## Design System to Handle Packets Out of Order
-
-3 methods, all should be O(1):
-1. Add new customers to the end of the queue (waiting line).
-2. Place first customer in the queue to an available table.
-3. Let a customer in the queue move forward by 1 position when they pay $1.
-
-https://leetcode.com/discuss/interview-question/737605/Bloomberg-New-Grad-or-Hiring-Manager-System-Design-Round-or-Gathering-Questions
-
----
-
-## Design an E-Commerce Website
-
----
-
-## Design Parking Lot
+## Parking Lot
