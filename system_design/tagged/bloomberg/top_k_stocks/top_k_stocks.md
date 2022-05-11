@@ -39,7 +39,7 @@ Also consider different time intervals: top k stocks in the last 1 minute? 5 min
 - For example, list of events, pair of ({stock, price})
 - Every time stock price changes, log such event by updating stock price in the list of events:
 
-![03_hash_table_single_host](../../problems/15_top_k_heavy_hitters/03_hash_table_single_host.png)
+![03_hash_table_single_host](../../../problems/15_top_k_heavy_hitters/03_hash_table_single_host.png)
 
 - Given list of events, how do we calculate the k highest elements?
 - First, calculate the price of each element in the list
@@ -85,7 +85,7 @@ public:
 - Introduce a load balancer
 - Each event then goes to 1 of the hosts in a cluster of hosts:
 
-![05_hash_table_multiple_hosts](../../problems/15_top_k_heavy_hitters/05_hash_table_multiple_hosts.png)
+![05_hash_table_multiple_hosts](../../../problems/15_top_k_heavy_hitters/05_hash_table_multiple_hosts.png)
 
 - Because same stock may appear on different processor hosts, each processor needs to flush accumulated data to a single storage host, store with a timestamp and take latest one
 - System better now: can process in parallel, total throughput has increased
@@ -100,7 +100,7 @@ public:
 - Partition data into smaller chunks
 - Introduce new component: data partitioner:
 
-![06_hash_table_multiple_hosts_partitioning](../../problems/15_top_k_heavy_hitters/06_hash_table_multiple_hosts_partitioning.png)
+![06_hash_table_multiple_hosts_partitioning](../../../problems/15_top_k_heavy_hitters/06_hash_table_multiple_hosts_partitioning.png)
 
 - Responsible for routing each individual stock to its own processor host, so each processor host only stores a subset of all data
 - Same process, build hash table, create heap, add from hash table to heap
@@ -140,7 +140,7 @@ public:
 - Height represents a number of hash functions
 - When a new stock comes or stock price gets updated, calculate each hash function value and add/update the corresponding cell
 
-![07_count-min_sketch](../../problems/15_top_k_heavy_hitters/07_count-min_sketch.png)
+![07_count-min_sketch](../../../problems/15_top_k_heavy_hitters/07_count-min_sketch.png)
 
 - Ex. stock "A" comes, calculate 5 hash functions based on this stock and it's price
 - When another "A" comes, re-calculate each cell value
@@ -165,13 +165,13 @@ public:
 - For our use case, interested in 1 specific function, log generation, when every call to API is logged
 - Use these logs to add/update a stock price
 
-![08_high-level_architecture_1](../../problems/15_top_k_heavy_hitters/08_high-level_architecture_1.png)
+![08_high-level_architecture_1](../../../problems/15_top_k_heavy_hitters/08_high-level_architecture_1.png)
 
 - Data is then sent to a distributed messaging system, like Apache Kafka
 - Internally, Kafka splits messages across several partitions, where each partition can be placed on a separate machine in a cluster
 - Apache Kafka is a distributed event store and stream-processing platform, aims to provide a unified, high-throughput, low-latency platform for handling real-time data feeds
 
-![09_high-level_architecture_2](../../problems/15_top_k_heavy_hitters/09_high-level_architecture_2.png)
+![09_high-level_architecture_2](../../../problems/15_top_k_heavy_hitters/09_high-level_architecture_2.png)
 
 - Now, we will split our data processing pipeline into 2 parts: fast path and slow path
 - Fast: calculate list of top k stocks approximately, results available within seconds
@@ -179,19 +179,19 @@ public:
 
 ### **a) Fast Path**
 
-![10_high-level_architecture_3](../../problems/15_top_k_heavy_hitters/10_high-level_architecture_3.png)
+![10_high-level_architecture_3](../../../problems/15_top_k_heavy_hitters/10_high-level_architecture_3.png)
 
-![11_high-level_architecture_4](../../problems/15_top_k_heavy_hitters/11_high-level_architecture_4.png)
+![11_high-level_architecture_4](../../../problems/15_top_k_heavy_hitters/11_high-level_architecture_4.png)
 
-![12_high-level_architecture_5](../../problems/15_top_k_heavy_hitters/12_high-level_architecture_5.png)
+![12_high-level_architecture_5](../../../problems/15_top_k_heavy_hitters/12_high-level_architecture_5.png)
 
 ### **b) Slow Path**
 
-![13_high-level_architecture_6](../../problems/15_top_k_heavy_hitters/13_high-level_architecture_6.png)
+![13_high-level_architecture_6](../../../problems/15_top_k_heavy_hitters/13_high-level_architecture_6.png)
 
-![14_high-level_architecture_7](../../problems/15_top_k_heavy_hitters/14_high-level_architecture_7.png)
+![14_high-level_architecture_7](../../../problems/15_top_k_heavy_hitters/14_high-level_architecture_7.png)
 
-![15_high-level_architecture_8](../../problems/15_top_k_heavy_hitters/15_high-level_architecture_8.png)
+![15_high-level_architecture_8](../../../problems/15_top_k_heavy_hitters/15_high-level_architecture_8.png)
 
 ### Which One?
 
@@ -212,7 +212,7 @@ public:
 - Then, fast processor hosts (count-min sketches) pick up and process messages
 - After aggregating for several seconds, each host sends info to some storage host, where we build a single count-min sketch
 
-![17_data_flow_fast_path](../../problems/15_top_k_heavy_hitters/17_data_flow_fast_path.png)
+![17_data_flow_fast_path](../../../problems/15_top_k_heavy_hitters/17_data_flow_fast_path.png)
 
 ### **b) Data Flow, Slow Path**
 
@@ -222,12 +222,12 @@ public:
 - Stock price MapReduce job reads all such 5 minute files and creates a final list per some time interval, say 1 hour
 - Top k MapReduce job then uses this info to calculate list of top k stocks for that hour
 
-![18_data_flow_slow_path](../../problems/15_top_k_heavy_hitters/18_data_flow_slow_path.png)
+![18_data_flow_slow_path](../../../problems/15_top_k_heavy_hitters/18_data_flow_slow_path.png)
 
 ### **c) MapReduce Jobs**
 
-![19_mapreduce_jobs](../../problems/15_top_k_heavy_hitters/19_mapreduce_jobs.png)
+![19_mapreduce_jobs](../../../problems/15_top_k_heavy_hitters/19_mapreduce_jobs.png)
 
 ### **d) Data Retrieval**
 
-![20_data_retrieval](../../problems/15_top_k_heavy_hitters/20_data_retrieval.png)
+![20_data_retrieval](../../../problems/15_top_k_heavy_hitters/20_data_retrieval.png)
