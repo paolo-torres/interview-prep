@@ -92,12 +92,6 @@ If we don't do batch processing then we could just do realtime processing in mem
 
 ---
 
-## Uber Bike
-
-Discussed how many calls to you anticipate. Initially I said that Google handles 60k requests per sec so let's assum 0.5% of that in the peak hours. Then it also occured to me the calls here are limited by the number of inventory aka cycles we have. Then they asked my about what all APIs would I implement - acquireBike, releaseBike. Then they asked what should be the SLA of this API. I said not more than 500 ms or so because the user should scan his phone or slide the CC and bike should unlock almost immediately. Then they discussed what all components will be critical here. I mentioned Payment is the most critical component. Then somehow the discussion was directed towards the storage layer. I mentioned Bike, User table and trips to save all past trips. My idea was to save all in-progress trips in the Redis Cache. Also, I suggested we can keep some data on the user's phone itself. Then they asked if it was a security concern. I told them if we are just saving the current trip user's info then it shouldn't be a concern. And when the trip ends we invalidate the cache and move the info to persistent storage.
-
----
-
 ## AWS S3
 
 I explained the consistency model of AWS S3 is eventually consistent and how Bloomberg would want a strictly consistent model. I suggested that when a user queries S3 after inserting data, they should be blocked from retrieving data until the inserted data arrives in all availabilty zones.
@@ -107,22 +101,3 @@ The interviewer was suggesting maybe we only need to wait till the data gets rep
 I also explained that when replicating we want to replicate to the availability zones closest to you.
 
 Note: AWS S3 supports both eventual consistency (for deletion of objects) as well as strong consistency for new objects.
-
----
-
-## Logging System
-
-I was asked to draw the high level design including components I think could be used for the question. I used a distributed messaging queue because thats what I have seen generally.
-
-I had proposed a solution with queue+processing service. But I reached this solution after a lot of discussion and thinking so it was my bad. You can also go through other questions which are frequently asked like topK.
-
-Hi, I was asked to design some kind of logging system that takes data from some kind of services and later writes it to the database. The input was a stream of stocks.
-Idk what their expectation was but I used Distributed queues to approach this question
-
-Also provide UI reports based on their search.
-
-https://leetcode.com/discuss/interview-question/system-design/622704/Design-a-system-to-store-and-retrieve-logs-for-all-of-eBay
-
----
-
-## Parking Lot
