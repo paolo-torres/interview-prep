@@ -22,3 +22,25 @@ a global impact, and clearly that's something Bloomberg has. I mean
 the company develops so many things like the Bloomberg Terminal, 
 News, Radio, etc. All these huge fintech products and mass media 
 services. I want to continue to create real impact.
+
+Why Integration Gateway?
+
+1. Always had an interest in the financial technology space, this
+looked like a good opportunity to achieve that.
+
+2. Particularly for Integration Gateway, what caught my eye was the
+GNET and the GNET engine, where you build things that provide
+customers with a visual programming language and be able to integrate
+that between Bloomberg and 3rd party systems. Sounds very interesting.
+
+3. Listed projects also sounded interesting: next-gen code-gen,
+compilation, and execution framework for example.
+
+4. Interest in the technology stack: Java/C# for the backend,
+building desktop UI and WPF applications, React for the frontend.
+
+Question:
+
+Primarily what is this system an integration between? Between
+like Bloomberg's trading solutions/order management systems and
+external clients?
