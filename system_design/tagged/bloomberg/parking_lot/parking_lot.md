@@ -117,17 +117,15 @@ System primarily manages 2 functions: vehicle entry and exit. So, break system i
 
 ### **a) Vehicle Entry Design**
 
-![vehicle_entry_design](vehicle_entry_design.png)
-
 - When user comes into parking lot, request goes to Parking Service for entry.
 - Parking Service calls Spot Allocation Service to scan Parking Spot DB and pick and allocate a previously vacant spot for this vehicle.
 - Parking spot DB is updated and state of spot is changed from "available" to "occupied".
 - Spot Allocation Service then returns allocated spot to Parking Service, and Parking Service creates a ticket entry to the Ticketing DB, and finally returns ticket to the user.
 - Ticket will carry all the important info, like ticket ID, parking spot ID, and vehicle's license number.
 
-### **b) Vehicle Exit Design**
+![vehicle_entry_design](vehicle_entry_design.png)
 
-![vehicle_exit_design](vehicle_exit_design.png)
+### **b) Vehicle Exit Design**
 
 1. When user want to exit, Parking Service will get ticket ID from user.
 2. Parking Service will lookup in Ticketing DB and extract all details for that ticket ID, including parking spot ID.
@@ -135,6 +133,8 @@ System primarily manages 2 functions: vehicle entry and exit. So, break system i
 4. Once spot deallocated, Spot Deallocation Service sends response to Parking Service.
 5. Parking Service will update the `exitTime` for that ticket in the Ticketing DB.
 6. Finally, Parking Service then contacts Pricing Service to calculate the price.
+
+![vehicle_exit_design](vehicle_exit_design.png)
 
 - Pricing Service uses vehicle type and the entry and exit times from Ticketing DB to generate price.
 - Parking Service will return price calculated to the user for payment.

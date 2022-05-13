@@ -63,11 +63,11 @@ Basic algorithm is to take a list of seed URLs as its input and repeatedly execu
 
 Bare minimum crawler needs:
 
-**1. URL Frontier:** To store list of URLs to download and also prioritize which URLs should be crawled first.
-**2. HTTP Fetcher:** To retrieve a web page from the server.
-**3. Extractor:** To extract links from HTML documents.
-**4. Duplicate Eliminator:** To make sure the same content isn't extracted twice unintentionally.
-**5. Datastore:** To store retrieved pages, URLs, and other metadata.
+1. URL Frontier: To store list of URLs to download and also prioritize which URLs should be crawled first.
+2. HTTP Fetcher: To retrieve a web page from the server.
+3. Extractor: To extract links from HTML documents.
+4. Duplicate Eliminator: To make sure the same content isn't extracted twice unintentionally.
+5. Datastore: To store retrieved pages, URLs, and other metadata.
 
 ![high_level_design](high_level_design.png)
 

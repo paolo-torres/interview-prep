@@ -50,7 +50,7 @@ Solution discussed in Designing Yelp but modified. Biggest difference is that th
 1. As soon as server receives update for driver's location, broadcast info to all interested customers.
 2. Notify respective QuadTree server to refresh driver's location (say every 10 sec).
 
-**How can we efficiently broadcast driver's location to customers?** Can have **Push Model** where and a dedicated Notification Service to broadcast current location of drivers to all interested customers. Can build notification service on a publisher/subscriber model.When customer opens Uber app, they query server to find nearby drivers, so subscribe the customer and return list of drivers.
+**How can we efficiently broadcast driver's location to customers?** Can have **Push Model** where and a dedicated Notification Service to broadcast current location of drivers to all interested customers. Can build notification service on a publisher/subscriber model. When customer opens Uber app, they query server to find nearby drivers, so subscribe the customer and return list of drivers.
 
 **How can we efficiently implement notification service?** Can use either HTTP long polling or push notifications.
 

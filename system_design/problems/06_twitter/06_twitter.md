@@ -138,7 +138,7 @@ Refer to Designing Facebook's Newsfeed
 
 ## 10. Replication and Fault Tolerance
 
-Since read-heavy, can have multiple secondary database servers for each DB partition. All writes first go to primary server and then replicated to seconary servers. Also gives fault tolerance, since whenever primary server goes down, can failover to secondary server.
+Since read-heavy, can have multiple secondary database servers for each DB partition. All writes first go to primary server and then replicated to secondary servers. Also gives fault tolerance, since whenever primary server goes down, can failover to secondary server.
 
 ---
 

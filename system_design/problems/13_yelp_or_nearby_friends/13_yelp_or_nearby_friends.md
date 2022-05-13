@@ -122,7 +122,7 @@ Divide places into regions such that all places belonging to a region will be st
 To recover from these, either re-partition or use consistent hashing.
 
 ### **b. Sharding based on LocationID:**
-Hash function will map each `LocationID` to a server where we store that place. Which building tree, iterate through all places and calculate hash of each `LocationID` to find server. To find places nearby, have to query all servers and each server returns a set of nearby places. A centralized server will aggregate results to return them.
+Hash function will map each `LocationID` to a server where we store that place. When building tree, iterate through all places and calculate hash of each `LocationID` to find server. To find places nearby, have to query all servers and each server returns a set of nearby places. A centralized server will aggregate results to return them.
 
 ![high_level_design](high_level_design.png)
 
@@ -150,4 +150,4 @@ Add in 2 places:
 
 Initially, simple Round Robin approach can be adopted to distribute all incoming requests equally. Simple, no overhead, would take dead servers out of rotation.
 
-A problem is won't take server load into consideration. If server overloaded, LB will keep sending requests. To handle this, periodically quert backend server about load and adjust traffic accordingly.
+A problem is won't take server load into consideration. If server overloaded, LB will keep sending requests. To handle this, periodically query backend server about load and adjust traffic accordingly.

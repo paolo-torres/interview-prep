@@ -18,7 +18,7 @@
 **Non-Functional:**
 
 - Highly available.
-- Low latency (near real-time). Ex. need info quickly to make business decisions, o dealing with money and can't afford to have lag (fraud, important payments).
+- Low latency (near real-time). Ex. need info quickly to make business decisions, or dealing with money and can't afford to have lag (fraud, important payments).
 - Validation of data.
 
 ---
@@ -54,8 +54,6 @@ request: {
 
 ## 4. System Design
 
-![system_design](system_design.png)
-
 - Users: A lot of users for the logging data to make sense and be effective.
 - Load Balancer: Big enough system warrants use of a Load Balancer.
 - Queue and Validation/Scrubbing Service: Need to ingest all this data, so need to validate the data, scrub sensitive info (passwords). Queuing system that takes in all these events, hands it off to Validation/Scrubbing Service.
@@ -66,3 +64,5 @@ request: {
 - Pre-Compute Service: Some data used/logged way more often, so maybe want to pre-compute or pre-cache some data. Ex. daily jobs (DAU, MAU), want in a more automated fashion.
 - Long-Term DB: Slower than main DB, where we can retain old info, isn't used that often. Purpose is to store old data so that main DB doesn't have to. Consider a data retention policy, where old data goes here.
 - Cache: Helps with latency, cache pre-computed info to be used by visualization tools (ex. Kibana, Splunk).
+
+![system_design](system_design.png)

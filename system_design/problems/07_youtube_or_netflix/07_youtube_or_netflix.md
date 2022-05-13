@@ -6,7 +6,7 @@ Video sharing service like YouTube, where users are able to upload/view/search v
 
 ## 1. Why YouTube?
 
-One of the most populat video sharing websites in the world. Upload, view, share, rate, and report videos, as well as add comments on videos.
+One of the most popular video sharing websites in the world. Upload, view, share, rate, and report videos, as well as add comments on videos.
 
 ---
 
@@ -117,7 +117,7 @@ Service is read-heavy, so focus on building a system that can retrieve videos qu
 
 **Where would videos be stored?** Distributed file storage system like Hadoop Distributed File System (HDFS) or GlusterFS.
 
-**How should we manage read traffic?** Segregate read traffic from write traffic. Since will have multiple copies of each video, can distribute read traffix on different servers.
+**How should we manage read traffic?** Segregate read traffic from write traffic. Since will have multiple copies of each video, can distribute read traffic on different servers.
 
 **Where would thumbnails be stored?** Two considerations before deciding which storage system to use:
 1. Thumbnails are small files.

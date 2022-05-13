@@ -8,9 +8,6 @@ Design a stock exchange like NASDAQ.
 
 ## 2. Requirements and Goals of the System
 
-- Functional: Depends on question, actual things the system needs to serve its purpose.
-- Non-Functional: Ex. highly available (never down), real-time/min latency (fast), highly reliable, scalable, consistency (different data seen by users), trade-offs between these depending on question.
-
 **Functional:**
 
 - Users should be able to bid buy/sell prices for a stock.

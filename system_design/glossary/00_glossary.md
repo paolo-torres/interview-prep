@@ -12,6 +12,8 @@
 ### 10. CAP Theorem
 ### 11. Consistent Hashing
 
+---
+
 # 01. Basics
 
 Whenever designing a large system, need to consider a few things:
@@ -37,7 +39,7 @@ Whenever designing a large system, need to consider a few things:
 
 ## Scalability
 
-Scalability is the capability of a system, process, or a network to grow and manage increased demand. A system may have to scale because of many reasons like increased data volume or increased amount of work, e.g., number of transactions. Generally, the performance of a system, althgouh designed (or claimed) to be scalable, declines with the system due to the management or environment cost.
+Scalability is the capability of a system, process, or a network to grow and manage increased demand. A system may have to scale because of many reasons like increased data volume or increased amount of work, e.g., number of transactions. Generally, the performance of a system, although designed (or claimed) to be scalable, declines with the system due to the management or environment cost.
 
 **Horizontal vs. Vertical Scaling:** Horizontal scaling means that you scale by adding more servers into your pool of resources, whereas vertical scaling means that you scale by adding more power (CPU, RAM, storage, etc.) to an existing server. Good examples of horizontal scaling are Cassandra and MongoDB as they both provide an easy way to scale horizontally by adding more machines to meet growing needs. Similarly, a good example of vertical scaling is MySQL as it allows for an easy way to scale vertically by switching from smaller to bigger machines, however this process often involves downtime.
 
@@ -151,7 +153,7 @@ If the data is modified in the database, it should be invalidated in the cache; 
 
 **Write-Through Cache:** Data is written into the cache and the corresponding database at the same time.
 
-**Write-Around Cache:** Data is written directly to permanent storage, bypasssing the cache.
+**Write-Around Cache:** Data is written directly to permanent storage, bypassing the cache.
 
 **Write-Back Cache:** Data is written to cache alone and completion is immediately confirmed to the client.
 
@@ -172,7 +174,7 @@ Most common cache eviction policies:
 
 # 05. Data Partitioning
 
-Data partitioning is a technique to break up a big database (DB) into many smaller parts. It is the process of splitting up a DB/table across multiple machines to improve the manageability, performance,availability, and load balancing of an application.
+Data partitioning is a technique to break up a big database (DB) into many smaller parts. It is the process of splitting up a DB/table across multiple machines to improve the manageability, performance, availability, and load balancing of an application.
 
 ___
 
