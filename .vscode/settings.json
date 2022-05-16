@@ -34,7 +34,8 @@
         "random": "cpp",
         "__functional_03": "cpp",
         "unordered_set": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
