@@ -197,3 +197,6 @@ expected, etc. And this could be a problem when you're trying to move
 fast with things & finishing things quickly. Basically I'm working 
 towards trying to find a better balance between working fast & 
 being careful & thoughtful with certain decisions. 
+
+682 230 2046
+jordana@twitter.com
