@@ -24,10 +24,20 @@ you think I should schedule it?
 
 - Backend
 - 2 interviews don't count
-- Thu, Fri
 - 3rd interview will count
 
 - coding
 - coding - applied - backend specific
 - no system design
 - new grad
+
+___
+
+- Comp: CAD $116k - $119k base, 10% perf bonus, $103k RSU over 4 yrs,
+    $18k bonus
+
+- 2 coding interviews
+- 1: architecture & design, OOP design?
+- 2: coding & engineering, whiteboard question, API design,
+    troubleshooting & debugging
+- I can use any language I want
